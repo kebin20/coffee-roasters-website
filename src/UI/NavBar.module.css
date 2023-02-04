@@ -1,0 +1,141 @@
+.navBar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: transparent;
+  padding: 2em;
+}
+
+.navFlexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileLogo {
+  max-width: 60%;
+}
+
+.mobileMenu {
+  display: block;
+}
+
+.mobileMenuItems {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgba(254, 252, 247, 0.504981) 0%,
+    #fefcf7 55.94%
+  );
+  align-self: flex-end;
+  gap: 1.5em;
+  align-items: center;
+  position: absolute;
+  top: 5em;
+  left: 1.5em;
+  right: 1.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.menuItems {
+  display: none;
+}
+
+.hamburgerMenu {
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+
+.hamburgerMenu:focus {
+  outline: none;
+}
+
+.hamburgerTop,
+.hamburgerMiddle,
+.hamburgerBottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 3px;
+  border-radius: 1.5px;
+  background: var(--darkGreyBlue);
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburgerMiddle {
+  transform: translateY(7px);
+}
+
+.hamburgerBottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburgerTop {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburgerMiddle {
+  display: none;
+}
+
+.open .hamburgerBottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+  .mobileLogo {
+    max-width: 100%;
+  }
+
+  .mobileMenuItems {
+    display: none;
+  }
+
+  .menuItems {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5em;
+  }
+
+  .menuLink {
+    color: var(--Grey);
+    margin-left: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .menuLink:hover {
+    color: var(--darkGreyBlue);
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 2500px) {
+}

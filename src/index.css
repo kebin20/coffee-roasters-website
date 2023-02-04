@@ -3,7 +3,7 @@
 
 /* Variables */
 
-:global {
+:root {
   --darkCyan: #0e8784;
   --darkGreyBlue: #333d4b;
   --paleOrange: #fdd6ba;
@@ -68,6 +68,13 @@ h6 {
 
 p {
   overflow-wrap: break-word;
+}
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #root,
