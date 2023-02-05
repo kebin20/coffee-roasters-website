@@ -2,7 +2,7 @@
   z-index: 10;
   width: 100%;
   background: transparent;
-  padding: 2em;
+  padding: 2em 2em 1em 2em;
 }
 
 .navFlexContainer {
@@ -12,7 +12,7 @@
 }
 
 .mobileLogo {
-  max-width: 60%;
+  max-width: 69%;
 }
 
 .mobileMenu {

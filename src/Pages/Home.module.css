@@ -1,0 +1,25 @@
+.homeHeroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--lightCream);
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+  background-size: cover;
+  padding: 6.25em 1.5em;
+  margin: 1.5em;
+  border-radius: 10px;
+  gap: 2em;
+}
+
+.homeHeroTitle {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.homeHeroText {
+  font-size: 0.9rem;
+  line-height: 25px;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+}
