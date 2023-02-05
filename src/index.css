@@ -17,6 +17,8 @@
   --big-select-option-active: var(--darkCyan);
   --accordion-menu-default: var(--darkCyan);
   --accordion-menu-hover: var(--main-button-hover);
+  --title-font: "Fraunces", serif;
+  --title-body: "Barlow", sans-serif;
 }
 
 /*
@@ -33,6 +35,7 @@
 }
 html,
 body {
+  background-color: var(--lightCream);
   height: 100%;
 }
 body {

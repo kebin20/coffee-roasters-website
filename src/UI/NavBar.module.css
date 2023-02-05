@@ -1,5 +1,4 @@
 .navBar {
-  position: fixed;
   z-index: 10;
   width: 100%;
   background: transparent;
@@ -17,7 +16,7 @@
 }
 
 .mobileMenu {
-  display: block;
+  display: none;
 }
 
 .mobileMenuItems {
@@ -37,7 +36,7 @@
   right: 1.5em;
   padding-top: 2em;
   padding-bottom: 2em;
-  font-family: "Fraunces", serif;
+  font-family: var(--title-font);
   font-weight: 900;
   font-size: 1.5rem;
 }
