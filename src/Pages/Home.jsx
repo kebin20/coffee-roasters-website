@@ -24,7 +24,7 @@ export default function Home() {
         </section>
 
         <section className={styles.collectionContainer}>
-          <h1 className={styles.collectionContainerTitle}>our collection.</h1>
+          <h1 className={styles.collectionContainerTitle}>our collection</h1>
           <div className={styles.collectionItem}>
             <img src={granEspresso} alt="gran espresso package" />
             <h2>Gran Espresso</h2>
