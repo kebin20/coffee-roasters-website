@@ -26,7 +26,7 @@ export default function Home() {
         <section className={styles.collectionContainer}>
           <h1 className={styles.collectionContainerTitle}>our collection</h1>
           <div className={styles.collectionItem}>
-            <img src={granEspresso} alt="gran espresso package" />
+            <img src={granEspresso} alt="gran espresso package" className={styles.collectionImage}/>
             <h2>Gran Espresso</h2>
             <p>
               Light and flavorful blend with cocoa and black pepper for an
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={planalto} alt="planalto package" />
+            <img src={planalto} alt="planalto package" className={styles.collectionImage}/>
             <h2>Planalto</h2>
             <p>
               Brazilian dark roast with rich and velvety body, and hints of
@@ -42,7 +42,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={piccollo} alt="piccollo package" />
+            <img src={piccollo} alt="piccollo package" className={styles.collectionImage}/>
             <h2>Piccollo</h2>
             <p>
               Mild and smooth blend featuring notes of toasted almond and dried
@@ -50,7 +50,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={danche} alt="danche package" />
+            <img src={danche} alt="danche package" className={styles.collectionImage}/>
             <h2>Danche</h2>
             <p>
               Ethiopian hand-harvested blend densely packed with vibrant fruit

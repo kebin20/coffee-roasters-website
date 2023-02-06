@@ -24,8 +24,12 @@
   mix-blend-mode: normal;
 }
 
-/* .collectionContainer
-.collectionItem */
+.collectionContainer {
+  display: grid;
+  padding: 1em 2.5em;
+  gap: 3em;
+  text-align: center;
+}
 
 .collectionContainerTitle {
   font-size: 2.5rem;
@@ -36,4 +40,15 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.collectionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.collectionImage {
+  max-width: 69%;
+  margin: auto;
 }
