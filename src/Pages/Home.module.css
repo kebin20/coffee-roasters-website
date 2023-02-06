@@ -63,7 +63,7 @@
   color: var(--lightCream);
   margin: 1.5em;
   border-radius: 10px;
-  height: 60em;
+  height: 100em;
 }
 
 .whyUsTitle {
@@ -81,6 +81,7 @@
 
 .whyUsFeaturesContainer {
   display: flex;
+  height: 40%;
   flex-direction: column;
   gap: 2em;
   margin: 2.5em 1.5em 1.5em 1.5em;
