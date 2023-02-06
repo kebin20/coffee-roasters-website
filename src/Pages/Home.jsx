@@ -26,7 +26,11 @@ export default function Home() {
         <section className={styles.collectionContainer}>
           <h1 className={styles.collectionContainerTitle}>our collection</h1>
           <div className={styles.collectionItem}>
-            <img src={granEspresso} alt="gran espresso package" className={styles.collectionImage}/>
+            <img
+              src={granEspresso}
+              alt="gran espresso package"
+              className={styles.collectionImage}
+            />
             <h2>Gran Espresso</h2>
             <p>
               Light and flavorful blend with cocoa and black pepper for an
@@ -34,7 +38,11 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={planalto} alt="planalto package" className={styles.collectionImage}/>
+            <img
+              src={planalto}
+              alt="planalto package"
+              className={styles.collectionImage}
+            />
             <h2>Planalto</h2>
             <p>
               Brazilian dark roast with rich and velvety body, and hints of
@@ -42,7 +50,11 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={piccollo} alt="piccollo package" className={styles.collectionImage}/>
+            <img
+              src={piccollo}
+              alt="piccollo package"
+              className={styles.collectionImage}
+            />
             <h2>Piccollo</h2>
             <p>
               Mild and smooth blend featuring notes of toasted almond and dried
@@ -50,12 +62,35 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.collectionItem}>
-            <img src={danche} alt="danche package" className={styles.collectionImage}/>
+            <img
+              src={danche}
+              alt="danche package"
+              className={styles.collectionImage}
+            />
             <h2>Danche</h2>
             <p>
               Ethiopian hand-harvested blend densely packed with vibrant fruit
               notes
             </p>
+          </div>
+        </section>
+
+        <section className={styles.whyUsContainer}>
+          <h1>Why choose us?</h1>
+          <p>
+            A large part of our role is choosing which particular coffees will
+            be featured in our range. This means working closely with the best
+            coffee growers to give you a more impactful experience on every
+            level.
+          </p>
+          <div className={styles.whyUsFeaturesBgContainer}>
+            <div className={styles.whyUsFeaturesContainer}>
+              <div className={styles.featuresContainer}>
+                <img src="" alt=""/>
+                <h2>Best Quality</h2>
+                <p></p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
