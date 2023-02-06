@@ -113,3 +113,5 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 
 
 https://www.scaler.com/topics/text-gradient-css/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
