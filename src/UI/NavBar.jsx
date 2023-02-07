@@ -1,14 +1,14 @@
-import React from "react";
-import styles from "./NavBar.module.css";
-import coffeeRoastersLogo from "../assets/shared/desktop/logo.svg";
+import React, {useState} from 'react';
+import styles from './NavBar.module.css';
+import coffeeRoastersLogo from '../assets/shared/desktop/logo.svg';
 
 export default function NavBar(props) {
+
+const [toggleMenu, setToggleMenu] = useState(false)
+
   return (
-    // <!-- Navbar -->
     <nav className={styles.navBar}>
-      {/* <!-- Flex container --> */}
       <div className={styles.navFlexContainer}>
-        {/* <!-- Logo */}
         <div>
           <img
             className={styles.mobileLogo}
@@ -16,7 +16,7 @@ export default function NavBar(props) {
             alt="coffee roasters logo"
           />
         </div>
-        {/* <!-- Menu Items --> */}
+
         <ul className={styles.menuItems}>
           <li>
             <a href="#" className={styles.menuLink}>
@@ -35,24 +35,15 @@ export default function NavBar(props) {
           </li>
         </ul>
 
-        {/* <!-- Hamburger Icon--> */}
-        <button
-          //   id="menu-btn"
-          //   className="hamburger"
-          className={styles.hamburgerMenu}
-        >
+        <button className={styles.hamburgerMenu}>
           <span className={styles.hamburgerTop}></span>
           <span className={styles.hamburgerMiddle}></span>
           <span className={styles.hamburgerBottom}></span>
         </button>
       </div>
 
-      {/* <!-- Mobile Menu --> */}
       <div className={styles.mobileMenu}>
-        <ul
-          //   id="menu"
-          className={styles.mobileMenuItems}
-        >
+        <ul className={styles.mobileMenuItems}>
           <li>
             <a href="">Home</a>
           </li>
