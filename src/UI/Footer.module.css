@@ -16,6 +16,11 @@
   gap: 1.5em;
 }
 
+.footerLinks {
+  color: var(--Grey);
+  text-transform: uppercase;
+}
+
 .footerLinks:hover {
   color: var(--lightCream);
 }
