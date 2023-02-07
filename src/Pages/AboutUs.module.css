@@ -1,3 +1,5 @@
+/*Hero Section*/
+
 .aboutUsHeroContainer {
   display: flex;
   flex-direction: column;
@@ -22,6 +24,19 @@
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
+}
+
+/* Our commitment section */
+
+.ourCommitment {
+  display: grid;
+  margin: 6.5em 1.5em;
+  gap: 2em;
+  text-align: center;
+}
+
+.ourCommitmentImage {
+  border-radius: 10px;
 }
 
 /* Tablet portrait and larger */
