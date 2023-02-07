@@ -6,6 +6,7 @@
 :root {
   --darkCyan: #0e8784;
   --darkGreyBlue: #333d4b;
+  --darkBlue: #2c343e;
   --paleOrange: #fdd6ba;
   --lightCream: #fefcf7;
   --Grey: #83888f;
@@ -76,9 +77,13 @@ p {
 ul,
 li,
 a {
+  font-weight: 700;
   list-style: none;
   text-decoration: none;
   transform: matrix(1, 0, 0, 1, 0, 0);
+  text-transform: uppercase;
+  padding: 0;
+  color: var(--Grey);
 }
 
 #root,

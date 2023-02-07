@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Home.module.css';
 import MainButton from '../UI/MainButton';
 import NavBar from '../UI/NavBar';
+import Footer from '../UI/Footer';
 
 /* Images */
 import granEspresso from '../assets/home/desktop/image-gran-espresso.png';
@@ -162,6 +163,8 @@ export default function Home() {
           </div>
           <MainButton>Create your plan</MainButton>
         </section>
+
+        <Footer />
       </main>
     </>
   );

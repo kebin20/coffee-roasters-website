@@ -1,0 +1,27 @@
+.footer {
+  background-color: var(--darkBlue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileLogo {
+  padding: 3.4em;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.footerLinks:hover {
+  color: var(--lightCream);
+}
+
+.socialLinksContainer {
+  display: flex;
+  gap: 1.5em;
+  padding: 3.4em;
+}
