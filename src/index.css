@@ -80,10 +80,7 @@ a {
   font-weight: 700;
   list-style: none;
   text-decoration: none;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  text-transform: uppercase;
   padding: 0;
-  color: var(--Grey);
 }
 
 #root,

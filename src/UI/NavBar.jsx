@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
-import styles from './NavBar.module.css';
-import coffeeRoastersLogo from '../assets/shared/desktop/logo.svg';
+import React, { useState } from "react";
+import styles from "./NavBar.module.css";
+import coffeeRoastersLogo from "../assets/shared/desktop/logo.svg";
 
 export default function NavBar(props) {
+  const [toggle, setToggle] = useState(false);
 
-const [toggleMenu, setToggleMenu] = useState(false)
+  function toggleHamburgerMenu() {
+    setToggle((prevToggle) => !prevToggle);
+  }
 
   return (
     <nav className={styles.navBar}>
@@ -35,26 +38,44 @@ const [toggleMenu, setToggleMenu] = useState(false)
           </li>
         </ul>
 
-        <button className={styles.hamburgerMenu}>
-          <span className={styles.hamburgerTop}></span>
-          <span className={styles.hamburgerMiddle}></span>
-          <span className={styles.hamburgerBottom}></span>
+        <button onClick={toggleHamburgerMenu} className={styles.hamburgerMenu}>
+          <span
+            className={`${styles.hamburgerTop} ${toggle && styles.open} ${
+              toggle && styles.openHamburgerTop
+            }`}
+          ></span>
+          <span
+            className={`${styles.hamburgerMiddle} ${toggle && styles.open} ${
+              toggle && styles.openHamburgerMiddle
+            }`}
+          ></span>
+          <span
+            className={`${styles.hamburgerBottom} ${toggle && styles.open} ${
+              toggle && styles.openHamburgerBottom
+            }`}
+          ></span>
         </button>
       </div>
 
-      <div className={styles.mobileMenu}>
+      {toggle && (
         <ul className={styles.mobileMenuItems}>
           <li>
-            <a href="">Home</a>
+            <a className={styles.mobileLink} href="">
+              Home
+            </a>
           </li>
           <li>
-            <a href="">About Us</a>
+            <a className={styles.mobileLink} href="">
+              About Us
+            </a>
           </li>
           <li>
-            <a href="">Create your plan</a>
+            <a className={styles.mobileLink} href="">
+              Create your plan
+            </a>
           </li>
         </ul>
-      </div>
+      )}
     </nav>
   );
 }
