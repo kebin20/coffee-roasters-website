@@ -108,3 +108,21 @@
 .featuresImage {
   padding: 3em;
 }
+
+/* How it Works Section*/
+
+.howItWorks {
+  display: grid;
+  margin: 1.5em;
+  text-align: center;
+  gap: 2.5em;
+}
+
+.howItWorksTitle {
+  color: var(--Grey);
+  font-size: 1.5rem;
+}
+
+.steps {
+  padding: 1.5em;
+}

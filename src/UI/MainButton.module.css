@@ -1,4 +1,5 @@
 .mainButton {
+  display: inline-block;
   padding: 1em 2em;
   font-family: var(--title-font);
   font-weight: 900;

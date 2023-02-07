@@ -92,43 +92,43 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.whyUsFeaturesContainer}>
-              <div className={styles.featuresItem}>
-                <img
-                  className={styles.featuresImage}
-                  src={coffeeBean}
-                  alt="coffee bean icon"
-                />
-                <h2>Best Quality</h2>
-                <p>
-                  Discover an endless variety of the world’s best artisan coffee
-                  from each of our roasters.
-                </p>
-              </div>
-              <div className={styles.featuresItem}>
-                <img
-                  className={styles.featuresImage}
-                  src={gift}
-                  alt="gift icon"
-                />
-                <h2>Exclusive Benefits</h2>
-                <p>
-                  Special offers and swag when you subscribe, including 30% off
-                  your first shipment.
-                </p>
-              </div>
-              <div className={styles.featuresItem}>
-                <img
-                  className={styles.featuresImage}
-                  src={truck}
-                  alt="truck icon"
-                />
-                <h2>Free Shipping</h2>
-                <p>
-                  We cover the cost and coffee is delivered fast. Peak
-                  freshness: guaranteed.
-                </p>
-              </div>
+            <div className={styles.featuresItem}>
+              <img
+                className={styles.featuresImage}
+                src={coffeeBean}
+                alt="coffee bean icon"
+              />
+              <h2>Best Quality</h2>
+              <p>
+                Discover an endless variety of the world’s best artisan coffee
+                from each of our roasters.
+              </p>
             </div>
+            <div className={styles.featuresItem}>
+              <img
+                className={styles.featuresImage}
+                src={gift}
+                alt="gift icon"
+              />
+              <h2>Exclusive Benefits</h2>
+              <p>
+                Special offers and swag when you subscribe, including 30% off
+                your first shipment.
+              </p>
+            </div>
+            <div className={styles.featuresItem}>
+              <img
+                className={styles.featuresImage}
+                src={truck}
+                alt="truck icon"
+              />
+              <h2>Free Shipping</h2>
+              <p>
+                We cover the cost and coffee is delivered fast. Peak freshness:
+                guaranteed.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className={styles.howItWorks}>
@@ -143,21 +143,21 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.steps}>
-            <h1 className={styles.stepTitle}>01</h1>
-            <h2>Pick your coffee</h2>
+            <h1 className={styles.stepTitle}>02</h1>
+            <h2>Choose the frequency</h2>
             <p>
-              Select from our evolving range of artisan coffees. Our beans are
-              ethically sourced and we pay fair prices for them. There are new
-              coffees in all profiles every month for you to try out.
+              Customize your order frequency, quantity, even your roast style
+              and grind type. Pause, skip or cancel your subscription with no
+              commitment through our online portal.
             </p>
           </div>
           <div className={styles.steps}>
-            <h1 className={styles.stepTitle}>01</h1>
-            <h2>Pick your coffee</h2>
+            <h1 className={styles.stepTitle}>03</h1>
+            <h2>Receive and enjoy!</h2>
             <p>
-              Select from our evolving range of artisan coffees. Our beans are
-              ethically sourced and we pay fair prices for them. There are new
-              coffees in all profiles every month for you to try out.
+              We ship your package within 48 hours, freshly roasted. Sit back
+              and enjoy award-winning world-class coffees curated to provide a
+              distinct tasting experience.
             </p>
           </div>
           <MainButton>Create your plan</MainButton>
