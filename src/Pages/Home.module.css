@@ -136,3 +136,16 @@
   font-size: 4.5rem;
   color: var(--paleOrange);
 }
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 2500px) {
+}
