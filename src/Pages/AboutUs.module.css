@@ -1,3 +1,29 @@
+.aboutUsHeroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--lightCream);
+  background-image: url('../assets/about/mobile/image-hero-whitecup.jpg');
+  background-size: cover;
+  padding: 6.25em 1.5em;
+  margin: 1.5em;
+  border-radius: 10px;
+  gap: 2em;
+}
+
+.aboutUsHeroTitle {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.aboutUsHeroText {
+  font-size: 0.9rem;
+  line-height: 25px;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+}
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
