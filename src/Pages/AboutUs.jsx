@@ -5,6 +5,7 @@ import Footer from '../UI/Footer';
 
 /* Images */
 import commitment from '../assets/about/mobile/image-commitment.jpg';
+import quality from '../assets/about/mobile/image-quality.jpg';
 
 export default function AboutUs() {
   return (
@@ -21,8 +22,12 @@ export default function AboutUs() {
           </p>
         </section>
 
-        <section className={styles.ourCommitment}>
-          <img className={styles.ourCommitmentImage} src={commitment} alt="picture of a guy pouring coffee" />
+        <section className={styles.ourCommitmentContainer}>
+          <img
+            className={styles.ourCommitmentImage}
+            src={commitment}
+            alt="picture of a guy pouring coffee"
+          />
           <h1>Our commitment</h1>
           <p>
             We’re built on a simple mission and a commitment to doing good along
@@ -36,6 +41,25 @@ export default function AboutUs() {
             community initiatives, and invest in coffee plant science. Curating
             only the finest blends, we roast each lot to highlight tasting
             profiles distinctive to their native growing region.
+          </p>
+        </section>
+
+        <section className={styles.qualityContainer}>
+          <div className={styles.imageWrapper}>
+            <img
+              className={styles.qualityImage}
+              src={quality}
+              alt="image of coffee"
+            />
+          </div>
+          <h1 className={styles.qualityTitle}>Uncomprimising quality</h1>
+          <p>
+            Although we work with growers who pay close attention to all stages
+            of harvest and processing, we employ, on our end, a rigorous quality
+            control program to avoid over-roasting or baking the coffee dry.
+            Every bag of coffee is tagged with a roast date and batch number.
+            Our goal is to roast consistent, user-friendly coffee, so that
+            brewing is easy and enjoyable.
           </p>
         </section>
       </main>

@@ -28,7 +28,7 @@
 
 /* Our commitment section */
 
-.ourCommitment {
+.ourCommitmentContainer {
   display: grid;
   margin: 6.5em 1.5em;
   gap: 2em;
@@ -37,6 +37,30 @@
 
 .ourCommitmentImage {
   border-radius: 10px;
+}
+
+/* Quality container */
+
+.qualityContainer {
+  display: grid;
+  text-align: center;
+  gap: 2em;
+  padding: 7.25em 1.5em 3.25em 1.5em;
+  margin: 9.5em 1.5em;
+  background-color: var(--darkBlue);
+  color: var(--lightCream);
+  border-radius: 10px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.qualityImage {
+  position: absolute;
+  border-radius: 15px;
+  padding: 0.5em;
+  bottom: 1em;
 }
 
 /* Tablet portrait and larger */
