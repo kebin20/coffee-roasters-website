@@ -63,6 +63,27 @@
   bottom: 1em;
 }
 
+/* Our Headquarters section*/
+
+.hqContainer {
+  display: grid;
+  gap: 2em;
+  margin: 1.5em;
+  text-align: center;
+  justify-items: center;
+}
+
+.hqTitle
+
+.countryWrapper {
+  display: flex;
+}
+
+.mapImages {
+  margin: auto;
+}
+
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
