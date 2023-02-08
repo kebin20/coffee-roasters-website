@@ -156,7 +156,7 @@
     padding: 0;
     align-items: center;
     background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -173,5 +173,8 @@
   }
 }
 /* Big desktop (4k) */
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 1800px) {
+  .heroWrapper {
+    padding: 5.3em 75em 5.3em 5.3em;
+  }
 }
