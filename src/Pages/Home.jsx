@@ -1,17 +1,17 @@
-import React from 'react';
-import styles from './Home.module.css';
-import MainButton from '../UI/MainButton';
-import NavBar from '../UI/NavBar';
-import Footer from '../UI/Footer';
+import React from "react";
+import styles from "./Home.module.css";
+import MainButton from "../UI/MainButton";
+import NavBar from "../UI/NavBar";
+import Footer from "../UI/Footer";
 
 /* Images */
-import granEspresso from '../assets/home/desktop/image-gran-espresso.png';
-import planalto from '../assets/home/desktop/image-planalto.png';
-import piccollo from '../assets/home/desktop/image-piccollo.png';
-import danche from '../assets/home/desktop/image-danche.png';
-import coffeeBean from '../assets/home/desktop/icon-coffee-bean.svg';
-import gift from '../assets/home/desktop/icon-gift.svg';
-import truck from '../assets/home/desktop/icon-truck.svg';
+import granEspresso from "../assets/home/desktop/image-gran-espresso.png";
+import planalto from "../assets/home/desktop/image-planalto.png";
+import piccollo from "../assets/home/desktop/image-piccollo.png";
+import danche from "../assets/home/desktop/image-danche.png";
+import coffeeBean from "../assets/home/desktop/icon-coffee-bean.svg";
+import gift from "../assets/home/desktop/icon-gift.svg";
+import truck from "../assets/home/desktop/icon-truck.svg";
 
 export default function Home() {
   return (
@@ -19,13 +19,15 @@ export default function Home() {
       <NavBar />
       <main>
         <section className={styles.homeHeroContainer}>
-          <h1 className={styles.homeHeroTitle}>Great coffee made simple.</h1>
-          <p className={styles.homeHeroText}>
-            Start your mornings with the world’s best coffees. Try our expertly
-            curated artisan coffees from our best roasters delivered directly to
-            your door, at your schedule.
-          </p>
-          <MainButton>Create your plan</MainButton>
+          <div className={styles.heroWrapper}>
+            <h1 className={styles.homeHeroTitle}>Great coffee made simple.</h1>
+            <p className={styles.homeHeroText}>
+              Start your mornings with the world’s best coffees. Try our
+              expertly curated artisan coffees from our best roasters delivered
+              directly to your door, at your schedule.
+            </p>
+            <MainButton>Create your plan</MainButton>
+          </div>
         </section>
 
         <section className={styles.collectionContainer}>

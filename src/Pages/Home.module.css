@@ -1,16 +1,19 @@
 /* Our Commitment Secetion*/
 
 .homeHeroContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   color: var(--lightCream);
-  background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
   background-size: cover;
   padding: 6.25em 1.5em;
   margin: 1.5em;
   border-radius: 10px;
+}
+
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 2em;
 }
 
@@ -20,7 +23,6 @@
 }
 
 .homeHeroText {
-  font-size: 0.9rem;
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
@@ -147,6 +149,28 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .homeHeroContainer {
+    display: flex;
+    height: 72vh;
+    margin: 1em 5em 1em 5em;
+    padding: 0;
+    align-items: center;
+    background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .heroWrapper {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 5.3em 45em 5.3em 5.3em;
+  }
+
+  .homeHeroTitle {
+    font-size: 4.5rem;
+    line-height: 72px;
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 2500px) {

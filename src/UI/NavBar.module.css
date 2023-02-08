@@ -115,6 +115,10 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .navBar {
+    padding: 2em 5em 2em 5em;
+  }
+
   .mobileLogo {
     max-width: 100%;
   }
@@ -132,6 +136,7 @@
   .menuLink {
     margin-left: 1.5em;
     text-transform: uppercase;
+    color: var(--Grey);
   }
 
   .menuLink:hover {
