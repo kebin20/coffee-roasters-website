@@ -1,8 +1,10 @@
 import React from "react";
-import Home from "./Pages/Home";
-// import About from "./Pages/AboutUs"
+// import Home from "./Pages/Home";
+// import AboutUs from "./Pages/AboutUs"
+import Subscribe from "./Pages/Subscribe"
 
 export default function App() {
-  // return <About />;
-  return <Home />;
+  // return <AboutUs />;
+  // return <Home />;
+  return <Subscribe />;
 }
