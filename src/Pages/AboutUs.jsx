@@ -68,23 +68,53 @@ export default function AboutUs() {
 
         <section className={styles.hqContainer}>
           <h1 className={styles.hqTitle}>Our headquarters</h1>
-            <div className={styles.countryWrapper}>
-              <img className={styles.mapImages} src={uk} alt="image of UK map" />
-              <h2>United Kingdom</h2>
-              <p>68 Asfordby Rd Alcaston SY6 1YA +44 1241 918425</p>
-            </div>
-            <div className={styles.countryWrapper}>
-              <img className={styles.mapImages} src={canada} alt="image of Canada map" />
-              <h2>Canada</h2>
-              <p>
-                1528 Eglinton Avenue Toronto Ontario M4P 1A6 +1 416 485 2997
-              </p>
-            </div>
-            <div className={styles.countryWrapper}>
-              <img className={styles.mapImages} src={australia} alt="image of Australia map" />
-              <h2>Australia</h2>
-              <p>36 Swanston Street Kewell Victoria +61 4 9928 3629</p>
-            </div>
+          <div className={styles.countryWrapper}>
+            <img className={styles.mapImages} src={uk} alt="image of UK map" />
+            <h2>United Kingdom</h2>
+            <p>
+              68 Asfordby Rd
+              <br />
+              Alcaston
+              <br />
+              SY6 1YA
+              <br />
+              +44 1241 918425
+            </p>
+          </div>
+          <div className={styles.countryWrapper}>
+            <img
+              className={styles.mapImages}
+              src={canada}
+              alt="image of Canada map"
+            />
+            <h2>Canada</h2>
+            <p>
+              1528 Eglinton Avenue
+              <br />
+              Toronto
+              <br />
+              Ontario M4P 1A6
+              <br />
+              +1 416 485 2997
+            </p>
+          </div>
+          <div className={styles.countryWrapper}>
+            <img
+              className={styles.mapImages}
+              src={australia}
+              alt="image of Australia map"
+            />
+            <h2>Australia</h2>
+            <p>
+              36 Swanston Street
+              <br />
+              Kewell
+              <br />
+              Victoria
+              <br />
+              +61 4 9928 3629
+            </p>
+          </div>
         </section>
 
         <Footer />

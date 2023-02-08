@@ -68,21 +68,27 @@
 .hqContainer {
   display: grid;
   gap: 2em;
-  margin: 1.5em;
+  margin: 7em 1.5em;
   text-align: center;
   justify-items: center;
 }
 
-.hqTitle
-
 .countryWrapper {
   display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em;
+  align-items: center;
 }
 
 .mapImages {
   margin: auto;
+  padding: 0.5em;
 }
 
+.hqTitle {
+  color: var(--Grey);
+}
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
