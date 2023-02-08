@@ -171,10 +171,31 @@
     font-size: 4.5rem;
     line-height: 72px;
   }
+
+  .collectionContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    margin: 13.5em 15.5em;
+    position: relative;
+    gap: 1em;
+  }
+
+  .collectionContainerTitle {
+    font-size: 9.4rem;
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1.25em;
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
   .heroWrapper {
     padding: 5.3em 75em 5.3em 5.3em;
+  }
+  .collectionContainerTitle {
+    font-size: 12rem;
+    bottom: 1.09em;
   }
 }
