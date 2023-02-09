@@ -26,11 +26,31 @@
   mix-blend-mode: normal;
 }
 
-.planStepsContainer
-.planStepWrapper
-.planStepTitle
+/* Plan Steps Section*/
 
+.planStepsContainer {
+  background-color: var(--darkBlue);
+  color: var(--lightCream);
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  margin: 6.5em 0em;
+  padding: 4.5em 0em;
+  text-align: center;
+  gap: 2.5em;
+}
 
+.planStepWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  gap: 1em;
+}
+
+.planStepTitle {
+  font-size: 4.5rem;
+  color: var(--paleOrange);
+}
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
