@@ -24,9 +24,10 @@
   width: 100%;
   background-color: var(--darkGreyBlue);
   color: var(--lightCream);
-  padding: 1.5em;
-  border-radius-top: 10px;
-  border-radius: ;
+  padding: 1em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.75rem;
 }
 
 .orderSummary {
