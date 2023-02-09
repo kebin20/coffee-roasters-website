@@ -175,18 +175,44 @@
   .collectionContainer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    margin: 13.5em 15.5em;
+    margin: 14.5em 6.5em 12.5em 6.5em;
     position: relative;
     gap: 1em;
   }
 
   .collectionContainerTitle {
-    font-size: 9.4rem;
+    font-size: 11.4rem;
     z-index: -10;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 1.25em;
+    bottom: 1em;
+  }
+
+  .whyUs {
+    height: auto;
+    margin: 5em;
+  }
+
+  .whyUsBgContainer {
+    height: 68vh;
+  }
+
+  .whyUsFeaturesContainer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    bottom: -9em;
+    margin: 1em 6em;
+  }
+
+  .whyUsContainer {
+    background-color: var(--darkBlue);
+    padding: 4em 27em;
+  }
+
+  .whyUsTitle {
+    font-size: 2.5rem;
   }
 }
 /* Big desktop (4k) */
@@ -194,8 +220,21 @@
   .heroWrapper {
     padding: 5.3em 75em 5.3em 5.3em;
   }
+
+  .collectionContainer {
+    margin: 15.5em 15.5em 11.5em 15.5em;
+  }
+
   .collectionContainerTitle {
     font-size: 12rem;
     bottom: 1.09em;
+  }
+
+  .whyUsFeaturesContainer {
+    bottom: -6em;
+  }
+
+  .whyUsBgContainer {
+    height: 56vh;
   }
 }
