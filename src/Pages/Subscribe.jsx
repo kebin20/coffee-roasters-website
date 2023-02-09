@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainButton from '../UI/MainButton';
 import NavBar from '../UI/NavBar';
 import Footer from '../UI/Footer';
+import OrderModal from '../UI/OrderModal';
 
 import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
+
+  const [confirmPlan, setConfirmPlan] = useState(true)
+
   return (
     <>
       <NavBar />
@@ -49,73 +53,7 @@ export default function Subscribe() {
       </section>
 
       <section className={styles.customizePlanContainer}>
-      {/* <div class="dropdowns" id="dropdowns">
-          <div class={styles.howDoYouDrink-container} nav-item">
-            <div class="dropdown" data-dropdown-product>
-              <button
-                class="link dropbtn"
-                id="drop-btn"
-                data-dropdown-button-product
-              >
-                How do you drink your coffee?
-                <svg
-                  class="arrow arrow-down"
-                  id="arrow-product"
-                  width="10"
-                  height="6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-dropdown-button-product
-                >
-                  <path
-                    stroke="none"
-                    stroke-width="1.5"
-                    fill="none"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </svg>
-              </button>
-              <div class="dropdown-menu product-menu" id="dropdownMenu">
-                <a href="#" class="link nav-link">Overview</a>
-                <a href="#" class="link nav-link"> Pricing</a>
-                <a href="#" class="link nav-link">Features</a>
-                <a href="#" class="link nav-link">Integrations</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="company-container nav-item">
-            <div class="dropdown" data-dropdown-company>
-              <button
-                class="link dropbtn"
-                id="drop-btn"
-                data-dropdown-button-company
-              >
-                Company
-                <svg
-                  class="arrow arrow-down"
-                  id="arrow-company"
-                  width="10"
-                  height="6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-dropdown-button-company
-                >
-                  <path
-                    stroke="none"
-                    stroke-width="1.5"
-                    fill="none"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              <div class="dropdown-menu company-menu" id="dropdownMenu">
-                <a href="#" class="link nav-link">About</a>
-                <a href="#" class="link nav-link">Team</a>
-                <a href="#" class="link nav-link">Blog</a>
-                <a href="#" class="link nav-link">Careers</a>
-              </div>
-            </div>
-          </div> */}
+        {confirmPlan && <OrderModal />}
       </section>
     </>
   );
