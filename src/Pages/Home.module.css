@@ -214,6 +214,16 @@
   .whyUsTitle {
     font-size: 2.5rem;
   }
+
+  .howItWorks {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 1fr 1fr;
+    margin: 15.5em 3.5em;
+  }
+
+  .howItWorksTitle {
+    grid-column: 1/-1;
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
