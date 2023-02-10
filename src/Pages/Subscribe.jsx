@@ -3,12 +3,13 @@ import MainButton from '../UI/MainButton';
 import NavBar from '../UI/NavBar';
 import Footer from '../UI/Footer';
 import OrderModal from '../UI/OrderModal';
+import PlanMenu from '../UI/PlanMenu';
+import PlanDropdownItem from '../UI/PlanDropdownItem';
 
 import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
-
-  const [confirmPlan, setConfirmPlan] = useState(true)
+  const [confirmPlan, setConfirmPlan] = useState(false);
 
   return (
     <>
@@ -54,6 +55,13 @@ export default function Subscribe() {
 
       <section className={styles.customizePlanContainer}>
         {confirmPlan && <OrderModal />}
+        <ul>
+          <PlanMenu>
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+          </PlanMenu>
+        </ul>
       </section>
     </>
   );
