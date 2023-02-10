@@ -8,7 +8,7 @@ export default function PlanDropdownItem(props) {
         className={styles.dropDownItem}
         onClick={() => console.log('Clicked!')}
       >
-        <span className={styles.buttonTitle}>THIS IS TITLE</span>
+        <span className={styles.buttonTitle}>THIS IS TITLE</span> <br />
         <span className={styles.buttonText}>lorem ipsum lalalala</span>
       </button>
     </>
