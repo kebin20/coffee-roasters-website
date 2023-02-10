@@ -52,10 +52,12 @@
   color: var(--paleOrange);
 }
 
+/*Customize Plan Section*/
+
 .customizePlanContainer {
-  background-color: red;
-  padding: 1em;
-  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em;
 }
 
 /* Tablet portrait and larger */

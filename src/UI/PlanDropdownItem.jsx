@@ -4,7 +4,13 @@ import styles from './PlanDropdownItem.module.css';
 export default function PlanDropdownItem(props) {
   return (
     <>
-      <h1>PLACEHGOLDER</h1>
+      <button
+        className={styles.dropDownItem}
+        onClick={() => console.log('Clicked!')}
+      >
+        <span className={styles.buttonTitle}>THIS IS TITLE</span>
+        <span className={styles.buttonText}>lorem ipsum lalalala</span>
+      </button>
     </>
   );
 }

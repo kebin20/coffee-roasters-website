@@ -1,13 +1,22 @@
 .selectionItem {
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
 }
+
 .selectionButton {
-  gap: 2em;
-  background-color: blueviolet;
+  border: none;
+  text-align: left;
+  background-color: var(--lightCream);
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
   display: flex;
   align-items: center;
-  padding: 2em 1em;
+  cursor: pointer;
+  padding: 1.5em 0em;
+  gap: 1em;
 }
 .selectionButtonText {
-  background-color: blanchedalmond;
+  color: var(--Grey);
 }

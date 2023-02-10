@@ -3,7 +3,7 @@ import styles from './PlanMenu.module.css';
 import ArrowIcon from './ArrowIcon';
 
 export default function PlanMenu(props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <li className={styles.selectionItem}>
