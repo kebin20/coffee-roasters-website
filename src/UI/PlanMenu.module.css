@@ -1,0 +1,13 @@
+.selectionItem {
+  background-color: aqua;
+}
+.selectionButton {
+  gap: 2em;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 2em 1em;
+}
+.selectionButtonText {
+  background-color: blanchedalmond;
+}

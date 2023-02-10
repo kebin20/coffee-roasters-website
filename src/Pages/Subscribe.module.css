@@ -52,6 +52,12 @@
   color: var(--paleOrange);
 }
 
+.customizePlanContainer {
+  background-color: red;
+  padding: 1em;
+  margin: 1em;
+}
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
