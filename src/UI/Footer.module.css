@@ -3,10 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.mobileLogo {
-  padding: 3.4em;
+  padding: 3em;
+  gap: 6em;
 }
 
 .linksContainer {
@@ -28,7 +26,6 @@
 .socialLinksContainer {
   display: flex;
   gap: 1.5em;
-  padding: 3.4em;
 }
 
 /* Tablet portrait and larger */
@@ -39,6 +36,18 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .footer {
+    flex-direction: row;
+    padding: 3em 10em;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+  }
+
+  .socialLinksContainer {
+    margin-left: auto;
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 2500px) {

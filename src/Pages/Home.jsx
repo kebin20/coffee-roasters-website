@@ -137,8 +137,11 @@ export default function Home() {
         <section className={styles.howItWorks}>
           <h1 className={styles.howItWorksTitle}>How it works</h1>
           <div className={styles.steps}>
-            <h1 className={styles.stepTitle}>01</h1>
-            <h2>Pick your coffee</h2>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.stepNumber}>01</h1>
+            <h2 className={styles.stepTitle}>
+              Pick your <br /> coffee
+            </h2>
             <p>
               Select from our evolving range of artisan coffees. Our beans are
               ethically sourced and we pay fair prices for them. There are new
@@ -146,17 +149,23 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.steps}>
-            <h1 className={styles.stepTitle}>02</h1>
-            <h2>Choose the frequency</h2>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.stepNumber}>02</h1>
+            <h2 className={styles.stepTitle}>
+              Choose the <br /> frequency
+            </h2>
             <p>
               Customize your order frequency, quantity, even your roast style
               and grind type. Pause, skip or cancel your subscription with no
               commitment through our online portal.
             </p>
           </div>
-          <div className={styles.steps}>
-            <h1 className={styles.stepTitle}>03</h1>
-            <h2>Receive and enjoy!</h2>
+          <div className={`${styles.steps} ${styles.stepsNoBorder}`}>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.stepNumber}>03</h1>
+            <h2 className={styles.stepTitle}>
+              Receive and <br /> enjoy!
+            </h2>
             <p>
               We ship your package within 48 hours, freshly roasted. Sit back
               and enjoy award-winning world-class coffees curated to provide a

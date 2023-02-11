@@ -136,7 +136,7 @@
   gap: 1em;
 }
 
-.stepTitle {
+.stepNumber {
   font-size: 4.5rem;
   color: var(--paleOrange);
 }
@@ -195,14 +195,14 @@
   }
 
   .whyUsBgContainer {
-    height: 68vh;
+    height: 70vh;
   }
 
   .whyUsFeaturesContainer {
     display: flex;
     flex-direction: row;
     height: auto;
-    bottom: -9em;
+    bottom: -19vh;
     margin: 1em 6em;
   }
 
@@ -216,13 +216,47 @@
   }
 
   .howItWorks {
+    align-items: center;
+    justify-items: start;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.1fr 1fr 1fr;
-    margin: 15.5em 3.5em;
+    grid-template-rows: 0.1fr 1fr 0.5fr;
+    grid-gap: 6em 0em;
+    margin: 18em 3.5em 8em 11em;
   }
 
   .howItWorksTitle {
     grid-column: 1/-1;
+  }
+
+  .steps {
+    position: relative;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1em;
+    padding: 0em 8em 0em 0em;
+    border-top: 1px solid var(--paleOrange);
+  }
+
+  .stepsNoBorder {
+    border-top: none;
+  }
+
+  .circleEl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--darkCyan);
+    border-radius: 50%;
+    background: var(--lightCream);
+    top: -1em;
+  }
+
+  .stepNumber {
+    margin-top: 1em;
+  }
+
+  .stepTitle {
+    font-size: 2rem;
   }
 }
 /* Big desktop (4k) */
@@ -241,7 +275,7 @@
   }
 
   .whyUsFeaturesContainer {
-    bottom: -6em;
+    bottom: -9em;
   }
 
   .whyUsBgContainer {
