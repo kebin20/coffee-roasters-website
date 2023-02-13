@@ -15,12 +15,12 @@
 }
 
 .createPlanHeroTitle {
-  font-size: 2.5rem;
+  font-size: var(--h2-font-size);
   line-height: 2.5rem;
 }
 
 .createPlanHeroText {
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
@@ -48,7 +48,7 @@
 }
 
 .planStepTitle {
-  font-size: 4.5rem;
+  font-size: var(--h1-font-size);
   color: var(--paleOrange);
 }
 

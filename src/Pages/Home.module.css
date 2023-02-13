@@ -18,7 +18,7 @@
 }
 
 .homeHeroTitle {
-  font-size: 2.5rem;
+  font-size: var(--h2-font-size);
   line-height: 2.5rem;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .collectionContainerTitle {
-  font-size: 2.5rem;
+  font-size: var(--h2-font-size);
   background: linear-gradient(
     360deg,
     rgba(254, 252, 247, 0.0001) 0%,
@@ -126,7 +126,7 @@
 
 .howItWorksTitle {
   color: var(--Grey);
-  font-size: 1.5rem;
+  font-size: var(--h4-font-size);
 }
 
 .steps {
@@ -137,7 +137,7 @@
 }
 
 .stepNumber {
-  font-size: 4.5rem;
+  font-size: var(--h1-font-size);
   color: var(--paleOrange);
 }
 
@@ -168,7 +168,7 @@
   }
 
   .homeHeroTitle {
-    font-size: 4.5rem;
+    font-size: var(--h1-font-size);
     line-height: 72px;
   }
 
@@ -212,7 +212,7 @@
   }
 
   .whyUsTitle {
-    font-size: 2.5rem;
+    font-size: var(--h2-font-size);
   }
 
   .howItWorks {

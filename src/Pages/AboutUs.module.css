@@ -15,7 +15,7 @@
 }
 
 .aboutUsHeroTitle {
-  font-size: 2.5rem;
+  font-size: var(--h2-font-size);
   line-height: 2.5rem;
 }
 

@@ -15,7 +15,7 @@ export default function Subscribe() {
     <>
       <NavBar />
       <section className={styles.createPlanHeroContainer}>
-        <h1 className={styles.createPlanHeroTitle}>Create a plan</h1>
+        <h2 className={styles.createPlanHeroTitle}>Create a plan</h2>
         <p className={styles.createPlanHeroText}>
           Build a subscription plan that best fits your needs. We offer an
           assortment of the best artisan coffees from around the globe delivered
