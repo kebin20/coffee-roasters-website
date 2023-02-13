@@ -8,8 +8,10 @@ export default function PlanDropdownItem(props) {
         className={styles.dropDownItem}
         onClick={() => console.log('Clicked!')}
       >
-        <span className={styles.buttonTitle}>THIS IS TITLE</span> <br />
-        <span className={styles.buttonText}>lorem ipsum lalalala</span>
+        <span className={styles.buttonTitle}>Capsule</span> <br />
+        <span className={styles.buttonText}>
+          Compatible with Nespresso systems and similar brewers
+        </span>
       </button>
     </>
   );

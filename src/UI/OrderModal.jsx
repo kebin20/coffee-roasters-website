@@ -7,8 +7,8 @@ export default function OrderModal(props) {
     <div className={styles.backdrop}>
       <div className={styles.orderModal}>
         <h1 className={styles.orderModalTitle}>Order Summary</h1>
-        <div className={styles.orderSummaryWrapper}>
-          <p className={styles.orderSummary}>
+        <div className={styles.orderModalSummaryWrapper}>
+          <p className={styles.orderModalSummary}>
             “I drink my coffee as {props.coffeeMethod}, with a{' '}
             {props.caffeineOption} type of bean. {props.size} ground ala{' '}
             {props.type}, sent to me {props.frequency}.”

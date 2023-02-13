@@ -1,17 +1,19 @@
 .dropDownItem {
   text-align: left;
-  background-color: var(--lightCream);
+  background-color: var(--big-select-option-default);
   border: none;
   border-radius: var(--border-px);
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .buttonTitle {
   font-family: var(--title-font);
+  font-size: var(--h4-font-size);
   color: var(--darkBlue);
 }
 
 .buttonText {
   font-family: var(--body-font);
-  color: var(--darkBlue);
+  color: var(--Grey);
+  font-weight: 400;
 }

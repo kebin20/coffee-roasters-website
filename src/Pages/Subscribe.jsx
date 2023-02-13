@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MainButton from '../UI/MainButton';
-import NavBar from '../UI/NavBar';
-import Footer from '../UI/Footer';
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
 import OrderModal from '../UI/OrderModal';
 import PlanMenu from '../UI/PlanMenu';
 import PlanDropdownItem from '../UI/PlanDropdownItem';
@@ -56,6 +56,16 @@ export default function Subscribe() {
       <section className={styles.customizePlanContainer}>
         {confirmPlan && <OrderModal />}
         <ul>
+          <PlanMenu>
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+          </PlanMenu>
+          <PlanMenu>
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+            <PlanDropdownItem />
+          </PlanMenu>
           <PlanMenu>
             <PlanDropdownItem />
             <PlanDropdownItem />
