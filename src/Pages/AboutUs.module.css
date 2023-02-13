@@ -110,8 +110,44 @@
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
   .aboutUsHeroContainer {
-    display: flex;
     background-image: url("../assets/about/desktop/image-hero-whitecup.jpg");
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+    justify-items: start;
+    text-align: left;
+    padding: 8.5em 5.3em;
+    margin: 3.5em;
+  }
+
+  .aboutUsHeroText {
+    grid-row: 2/3;
+  }
+
+  .aboutUsHeroTitle {
+    font-size: var(--xl-font-size);
+  }
+
+  .ourCommitmentContainer {
+    padding: 1em 8em;
+    margin: 0;
+    align-items: center;
+    text-align: left;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 0;
+  }
+
+  .ourCommitmentImage {
+    grid-row: 1/3;
+  }
+
+  .ourCommitmentContent {
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3.8em 7em;
   }
 }
 /* Big desktop (4k) */
