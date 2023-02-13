@@ -75,7 +75,7 @@ export default function Subscribe() {
         </ul>
       </section>
       <OrderSummary />
-
+      <MainButton>Create my plan!</MainButton>
       <Footer />
     </>
   );
