@@ -11,6 +11,10 @@ import uk from "../assets/about/desktop/illustration-uk.svg";
 import canada from "../assets/about/desktop/illustration-canada.svg";
 import australia from "../assets/about/desktop/illustration-australia.svg";
 
+/* Desktop Images */
+import lgCommitment from "../assets/about/desktop/image-commitment.jpg";
+import lgQuality from "../assets/about/desktop/image-quality.jpg";
+
 export default function AboutUs() {
   return (
     <>
@@ -28,11 +32,14 @@ export default function AboutUs() {
           </section>
 
           <section className={styles.ourCommitmentContainer}>
-            <img
-              className={styles.ourCommitmentImage}
-              src={commitment}
-              alt="picture of a guy pouring coffee"
-            />
+            <picture className={styles.ourCommitmentImage}>
+              <source srcSet={lgCommitment} media="(min-width: 1200px)" />
+              <img
+                className={styles.ourCommitmentImage}
+                src={commitment}
+                alt="picture of a guy pouring coffee"
+              />
+            </picture>
             <h1 className={styles.ourCommitmentTitle}>Our commitment</h1>
             <p>
               We’re built on a simple mission and a commitment to doing good
@@ -52,11 +59,14 @@ export default function AboutUs() {
 
           <section className={styles.qualityContainer}>
             <div className={styles.imageWrapper}>
-              <img
-                className={styles.qualityImage}
-                src={quality}
-                alt="image of coffee"
-              />
+              <picture className={styles.qualityImageLg}>
+                <source srcSet={lgQuality} media="(min-width: 1200px)" />
+                <img
+                  className={styles.qualityImage}
+                  src={quality}
+                  alt="image of coffee"
+                />
+              </picture>
             </div>
             <h1 className={styles.qualityTitle}>Uncomprimising quality</h1>
             <p>

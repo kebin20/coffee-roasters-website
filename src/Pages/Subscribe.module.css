@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   color: var(--lightCream);
-  background-image: url('../assets/plan/mobile/image-hero-blackcup.jpg');
+  background-image: url("../assets/plan/mobile/image-hero-blackcup.jpg");
   background-size: cover;
   padding: 8.25em 1.5em;
   margin: 1.5em;
@@ -15,12 +15,11 @@
 }
 
 .createPlanHeroTitle {
-  font-size: var(--h2-font-size);
+  font-size: var(--xl-font-size);
   line-height: 2.5rem;
 }
 
 .createPlanHeroText {
-  /* font-size: 0.9rem; */
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
@@ -48,7 +47,7 @@
 }
 
 .planStepTitle {
-  font-size: var(--h1-font-size);
+  font-size: var(--xxl-font-size);
   color: var(--paleOrange);
 }
 
