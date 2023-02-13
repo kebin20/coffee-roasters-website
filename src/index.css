@@ -20,11 +20,11 @@
   --accordion-menu-hover: var(--main-button-hover);
   --title-font: 'Fraunces', serif;
   --body-font: 'Barlow', sans-serif;
-  --title-alternate-big: '9.4rem';
-  --h1-font-size: '4.5rem';
-  --h2-font-size: '2.5rem';
-  --h3-font-size: '2rem';
-  --h4-font-size: '1.5rem';
+  --title-alternate-big: 9.4rem;
+  --h1-font-size: 4.5rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.5rem;
   --border-px: 10px;
 }
 
