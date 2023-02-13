@@ -5,6 +5,7 @@ import Footer from '../Layout/Footer';
 import OrderModal from '../UI/OrderModal';
 import PlanMenu from '../UI/PlanMenu';
 import PlanDropdownItem from '../UI/PlanDropdownItem';
+import OrderSummary from '../UI/OrderSummary';
 
 import styles from './Subscribe.module.css';
 
@@ -73,6 +74,9 @@ export default function Subscribe() {
           </PlanMenu>
         </ul>
       </section>
+      <OrderSummary />
+
+      <Footer />
     </>
   );
 }
