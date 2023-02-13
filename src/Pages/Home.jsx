@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
 import MainButton from "../UI/MainButton";
-import NavBar from "../UI/NavBar";
-import Footer from "../UI/Footer";
+import NavBar from "../Layout/NavBar";
+import Footer from "../Layout/Footer";
 
 /* Images */
 import granEspresso from "../assets/home/desktop/image-gran-espresso.png";

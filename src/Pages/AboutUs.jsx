@@ -1,14 +1,14 @@
-import React from 'react';
-import styles from './AboutUs.module.css';
-import NavBar from '../UI/NavBar';
-import Footer from '../UI/Footer';
+import React from "react";
+import styles from "./AboutUs.module.css";
+import NavBar from "../Layout/NavBar";
+import Footer from "../Layout/Footer";
 
 /* Images */
-import commitment from '../assets/about/mobile/image-commitment.jpg';
-import quality from '../assets/about/mobile/image-quality.jpg';
-import uk from '../assets/about/desktop/illustration-uk.svg';
-import canada from '../assets/about/desktop/illustration-canada.svg';
-import australia from '../assets/about/desktop/illustration-australia.svg';
+import commitment from "../assets/about/mobile/image-commitment.jpg";
+import quality from "../assets/about/mobile/image-quality.jpg";
+import uk from "../assets/about/desktop/illustration-uk.svg";
+import canada from "../assets/about/desktop/illustration-canada.svg";
+import australia from "../assets/about/desktop/illustration-australia.svg";
 
 export default function AboutUs() {
   return (
