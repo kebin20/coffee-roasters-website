@@ -56,7 +56,7 @@ export default function Subscribe() {
 
       <section className={styles.customizePlanContainer}>
         {confirmPlan && <OrderModal />}
-        <ul>
+        <ul className={styles.planWrapper}>
           <PlanMenu>
             <PlanDropdownItem />
             <PlanDropdownItem />
@@ -73,9 +73,9 @@ export default function Subscribe() {
             <PlanDropdownItem />
           </PlanMenu>
         </ul>
+        <OrderSummary />
+        <MainButton>Create my plan!</MainButton>
       </section>
-      <OrderSummary />
-      <MainButton>Create my plan!</MainButton>
       <Footer />
     </>
   );
