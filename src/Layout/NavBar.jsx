@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import coffeeRoastersLogo from "../assets/shared/desktop/logo.svg";
 
@@ -12,29 +13,29 @@ export default function NavBar(props) {
   return (
     <nav className={styles.navBar}>
       <div className={styles.navFlexContainer}>
-        <div>
+        <Link to="/">
           <img
             className={styles.mobileLogo}
             src={coffeeRoastersLogo}
             alt="coffee roasters logo"
           />
-        </div>
+        </Link>
 
         <ul className={styles.menuItems}>
           <li>
-            <a href="#" className={styles.menuLink}>
+            <Link to="/" className={styles.menuLink}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className={styles.menuLink}>
+            <Link to="/aboutus" className={styles.menuLink}>
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className={styles.menuLink}>
+            <Link to="/subscribe" className={styles.menuLink}>
               Create Your Plan
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -60,19 +61,19 @@ export default function NavBar(props) {
       {toggle && (
         <ul className={styles.mobileMenuItems}>
           <li>
-            <a className={styles.mobileLink} href="">
+            <Link to="/" className={styles.menuLink}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className={styles.mobileLink} href="">
+            <Link to="/aboutus" className={styles.menuLink}>
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className={styles.mobileLink} href="">
-              Create your plan
-            </a>
+            <Link to="/subscribe" className={styles.menuLink}>
+              Create Your Plan
+            </Link>
           </li>
         </ul>
       )}

@@ -1,10 +1,11 @@
-import React from 'react';
-import styles from './Footer.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
 /* Images */
-import coffeeRoastersLogoWhite from '../assets/shared/desktop/logo-white-text.svg';
-import facebookIcon from '../assets/shared/desktop/icon-facebook.svg';
-import twitterIcon from '../assets/shared/desktop/icon-twitter.svg';
-import instagramIcon from '../assets/shared/desktop/icon-instagram.svg';
+import coffeeRoastersLogoWhite from "../assets/shared/desktop/logo-white-text.svg";
+import facebookIcon from "../assets/shared/desktop/icon-facebook.svg";
+import twitterIcon from "../assets/shared/desktop/icon-twitter.svg";
+import instagramIcon from "../assets/shared/desktop/icon-instagram.svg";
 
 export default function Footer() {
   return (
@@ -16,19 +17,19 @@ export default function Footer() {
       />
       <ul className={styles.linksContainer}>
         <li>
-          <a className={styles.footerLinks} href="#">
+          <Link to="/" className={styles.footerLinks}>
             home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.footerLinks} href="#">
+          <Link to="/aboutus" className={styles.footerLinks}>
             about us
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.footerLinks} href="#">
+          <Link to="/subscribe" className={styles.footerLinks}>
             create your plan
-          </a>
+          </Link>
         </li>
       </ul>
       <div className={styles.socialLinksContainer}>
