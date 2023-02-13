@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import styles from './PlanMenu.module.css';
-import ArrowIcon from './ArrowIcon';
+import ArrowIcon from '../Layout/ArrowIcon';
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);

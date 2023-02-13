@@ -6,16 +6,15 @@
   align-items: center;
   text-align: center;
   color: var(--lightCream);
-  background-image: url('../assets/about/mobile/image-hero-whitecup.jpg');
+  background-image: url("../assets/about/mobile/image-hero-whitecup.jpg");
   background-size: cover;
   padding: 6.25em 1.5em;
-  margin: 1.5em;
   border-radius: 10px;
   gap: 2em;
 }
 
 .aboutUsHeroTitle {
-  font-size: var(--h2-font-size);
+  font-size: var(--semi-lg-font-size);
   line-height: 2.5rem;
 }
 
@@ -30,13 +29,17 @@
 
 .ourCommitmentContainer {
   display: grid;
-  margin: 6.5em 1.5em;
+  margin-top: 6.5em;
   gap: 2em;
   text-align: center;
 }
 
+.ourCommitmentTitle {
+  font-size: var(--lg-font-size);
+}
+
 .ourCommitmentImage {
-  border-radius: 10px;
+  border-radius: var(--border-px);
 }
 
 /* Quality container */
@@ -46,10 +49,14 @@
   text-align: center;
   gap: 2em;
   padding: 7.25em 1.5em 3.25em 1.5em;
-  margin: 9.5em 1.5em;
+  margin-top: 9.5em;
   background-color: var(--darkBlue);
   color: var(--lightCream);
-  border-radius: 10px;
+  border-radius: var(--border-px);
+}
+
+.qualityTitle {
+  font-size: var(--semi-lg-font-size);
 }
 
 .imageWrapper {
@@ -68,7 +75,8 @@
 .hqContainer {
   display: grid;
   gap: 2em;
-  margin: 7em 1.5em;
+  margin-top: 7.5em;
+  margin-bottom: 6em;
   text-align: center;
   justify-items: center;
 }
@@ -76,13 +84,16 @@
 .countryWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2em;
   padding: 1em;
-  align-items: center;
+}
+
+.countryTitle {
+  font-size: var(--semi-lg-font-size);
 }
 
 .mapImages {
-  margin: auto;
   padding: 0.5em;
 }
 
