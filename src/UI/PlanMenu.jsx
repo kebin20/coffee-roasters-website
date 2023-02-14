@@ -4,6 +4,7 @@ import styles from './PlanMenu.module.css';
 import ArrowIcon from '../Layout/ArrowIcon';
 import PlanDropdownItem from './PlanDropdownItem';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
@@ -24,12 +25,12 @@ export default function PlanMenu(props) {
   );
 }
 
-// PlanMenu.propTypes = {
-//   plan: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       key: PropTypes.string.isRequired,
-//       title: PropTypes.string.isRequired,
-//       description: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
+PlanMenu.propTypes = {
+  plan: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
