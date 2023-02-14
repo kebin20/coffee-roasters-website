@@ -51,6 +51,10 @@
   display: none;
 }
 
+.menuLink {
+  color: var(--darkBlue)
+}
+
 .hamburgerMenu {
   display: block;
   cursor: pointer;
