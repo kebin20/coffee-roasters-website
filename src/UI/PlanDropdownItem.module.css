@@ -6,14 +6,29 @@
   padding: 1.5em;
 }
 
+.dropDownItem:hover {
+  background-color: var(--paleOrange);
+}
+
+.dropDownItem:active,
+.dropDownItem:focus {
+  background-color: var(--darkCyan);
+  color: var(--lightCream);
+}
+
+.dropDownItem:active > span,
+.dropDownItem:focus > span {
+  color: var(--lightCream);
+}
+
 .buttonTitle {
   font-family: var(--title-font);
-  font-size: var(--h4-font-size);
+  font-size: var(--md-font-size);
   color: var(--darkBlue);
 }
 
 .buttonText {
   font-family: var(--body-font);
-  color: var(--Grey);
+  color: var(--darkBlue);
   font-weight: 400;
 }
