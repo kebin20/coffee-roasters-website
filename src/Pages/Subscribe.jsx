@@ -6,7 +6,6 @@ import Footer from '../Layout/Footer';
 import MainButton from '../UI/MainButton';
 import OrderModal from '../UI/OrderModal';
 import PlanMenu from '../UI/PlanMenu';
-import PlanDropdownItem from '../UI/PlanDropdownItem';
 import OrderSummary from '../UI/OrderSummary';
 
 import plan from '../planData.jsx';
@@ -16,9 +15,9 @@ import styles from './Subscribe.module.css';
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
 
-  const [planData, setPlanData] = useState(plan);
-
-  console.log(planData[0]);
+  const menuComponent = plan.map((item) => {
+    return <PlanMenu key={uuidv4} plan={item} />;
+  });
 
   return (
     <>
@@ -64,23 +63,7 @@ export default function Subscribe() {
 
       <section className={styles.customizePlanContainer}>
         {confirmPlan && <OrderModal />}
-        <ul className={styles.planWrapper}>
-          <PlanMenu>
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-          </PlanMenu>
-          <PlanMenu>
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-          </PlanMenu>
-          <PlanMenu>
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-            <PlanDropdownItem />
-          </PlanMenu>
-        </ul>
+        <ul className={styles.planWrapper}>{menuComponent}</ul>
         <OrderSummary />
         <MainButton>Create my plan!</MainButton>
       </section>

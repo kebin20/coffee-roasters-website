@@ -1,6 +1,5 @@
 const plan = [
   {
-    id: 1,
     menu: 'How do you drink your coffee?',
     titles: ['Capsule', 'Filter', 'Espresso'],
     descriptions: [
@@ -10,7 +9,6 @@ const plan = [
     ],
   },
   {
-    id: 2,
     menu: 'What type of coffee?',
     titles: ['Single Origin', 'Decaf', 'Blended'],
     descriptions: [
@@ -20,7 +18,6 @@ const plan = [
     ],
   },
   {
-    id: 3,
     menu: 'How much would you like?',
     titles: ['250g', '500g', '1000g'],
     descriptions: [
@@ -30,7 +27,6 @@ const plan = [
     ],
   },
   {
-    id: 4,
     menu: 'Want us to grind them?',
     titles: ['Wholebean', 'Filter', 'Cafetiére'],
     descriptions: [
@@ -40,7 +36,6 @@ const plan = [
     ],
   },
   {
-    id: 5,
     menu: 'How often should we deliver?',
     titles: ['Every week', 'Every 2 weeks', 'Every month'],
     descriptions: [
