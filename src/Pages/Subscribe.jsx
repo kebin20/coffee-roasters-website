@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-import MainButton from '../UI/MainButton';
+import { v4 as uuidv4 } from 'uuid';
+
 import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
+import MainButton from '../UI/MainButton';
 import OrderModal from '../UI/OrderModal';
 import PlanMenu from '../UI/PlanMenu';
 import PlanDropdownItem from '../UI/PlanDropdownItem';
 import OrderSummary from '../UI/OrderSummary';
 
+import plan from '../planData.jsx';
+
 import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
+
+  const [planData, setPlanData] = useState(plan);
+
+  console.log(planData[0]);
 
   return (
     <>

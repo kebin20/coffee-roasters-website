@@ -10,7 +10,7 @@ export default function PlanMenu(props) {
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>
-          How do you drink your coffee?
+          {props.menu}
         </span>
         <ArrowIcon />
       </button>
