@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { nanoid } from 'nanoid';
 
 import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
@@ -16,7 +16,7 @@ export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
 
   const menuComponent = plan.map((item) => {
-    return <PlanMenu key={uuidv4} plan={item} />;
+    return <PlanMenu plan={item} />;
   });
 
   return (

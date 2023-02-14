@@ -86,16 +86,13 @@ const plan = [
       },
       {
         title: 'Every 2 weeks',
-        description:
-        '$9.60 per shipment. Includes free priority shipping.',
+        description: '$9.60 per shipment. Includes free priority shipping.',
       },
       {
         title: 'Every month',
-        description:
-        '$12.00 per shipment. Includes free priority shipping.',
+        description: '$12.00 per shipment. Includes free priority shipping.',
       },
     ],
-
   },
 ];
 

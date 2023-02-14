@@ -7,15 +7,11 @@ import PlanDropdownItem from './PlanDropdownItem';
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
 
-  const dropdownItems = props.plan.map((item) => {
-    return (
-      <PlanDropdownItem
-        key={item.key}
-        titles={item.titles}
-        descriptions={item.description}
-      />
-    );
+  const dropdownItems = props.plan.content.map((item) => {
+    return <PlanDropdownItem content={item} />;
   });
+
+  // console.log(props.plan.content)
 
   return (
     <li className={styles.selectionItem}>
@@ -28,12 +24,12 @@ export default function PlanMenu(props) {
   );
 }
 
-PlanMenu.propTypes = {
-  plan: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
+// PlanMenu.propTypes = {
+//   plan: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       key: PropTypes.string.isRequired,
+//       title: PropTypes.string.isRequired,
+//       description: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+// };
