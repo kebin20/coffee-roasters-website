@@ -16,7 +16,8 @@ export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
 
   const menuComponent = plan.map((item) => {
-    return <PlanMenu plan={item} />;
+    const id = nanoid();
+    return <PlanMenu key={id} plan={item} />;
   });
 
   return (

@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import styles from './PlanMenu.module.css';
 import ArrowIcon from '../Layout/ArrowIcon';
 import PlanDropdownItem from './PlanDropdownItem';
+import { nanoid } from 'nanoid';
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
 
   const dropdownItems = props.plan.content.map((item) => {
-    return <PlanDropdownItem content={item} />;
+    const id = nanoid();
+    return <PlanDropdownItem key={id} content={item} />;
   });
-
-  // console.log(props.plan.content)
 
   return (
     <li className={styles.selectionItem}>
