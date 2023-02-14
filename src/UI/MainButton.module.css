@@ -9,6 +9,7 @@
   border: none;
   font-size: 1.125rem;
   line-height: 25px;
+  cursor: pointer;
 }
 
 .mainButton:hover {

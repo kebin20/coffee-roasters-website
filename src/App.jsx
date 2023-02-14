@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from "./Pages/Home";
-import AboutUs from "./Pages/AboutUs";
-import Subscribe from "./Pages/Subscribe";
+import Home from './Pages/Home';
+import AboutUs from './Pages/AboutUs';
+import Subscribe from './Pages/Subscribe';
 
 export default function App() {
   return (

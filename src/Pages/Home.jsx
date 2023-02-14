@@ -1,17 +1,18 @@
-import React from "react";
-import styles from "./Home.module.css";
-import MainButton from "../UI/MainButton";
-import NavBar from "../Layout/NavBar";
-import Footer from "../Layout/Footer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
+import MainButton from '../UI/MainButton';
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
 
 /* Images */
-import granEspresso from "../assets/home/desktop/image-gran-espresso.png";
-import planalto from "../assets/home/desktop/image-planalto.png";
-import piccollo from "../assets/home/desktop/image-piccollo.png";
-import danche from "../assets/home/desktop/image-danche.png";
-import coffeeBean from "../assets/home/desktop/icon-coffee-bean.svg";
-import gift from "../assets/home/desktop/icon-gift.svg";
-import truck from "../assets/home/desktop/icon-truck.svg";
+import granEspresso from '../assets/home/desktop/image-gran-espresso.png';
+import planalto from '../assets/home/desktop/image-planalto.png';
+import piccollo from '../assets/home/desktop/image-piccollo.png';
+import danche from '../assets/home/desktop/image-danche.png';
+import coffeeBean from '../assets/home/desktop/icon-coffee-bean.svg';
+import gift from '../assets/home/desktop/icon-gift.svg';
+import truck from '../assets/home/desktop/icon-truck.svg';
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
               expertly curated artisan coffees from our best roasters delivered
               directly to your door, at your schedule.
             </p>
-            <MainButton>Create your plan</MainButton>
+            <Link to="/subscribe">
+              <MainButton>Create your plan</MainButton>
+            </Link>
           </div>
         </section>
 
@@ -172,7 +175,9 @@ export default function Home() {
               distinct tasting experience.
             </p>
           </div>
-          <MainButton>Create your plan</MainButton>
+          <Link to="/subscribe">
+            <MainButton>Create your plan</MainButton>
+          </Link>
         </section>
 
         <Footer />
