@@ -12,7 +12,7 @@ export default function PlanMenu(props) {
       <PlanDropdownItem
         key={item.key}
         titles={item.titles}
-        decriptions={item.description}
+        descriptions={item.description}
       />
     );
   });
@@ -27,3 +27,13 @@ export default function PlanMenu(props) {
     </li>
   );
 }
+
+PlanMenu.propTypes = {
+  plan: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
