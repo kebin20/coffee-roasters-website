@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import styles from './PlanMenu.module.css';
 import ArrowIcon from '../Layout/ArrowIcon';
@@ -26,11 +25,8 @@ export default function PlanMenu(props) {
 }
 
 PlanMenu.propTypes = {
-  plan: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  plan: PropTypes.shape({
+    menu: PropTypes.string.isRequired,
+    content: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
 };

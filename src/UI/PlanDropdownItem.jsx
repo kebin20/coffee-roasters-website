@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './PlanDropdownItem.module.css';
+import PropTypes from 'prop-types';
 
 export default function PlanDropdownItem(props) {
-
   return (
     <>
       <button
@@ -15,3 +15,10 @@ export default function PlanDropdownItem(props) {
     </>
   );
 }
+
+PlanDropdownItem.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
