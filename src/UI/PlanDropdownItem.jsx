@@ -3,17 +3,16 @@ import styles from './PlanDropdownItem.module.css';
 import PropTypes from 'prop-types';
 
 export default function PlanDropdownItem(props) {
-  function savePlanTitle(e) {
-    e.preventDefault();
-    console.log(e.target.value);
-  }
-
   return (
     <>
       <button
         className={styles.dropDownItem}
-        onClick={savePlanTitle}
+        type={props.type || 'button'}
+        style={props.style}
+        onClick={props.savePlanTitle}
         value={props.content.title}
+        name={props.name}
+        disabled={props.disabled}
       >
         <span className={styles.buttonTitle}>{props.content.title}</span> <br />
         <span className={styles.buttonText}>{props.content.description}</span>

@@ -8,10 +8,26 @@ import PropTypes from 'prop-types';
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
 
+  function savePlanTitle(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+  }
+
   const dropdownItems = props.plan.content.map((item) => {
     const id = nanoid();
-    return <PlanDropdownItem key={id} content={item} />;
+    return (
+      <PlanDropdownItem
+        key={id}
+        onHoldChoice={props.onHoldChoice}
+        content={item}
+      />
+    );
   });
+
+  // {props.choices.map((choice) => {
+  //   const styles = {
+  //     backgroundColor: choice.isSelected ? "#D6DBF5" : "white",
+  //   }; 
 
   return (
     <li className={styles.selectionItem}>
