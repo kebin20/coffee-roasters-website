@@ -176,7 +176,31 @@
   .qualityTitle {
     font-size: var(--xl-font-size);
   }
+
+  .hqContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0fr 1fr;
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+    padding: 4em 5em 4em 5em;
+    row-gap: 4em;
+    column-gap: 0;
+  }
+
+  .hqTitle {
+    grid-column: 1/-1;
+  }
+
+  .countryWrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
 }
 /* Big desktop (4k) */
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 1800px) {
+  .qualityImage {
+    bottom: -25em;
+    right: 12em;
+  }
 }

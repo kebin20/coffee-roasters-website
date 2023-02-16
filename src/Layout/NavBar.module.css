@@ -120,7 +120,7 @@
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
   .navBar {
-    padding: 2em 5em 2em 5em;
+    padding: 2.7em 5em;
   }
 
   .mobileLogo {
@@ -152,5 +152,5 @@
   }
 }
 /* Big desktop (4k) */
-@media only screen and (min-width: 2500px) {
+@media only screen and (min-width: 1800px) {
 }
