@@ -4,6 +4,7 @@
   border: none;
   border-radius: var(--border-px);
   padding: 1.5em;
+  cursor: pointer;
 }
 
 .dropDownItem:hover {
