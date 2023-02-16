@@ -14,11 +14,34 @@ import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
+  const [planOption, setPlanOption] = useState(plan);
 
-  const menuComponent = plan.map((item) => {
+  const menuComponent = planOption.map((item) => {
     const id = nanoid();
-    return <PlanMenu key={id} plan={item} />;
+    return (
+      <PlanMenu
+        key={id}
+        plan={item}
+        onHoldChoice={(id) => holdChoice(item.id, id)}
+      />
+    );
   });
+
+  function holdChoice(planId, optionId) {
+    setPlanOption((prevPlanOption) =>
+      prevPlanOption.map((plan) => {
+        if (plan.id !== planId) return plan;
+        return {
+          ...plan,
+          content: plan.content.map((option) => {
+            option.id === optionId
+              ? { ...option, isSelected: !choice.isSelected }
+              : { ...option, isSelected: false };
+          }),
+        };
+      })
+    );
+  }
 
   return (
     <>
