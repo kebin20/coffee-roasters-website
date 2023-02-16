@@ -19,7 +19,6 @@
 }
 
 .aboutUsHeroText {
-  font-size: 0.9rem;
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
@@ -59,7 +58,7 @@
   font-size: var(--semi-lg-font-size);
 }
 
-.imageWrapper {
+.qualityImageWrapper {
   position: relative;
 }
 
@@ -118,7 +117,6 @@
     justify-items: start;
     text-align: left;
     padding: 8.5em 5.3em;
-    margin: 3.5em;
   }
 
   .aboutUsHeroText {
@@ -130,11 +128,12 @@
   }
 
   .ourCommitmentContainer {
-    padding: 1em 8em;
+    padding: 10em 0em;
     margin: 0;
     align-items: center;
     text-align: left;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     gap: 0;
   }
 
@@ -147,7 +146,35 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 3.8em 7em;
+    padding-right: 8em;
+  }
+
+  .qualityContainer {
+    grid: auto/ 1fr 1fr;
+    padding: 0em 0em 7.2em 0em;
+    gap: 0;
+    margin-top: 5em;
+  }
+
+  .qualityContentWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1em;
+    padding: 5em;
+  }
+
+  .qualityImageWrapper {
+    grid-column: 2/3;
+  }
+
+  .qualityImage {
+    bottom: -25em;
+    right: 6em;
+  }
+
+  .qualityTitle {
+    font-size: var(--xl-font-size);
   }
 }
 /* Big desktop (4k) */
