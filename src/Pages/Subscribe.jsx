@@ -27,21 +27,21 @@ export default function Subscribe() {
     );
   });
 
-  function holdChoice(planId, optionId) {
-    setPlanOption((prevPlanOption) =>
-      prevPlanOption.map((plan) => {
-        if (plan.id !== planId) return plan;
-        return {
-          ...plan,
-          content: plan.content.map((option) => {
-            option.id === optionId
-              ? { ...option, isSelected: !choice.isSelected }
-              : { ...option, isSelected: false };
-          }),
-        };
-      })
-    );
-  }
+  // function holdChoice(planId, optionId) {
+  //   setPlanOption((prevPlanOption) =>
+  //     prevPlanOption.map((plan) => {
+  //       if (plan.id !== planId) return plan;
+  //       return {
+  //         ...plan,
+  //         content: plan.content.map((option) => {
+  //           option.id === optionId
+  //             ? { ...option, isSelected: !choice.isSelected }
+  //             : { ...option, isSelected: false };
+  //         }),
+  //       };
+  //     })
+  //   );
+  // }
 
   return (
     <>
