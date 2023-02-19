@@ -89,10 +89,46 @@ export default function Subscribe() {
       </section>
 
       <section className={styles.customizePlanContainer}>
+        <aside className={styles.sidebar}>
+          <ul className={styles.listOptions}>
+            <li>
+              <a href="" className={styles.listItem}>
+                <span className={styles.stepNumber}>01</span>
+                <p className={styles.stepTitle}>Preferences</p>
+              </a>
+            </li>
+            <li>
+              <a href="" className={styles.listItem}>
+                <span className={styles.stepNumber}>02</span>
+                <p className={styles.stepTitle}>Bean Type</p>
+              </a>
+            </li>
+            <li>
+              <a href="" className={styles.listItem}>
+                <span className={styles.stepNumber}>03</span>
+                <p className={styles.stepTitle}>Quantity</p>
+              </a>
+            </li>
+            <li>
+              <a href="" className={styles.listItem}>
+                <span className={styles.stepNumber}>04</span>
+                <p className={styles.stepTitle}>Grind Option</p>
+              </a>
+            </li>
+            <li>
+              <a href="" className={styles.listItem}>
+                <span className={styles.stepNumber}>05</span>
+                <p className={styles.stepTitle}>Deliveries</p>
+              </a>
+            </li>
+          </ul>
+        </aside>
         {confirmPlan && <OrderModal />}
-        <ul className={styles.planWrapper}>{menuComponent}</ul>
-        <OrderSummary />
-        <MainButton>Create my plan!</MainButton>
+        <div className={styles.planContainer}>
+          <ul className={styles.planWrapper}>{menuComponent}</ul>
+          <OrderSummary />
+          <MainButton>Create my plan!</MainButton>
+        </div>
       </section>
       <Footer />
     </>

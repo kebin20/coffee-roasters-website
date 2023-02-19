@@ -66,6 +66,10 @@
   gap: 4.5em;
 }
 
+.sidebar {
+  display: none;
+}
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
@@ -74,6 +78,8 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  /*HERO SECTION*/
+
   .createPlanHeroContainer {
     background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
     margin: 0em 5em;
@@ -91,6 +97,8 @@
   .createPlanHeroTitle {
     font-size: var(--xxl-font-size);
   }
+
+  /* PLAN STEP SECTION*/
 
   .planStepsContainer {
     grid-template-columns: repeat(3, 1fr);
@@ -128,6 +136,56 @@
   .planStepTitle {
     margin-top: 0.7em;
   }
+
+  /*CUSTOMIZE PLAN SECTION*/
+
+  .customizePlanContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: start;
+    gap: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    font-family: "Fraunces";
+    color: var(--Grey);
+  }
+
+  .listItem {
+    display: flex;
+    color: var(--Grey);
+    gap: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .listOptions > li:not(:last-child) {
+    border-bottom: 1px solid #83888f4f;
+  }
+
+  .listItem:hover,
+  .listItem:active,
+  .listItem:focus {
+    opacity: 1;
+  }
+
+  .stepTitle {
+    color: var(--darkGreyBlue);
+  }
+
+  .stepNumber:hover {
+    color: var(--darkCyan);
+  }
+
+  .planContainer{
+    display: flex;
+  }
+
+
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
