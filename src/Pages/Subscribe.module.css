@@ -108,6 +108,10 @@
     gap: 0;
   }
 
+  .planWrapper {
+    align-self: flex-start;
+  }
+
   .planStepWrapper {
     position: relative;
     justify-content: space-between;
@@ -146,6 +150,13 @@
     gap: 0;
   }
 
+  .planContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2em;
+  }
+
   .sidebar {
     display: flex;
     justify-content: center;
@@ -180,12 +191,6 @@
   .stepNumber:hover {
     color: var(--darkCyan);
   }
-
-  .planContainer{
-    display: flex;
-  }
-
-
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
