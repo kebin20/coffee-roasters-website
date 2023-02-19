@@ -1,4 +1,5 @@
 .orderSummary {
+  width: 100%;
   background-color: var(--darkBlue);
   color: var(--Grey);
   display: flex;
