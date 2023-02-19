@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { nanoid } from 'nanoid';
+import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
-import NavBar from '../Layout/NavBar';
-import Footer from '../Layout/Footer';
-import MainButton from '../UI/MainButton';
-import OrderModal from '../UI/OrderModal';
-import PlanMenu from '../UI/PlanMenu';
-import OrderSummary from '../UI/OrderSummary';
+import NavBar from "../Layout/NavBar";
+import Footer from "../Layout/Footer";
+import MainButton from "../UI/MainButton";
+import OrderModal from "../UI/OrderModal";
+import PlanMenu from "../UI/PlanMenu";
+import OrderSummary from "../UI/OrderSummary";
 
-import plan from '../planData.jsx';
+import plan from "../planData.jsx";
 
-import styles from './Subscribe.module.css';
+import styles from "./Subscribe.module.css";
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
@@ -57,6 +57,7 @@ export default function Subscribe() {
 
       <section className={styles.planStepsContainer}>
         <div className={styles.planStepWrapper}>
+          <span className={styles.circleEl}></span>
           <h1 className={styles.planStepTitle}>01</h1>
           <h2>Pick your coffee</h2>
           <p>
@@ -66,6 +67,7 @@ export default function Subscribe() {
           </p>
         </div>
         <div className={styles.planStepWrapper}>
+          <span className={styles.circleEl}></span>
           <h1 className={styles.planStepTitle}>02</h1>
           <h2>Choose the frequency</h2>
           <p>
@@ -74,7 +76,8 @@ export default function Subscribe() {
             commitment through our online portal.
           </p>
         </div>
-        <div className={styles.planStepWrapper}>
+        <div className={`${styles.planStepWrapper} ${styles.noTopBorder}`}>
+          <span className={styles.circleEl}></span>
           <h1 className={styles.planStepTitle}>03</h1>
           <h2>Receive and enjoy!</h2>
           <p>

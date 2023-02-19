@@ -96,17 +96,37 @@
     grid-template-columns: repeat(3, 1fr);
     margin: 8em 5em;
     text-align: left;
-    padding: 6em 8em 6em 4em;
+    padding: 6.25em 8em 6.25em 6.25em;
     gap: 0;
   }
 
   .planStepWrapper {
+    position: relative;
     justify-content: space-between;
     border-top: 1px solid var(--paleOrange);
+    padding-right: 7em;
+  }
+
+  .circleEl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--darkCyan);
+    border-radius: 50%;
+    top: -1em;
+    left: -0.9em;
+  }
+
+  .noTopBorder {
+    border-top: none;
   }
 
   .planStepWrapper > h2 {
     font-size: var(--lg-font-size);
+  }
+
+  .planStepTitle {
+    margin-top: 0.7em;
   }
 }
 /* Big desktop (4k) */

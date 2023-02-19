@@ -163,7 +163,7 @@ export default function Home() {
               commitment through our online portal.
             </p>
           </div>
-          <div className={`${styles.steps} ${styles.stepsNoBorder}`}>
+          <div className={`${styles.steps} ${styles.noTopBorder}`}>
             <span className={styles.circleEl}></span>
             <h1 className={styles.stepNumber}>03</h1>
             <h2 className={styles.stepTitle}>
