@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import styles from './PlanMenu.module.css';
-import ArrowIcon from '../Layout/ArrowIcon';
-import PlanDropdownItem from './PlanDropdownItem';
-import { nanoid } from 'nanoid';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import styles from "./PlanMenu.module.css";
+import ArrowIcon from "../Layout/ArrowIcon";
+import PlanDropdownItem from "./PlanDropdownItem";
+import { nanoid } from "nanoid";
+import PropTypes from "prop-types";
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
@@ -27,7 +27,7 @@ export default function PlanMenu(props) {
   // {props.choices.map((choice) => {
   //   const styles = {
   //     backgroundColor: choice.isSelected ? "#D6DBF5" : "white",
-  //   }; 
+  //   };
 
   return (
     <li className={styles.selectionItem}>
@@ -35,7 +35,7 @@ export default function PlanMenu(props) {
         <span className={styles.selectionButtonText}>{props.plan.menu}</span>
         <ArrowIcon />
       </button>
-      {open && dropdownItems}
+      <div className={styles.dropdownItems}>{open && dropdownItems}</div>
     </li>
   );
 }

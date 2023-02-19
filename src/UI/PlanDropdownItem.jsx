@@ -26,4 +26,9 @@ PlanDropdownItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
+  type: PropTypes.string,
+  style: PropTypes.object,
+  savePlanTitle: PropTypes.func,
+  name: PropTypes.string,
+  disabled: PropTypes.bool,
 };

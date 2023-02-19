@@ -24,3 +24,5 @@ export default function OrderModal(props) {
     </div>
   );
 }
+
+PropTypes.

@@ -1,3 +1,9 @@
+.dropdownItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .selectionItem {
   display: flex;
   flex-direction: column;
@@ -20,4 +26,25 @@
 }
 .selectionButtonText {
   color: var(--Grey);
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+  .dropdownItems {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .selectionButton {
+    padding: 0.5em 0em;
+  }
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
 }

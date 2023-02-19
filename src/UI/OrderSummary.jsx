@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import styles from "./OrderSummary.module.css"
 
 export default function OrderSummary (props) {
@@ -13,3 +14,11 @@ export default function OrderSummary (props) {
       </div>
   )
 }
+
+OrderSummary.propTypes = {
+  coffeeMethod: PropTypes.string.isRequired,
+  caffeineOption: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  frequency: PropTypes.string.isRequired
+};
