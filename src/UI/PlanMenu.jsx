@@ -8,10 +8,10 @@ import PropTypes from "prop-types";
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
 
-  function savePlanTitle(e) {
-    e.preventDefault();
-    console.log(e.target.value);
-  }
+  // function savePlanTitle(e) {
+  //   e.preventDefault();
+  //   console.log(e.target.value);
+  // }
 
   const dropdownItems = props.plan.content.map((item) => {
     const id = nanoid();
@@ -45,4 +45,5 @@ PlanMenu.propTypes = {
     menu: PropTypes.string.isRequired,
     content: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
+  onHoldChoice: PropTypes.func.isRequired,
 };
