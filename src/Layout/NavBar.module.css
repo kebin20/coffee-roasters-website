@@ -109,22 +109,9 @@
 }
 
 /* Tablet portrait and larger */
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .navBar {
-    background-color: red;
-  }
-} */
-/* Tablet landscape and larger */
-@media only screen and (min-width: 900px) {
-}
-/* Desktop and larger */
-@media only screen and (min-width: 1200px) {
-  .navBar {
-    padding: 2.7em 5em;
-  }
-
-  .mobileLogo {
-    max-width: 100%;
+    padding: 2em;
   }
 
   .mobileMenuItems {
@@ -150,6 +137,44 @@
   .hamburgerMenu {
     display: none;
   }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+  .navBar {
+    padding: 2.7em 5em;
+  }
+
+  .mobileLogo {
+    max-width: 100%;
+  }
+
+  /* .mobileMenuItems {
+    display: none;
+  } */
+
+  /* .menuItems {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5em;
+  }
+
+  .menuLink {
+    margin-left: 1.5em;
+    text-transform: uppercase;
+    color: var(--Grey);
+  } */
+
+  /* .menuLink:hover {
+    color: var(--darkGreyBlue);
+  } */
+
+  /* .hamburgerMenu {
+    display: none;
+  } */
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
