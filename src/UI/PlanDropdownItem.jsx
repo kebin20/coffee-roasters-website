@@ -31,4 +31,5 @@ PlanDropdownItem.propTypes = {
   savePlanTitle: PropTypes.func,
   name: PropTypes.string,
   disabled: PropTypes.bool,
+  onClick: PropTypes.func
 };

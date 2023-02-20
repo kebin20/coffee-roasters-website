@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import styles from './PlanMenu.module.css';
-import ArrowIcon from '../Layout/ArrowIcon';
-import PlanDropdownItem from './PlanDropdownItem';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import styles from "./PlanMenu.module.css";
+import ArrowIcon from "../Layout/ArrowIcon";
+import PlanDropdownItem from "./PlanDropdownItem";
+import PropTypes from "prop-types";
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
@@ -15,11 +15,10 @@ export default function PlanMenu(props) {
   // }
 
   const dropdownItems = content.map((item) => {
-
     const styles = {
       backgroundColor: item.isSelected
-        ? 'var(--darkCyan)'
-        : 'var(--big-select-option-default)',
+        ? "var(--darkCyan)"
+        : "var(--big-select-option-default)",
     };
 
     return (
@@ -50,4 +49,5 @@ PlanMenu.propTypes = {
     content: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
   onHoldChoice: PropTypes.func.isRequired,
+  savePlanTitle: PropTypes.func.isRequired,
 };
