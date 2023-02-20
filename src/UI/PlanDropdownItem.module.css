@@ -1,36 +1,27 @@
 .dropDownItem {
   text-align: left;
   background-color: var(--big-select-option-default);
+  color: var(--darkBlue);
   border: none;
   border-radius: var(--border-px);
   padding: 1.5em;
   cursor: pointer;
 }
 
-.dropDownItem:hover {
-  background-color: var(--paleOrange);
-}
-
 .dropDownItem:active,
 .dropDownItem:focus {
   background-color: var(--darkCyan);
-  color: var(--lightCream);
-}
-
-.dropDownItem:active > span,
-.dropDownItem:focus > span {
-  color: var(--lightCream);
 }
 
 .buttonTitle {
   font-family: var(--title-font);
   font-size: var(--md-font-size);
-  color: var(--darkBlue);
+  color: inherit;
 }
 
 .buttonText {
   font-family: var(--body-font);
-  color: var(--darkBlue);
+  color: inherit;
   font-weight: 400;
 }
 

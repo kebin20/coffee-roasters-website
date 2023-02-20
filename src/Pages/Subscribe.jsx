@@ -13,26 +13,35 @@ import plan from '../planData.jsx';
 import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
+  // eslint-disable-next-line no-unused-vars
   const [confirmPlan, setConfirmPlan] = useState(false);
-  const [planOption, setPlanOption] = useState(plan);
+  const [planOption, setPlanOption] = useState([]);
 
-  // useEffect(() => {
-  //   const newPlanData = plan.map((item) => {
-  //     return {
-  //       ...item,
-  //       id: nanoid(),
-  //       content: item.content.map((option) => {
-  //         return {
-  //           ...option,
-  //           id: nanoid(),
-  //         };
-  //       }),
-  //     };
-  //   });
-  //   setPlanOption(newPlanData);
-  // }, []);
+  useEffect(() => {
+    const newPlanData = plan.map((item) => {
+      return {
+        ...item,
+        id: nanoid(),
+        content: item.content.map((option) => {
+          return {
+            ...option,
+            id: nanoid(),
+          };
+        }),
+      };
+    });
+    setPlanOption(newPlanData);
+  }, []);
 
-  console.log(planOption);
+  const menuComponent = planOption.map((item) => {
+    return (
+      <PlanMenu
+        key={item.id}
+        plan={item}
+        onHoldChoice={(id) => holdChoice(item.id, id)}
+      />
+    );
+  });
 
   function holdChoice(planId, optionId) {
     setPlanOption((prevPlanOption) =>
@@ -50,42 +59,6 @@ export default function Subscribe() {
     );
   }
 
-  const menuComponent = plan.map((item) => {
-    return (
-      <PlanMenu
-        key={item.id}
-        plan={{
-          ...item,
-          id: nanoid(),
-          content: item.content.map((option) => {
-            return {
-              ...option,
-              id: nanoid(),
-            };
-          }),
-        }}
-        onHoldChoice={(id) => holdChoice(item.id, id)}
-      />
-    );
-  });
-
-  // const menuComponent = plan.map((item) => {
-  //   return (
-  //     <PlanMenu
-  //       key={item.id}
-  //       plan={{
-  //         ...item,
-  //         content: item.content.map((option) => {
-  //           return {
-  //             ...option,
-  //             id: nanoid(),
-  //           };
-  //         }),
-  //       }}
-  //       onHoldChoice={(id) => holdChoice(item.id, id)}
-  //     />
-  //   );
-  // });
 
   return (
     <>

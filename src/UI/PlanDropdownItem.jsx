@@ -1,13 +1,13 @@
-import React from 'react';
-import styles from './PlanDropdownItem.module.css';
-import PropTypes from 'prop-types';
+import React from "react";
+import styles from "./PlanDropdownItem.module.css";
+import PropTypes from "prop-types";
 
 export default function PlanDropdownItem(props) {
   return (
     <>
       <button
         className={styles.dropDownItem}
-        type={props.type || 'button'}
+        type={props.type || "button"}
         style={props.style}
         onClick={props.onClick}
         value={props.content.title}
@@ -31,5 +31,6 @@ PlanDropdownItem.propTypes = {
   savePlanTitle: PropTypes.func,
   name: PropTypes.string,
   disabled: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  isSelected: PropTypes.bool,
 };
