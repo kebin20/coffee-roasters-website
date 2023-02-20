@@ -9,7 +9,7 @@ export default function PlanDropdownItem(props) {
         className={styles.dropDownItem}
         type={props.type || 'button'}
         style={props.style}
-        onClick={props.savePlanTitle}
+        onClick={props.onClick}
         value={props.content.title}
         name={props.name}
         disabled={props.disabled}

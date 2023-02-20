@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
 import NavBar from "../Layout/NavBar";
@@ -16,32 +16,47 @@ export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
 
+useEffect(() => {
+  const newPlanData = plan.map(item => {
+    return {
+      ...item,
+      id: nanoid(),
+      content: item.content.map((option) => {
+        return {
+          ...option,
+          id: nanoid(),
+        }
+      })
+    }
+  })
+  setPlanOption(newPlanData)
+}, [])
+
+function holdChoice(planId, optionId) {
+  setPlanOption((prevPlanOption) =>
+    prevPlanOption.map((plan) => {
+      if (plan.id !== planId) return plan;
+      return {
+        ...plan,
+        content: plan.content.map((option) => {
+          option.id === optionId
+            ? { ...option, isSelected: !option.isSelected }
+            : { ...option, isSelected: false };
+        }),
+      };
+    })
+  );
+}
+
   const menuComponent = planOption.map((item) => {
-    const id = nanoid();
     return (
       <PlanMenu
-        key={id}
+        key={item.id}
         plan={item}
         onHoldChoice={(id) => holdChoice(item.id, id)}
       />
     );
   });
-
-  // function holdChoice(planId, optionId) {
-  //   setPlanOption((prevPlanOption) =>
-  //     prevPlanOption.map((plan) => {
-  //       if (plan.id !== planId) return plan;
-  //       return {
-  //         ...plan,
-  //         content: plan.content.map((option) => {
-  //           option.id === optionId
-  //             ? { ...option, isSelected: !choice.isSelected }
-  //             : { ...option, isSelected: false };
-  //         }),
-  //       };
-  //     })
-  //   );
-  // }
 
   return (
     <>

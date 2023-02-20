@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./PlanMenu.module.css";
 import ArrowIcon from "../Layout/ArrowIcon";
 import PlanDropdownItem from "./PlanDropdownItem";
-import { nanoid } from "nanoid";
 import PropTypes from "prop-types";
 
 export default function PlanMenu(props) {
@@ -14,20 +13,22 @@ export default function PlanMenu(props) {
   // }
 
   const dropdownItems = props.plan.content.map((item) => {
-    const id = nanoid();
+    console.log(item)
+
+    const styles = {
+      backgroundColor: item.isSelected ? "var(--darkCyan)" : "var(--big-select-option-default)"
+    }
+
     return (
       <PlanDropdownItem
-        key={id}
-        onHoldChoice={props.onHoldChoice}
+        key={item.id}
+        style={styles}
+        onClick={() => props.onHoldChoice(item.id)}
+        onSavePlanTitle={props.savePlanTitle}
         content={item}
       />
     );
   });
-
-  // {props.choices.map((choice) => {
-  //   const styles = {
-  //     backgroundColor: choice.isSelected ? "#D6DBF5" : "white",
-  //   };
 
   return (
     <li className={styles.selectionItem}>
