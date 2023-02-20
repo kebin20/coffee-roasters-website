@@ -41,7 +41,7 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            option.id === optionId
+            return option.id === optionId
               ? { ...option, isSelected: !option.isSelected }
               : { ...option, isSelected: false };
           }),
