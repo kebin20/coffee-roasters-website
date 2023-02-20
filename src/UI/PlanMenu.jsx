@@ -15,18 +15,9 @@ export default function PlanMenu(props) {
   // }
 
   const dropdownItems = content.map((item) => {
-    const styles = {
-      backgroundColor: item.isSelected
-        ? "var(--darkCyan)"
-        : "var(--big-select-option-default)",
-      color: item.isSelected ? "var(--lightCream)" : "var(--darkBlue)",
-      transition: "background-color 0.2s ease-in-out",
-    };
-
     return (
       <PlanDropdownItem
         key={item.id}
-        style={styles}
         onClick={() => props.onHoldChoice(item.id)}
         // onSavePlanTitle={props.savePlanTitle}
         content={item}
