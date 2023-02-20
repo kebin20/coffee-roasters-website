@@ -1,23 +1,26 @@
-import React, { useState } from "react";
-import styles from "./PlanMenu.module.css";
-import ArrowIcon from "../Layout/ArrowIcon";
-import PlanDropdownItem from "./PlanDropdownItem";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import styles from './PlanMenu.module.css';
+import ArrowIcon from '../Layout/ArrowIcon';
+import PlanDropdownItem from './PlanDropdownItem';
+import PropTypes from 'prop-types';
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
+
+  const { content, menu } = props.plan;
 
   // function savePlanTitle(e) {
   //   e.preventDefault();
   //   console.log(e.target.value);
   // }
 
-  const dropdownItems = props.plan.content.map((item) => {
-    console.log(item)
+  const dropdownItems = content.map((item) => {
 
     const styles = {
-      backgroundColor: item.isSelected ? "var(--darkCyan)" : "var(--big-select-option-default)"
-    }
+      backgroundColor: item.isSelected
+        ? 'var(--darkCyan)'
+        : 'var(--big-select-option-default)',
+    };
 
     return (
       <PlanDropdownItem
@@ -33,7 +36,7 @@ export default function PlanMenu(props) {
   return (
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
-        <span className={styles.selectionButtonText}>{props.plan.menu}</span>
+        <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>

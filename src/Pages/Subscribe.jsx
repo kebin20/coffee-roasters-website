@@ -1,62 +1,91 @@
-import React, { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
+import React, { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
 
-import NavBar from "../Layout/NavBar";
-import Footer from "../Layout/Footer";
-import MainButton from "../UI/MainButton";
-import OrderModal from "../UI/OrderModal";
-import PlanMenu from "../UI/PlanMenu";
-import OrderSummary from "../UI/OrderSummary";
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
+import MainButton from '../UI/MainButton';
+import OrderModal from '../UI/OrderModal';
+import PlanMenu from '../UI/PlanMenu';
+import OrderSummary from '../UI/OrderSummary';
 
-import plan from "../planData.jsx";
+import plan from '../planData.jsx';
 
-import styles from "./Subscribe.module.css";
+import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
 
-useEffect(() => {
-  const newPlanData = plan.map(item => {
-    return {
-      ...item,
-      id: nanoid(),
-      content: item.content.map((option) => {
+  // useEffect(() => {
+  //   const newPlanData = plan.map((item) => {
+  //     return {
+  //       ...item,
+  //       id: nanoid(),
+  //       content: item.content.map((option) => {
+  //         return {
+  //           ...option,
+  //           id: nanoid(),
+  //         };
+  //       }),
+  //     };
+  //   });
+  //   setPlanOption(newPlanData);
+  // }, []);
+
+  console.log(planOption);
+
+  function holdChoice(planId, optionId) {
+    setPlanOption((prevPlanOption) =>
+      prevPlanOption.map((plan) => {
+        if (plan.id !== planId) return plan;
         return {
-          ...option,
-          id: nanoid(),
-        }
+          ...plan,
+          content: plan.content.map((option) => {
+            option.id === optionId
+              ? { ...option, isSelected: !option.isSelected }
+              : { ...option, isSelected: false };
+          }),
+        };
       })
-    }
-  })
-  setPlanOption(newPlanData)
-}, [])
+    );
+  }
 
-function holdChoice(planId, optionId) {
-  setPlanOption((prevPlanOption) =>
-    prevPlanOption.map((plan) => {
-      if (plan.id !== planId) return plan;
-      return {
-        ...plan,
-        content: plan.content.map((option) => {
-          option.id === optionId
-            ? { ...option, isSelected: !option.isSelected }
-            : { ...option, isSelected: false };
-        }),
-      };
-    })
-  );
-}
-
-  const menuComponent = planOption.map((item) => {
+  const menuComponent = plan.map((item) => {
     return (
       <PlanMenu
         key={item.id}
-        plan={item}
+        plan={{
+          ...item,
+          id: nanoid(),
+          content: item.content.map((option) => {
+            return {
+              ...option,
+              id: nanoid(),
+            };
+          }),
+        }}
         onHoldChoice={(id) => holdChoice(item.id, id)}
       />
     );
   });
+
+  // const menuComponent = plan.map((item) => {
+  //   return (
+  //     <PlanMenu
+  //       key={item.id}
+  //       plan={{
+  //         ...item,
+  //         content: item.content.map((option) => {
+  //           return {
+  //             ...option,
+  //             id: nanoid(),
+  //           };
+  //         }),
+  //       }}
+  //       onHoldChoice={(id) => holdChoice(item.id, id)}
+  //     />
+  //   );
+  // });
 
   return (
     <>
