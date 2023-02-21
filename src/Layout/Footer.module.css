@@ -30,6 +30,17 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  .footer {
+    gap: 2em;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+  }
+
+  .socialLinksContainer {
+    margin-top: 3em;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
