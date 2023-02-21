@@ -2,7 +2,7 @@
 
 .homeHeroContainer {
   color: var(--lightCream);
-  background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
   background-size: cover;
   padding: 6.25em 1.5em;
   margin-left: 1.5em;
@@ -147,7 +147,7 @@
   /*Hero Section */
   .homeHeroContainer {
     display: flex;
-    background: url('../assets/home/tablet/image-hero-coffeepress.jpg');
+    background: url("../assets/home/tablet/image-hero-coffeepress.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 1.5em;
@@ -196,7 +196,7 @@
   /*Why Us Section*/
 
   .whyUs {
-    height: 130vh;
+    height: 100vh;
   }
 
   .whyUsTitle {
@@ -243,7 +243,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.1fr 1fr 0.1fr;
     gap: 3em 0em;
-    margin: 5.5em 3.5em 15.5em 3.5em;
+    margin: 1.5em 3.5em 13.5em 3.5em;
   }
 
   .howItWorksTitle {
@@ -284,6 +284,9 @@
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
+  .whyUs {
+    height: 135vh;
+  }
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
@@ -294,7 +297,7 @@
     margin: 0em 5em;
     padding: 0;
     align-items: center;
-    background: url('../assets/home/desktop/image-hero-coffeepress.jpg');
+    background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -345,10 +348,10 @@
   }
 
   .whyUsFeaturesContainer {
-    display: flex;
     flex-direction: row;
     height: 100%;
     margin: 1em 6em;
+    top: 48%;
   }
 
   .whyUsTitle {
@@ -368,7 +371,7 @@
   /*HOW IT WORKS SECTION*/
 
   .howItWorks {
-    margin: 18em 3.5em 8em 11em;
+    margin: 25em 3.5em 8em 11em;
   }
 
   .steps {
