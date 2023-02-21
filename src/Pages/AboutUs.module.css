@@ -131,6 +131,46 @@
   .ourCommitmentImage {
     margin: auto;
   }
+
+  /*Our Quality Container*/
+
+  .qualityContainer {
+    padding: 14em 4em 4.6em 4em;
+    margin-top: 15.5em;
+  }
+
+  .qualityTitle {
+    font-size: var(--lg-font-size);
+    margin-bottom: 1em;
+  }
+
+  .qualityImage {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  /*Our Headquarters Section*/
+
+  .hqContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0fr 1fr;
+    justify-items: start;
+    align-items: center;
+    text-align: left;
+    padding: 2em 0em 4em 1em;
+    row-gap: 4em;
+    column-gap: 1em;
+  }
+
+  .hqTitle {
+    grid-column: 1/-1;
+  }
+
+  .countryWrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
@@ -207,23 +247,8 @@
   }
 
   .hqContainer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0fr 1fr;
-    justify-items: start;
-    align-items: center;
-    text-align: left;
     padding: 4em 5em 4em 5em;
-    row-gap: 4em;
     column-gap: 0;
-  }
-
-  .hqTitle {
-    grid-column: 1/-1;
-  }
-
-  .countryWrapper {
-    padding: 0;
-    align-items: flex-start;
   }
 }
 /* Big desktop (4k) */
