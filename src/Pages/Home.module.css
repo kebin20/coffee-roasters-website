@@ -188,6 +188,42 @@
   .collectionTitle {
     align-self: center;
   }
+
+  .whyUsTitle {
+    font-size: var(--lg-font-size);
+  }
+
+  .whyUsBgContainer {
+    height: 45%;
+  }
+
+  .whyUsContainer {
+    background-color: var(--darkBlue);
+    padding: 5em;
+  }
+
+  .whyUsFeaturesContainer {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    flex-direction: column;
+    gap: 2em;
+    margin: 4.5em;
+  }
+
+  .featuresItem {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 0;
+    text-align: left;
+    padding: 2em;
+  }
+
+  .featuresImage {
+    grid-row: 1/3;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
