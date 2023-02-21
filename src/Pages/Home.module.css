@@ -286,10 +286,11 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  /* HERO SECTION */
+
   .homeHeroContainer {
     display: flex;
-    height: 72vh;
-    margin: 1em 5em 1em 5em;
+    margin: 0em 5em;
     padding: 0;
     align-items: center;
     background: url('../assets/home/desktop/image-hero-coffeepress.jpg');
@@ -301,19 +302,16 @@
     display: flex;
     align-items: flex-start;
     text-align: left;
-    padding: 5.3em 45em 5.3em 5.3em;
+    padding: 5.3em 35em 5.3em 5.3em;
   }
 
-  .homeHeroTitle {
-    font-size: var(--xxl-font-size);
-    line-height: 72px;
-  }
+  /*COLLECTION SECION */
 
   .collectionContainer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    margin: 14.5em 6.5em 12.5em 6.5em;
-    position: relative;
+    margin-left: 4em;
+    margin-right: 4em;
     gap: 1em;
   }
 
@@ -321,10 +319,11 @@
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2em;
   }
 
   .collectionContainerTitle {
-    font-size: 11.4rem;
+    font-size: 9rem;
     z-index: -10;
     position: absolute;
     left: 0;
@@ -332,49 +331,47 @@
     bottom: 1em;
   }
 
+  /*WHY US SECTION*/
+
   .whyUs {
     height: auto;
     margin: 5em;
   }
 
-  .whyUsBgContainer {
-    height: 70vh;
+  .whyUsContainer {
+    height: 55vh;
+    border-radius: var(--border-px);
   }
 
   .whyUsFeaturesContainer {
     display: flex;
     flex-direction: row;
     height: auto;
-    bottom: -19vh;
+    bottom: -20vh;
     margin: 1em 6em;
-  }
-
-  .whyUsContainer {
-    background-color: var(--darkBlue);
-    padding: 4em 27em;
   }
 
   .whyUsTitle {
     font-size: var(--xl-font-size);
   }
 
+  .featuresItem {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .featuresImage {
+    margin: auto;
+  }
+
+  /*HOW IT WORKS SECTION*/
+
   .howItWorks {
-    align-items: center;
-    justify-items: start;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.1fr 1fr 0.5fr;
-    grid-gap: 6em 0em;
     margin: 18em 3.5em 8em 11em;
   }
 
-  .howItWorksTitle {
-    grid-column: 1/-1;
-  }
-
   .steps {
-    position: relative;
-    align-items: flex-start;
-    text-align: left;
     gap: 1em;
     padding: 0em 8em 0em 0em;
     border-top: 1px solid var(--paleOrange);
@@ -392,14 +389,6 @@
     border-radius: 50%;
     background: var(--lightCream);
     top: -1em;
-  }
-
-  .stepNumber {
-    margin-top: 1em;
-  }
-
-  .stepTitle {
-    font-size: var(--lg-font-size);
   }
 }
 /* Big desktop (4k) */
