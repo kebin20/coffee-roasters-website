@@ -102,7 +102,6 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-
   /*Hero Section*/
   .aboutUsHeroContainer {
     background-image: url("../assets/about/tablet/image-hero-whitecup.jpg");
@@ -117,7 +116,21 @@
     grid-column: 1/2;
   }
 
-  
+  /* Our Commitment Section */
+
+  .ourCommitmentContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    text-align: left;
+  }
+
+  .ourCommitmentTitle {
+    margin-bottom: 0.8em;
+  }
+
+  .ourCommitmentImage {
+    margin: auto;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {

@@ -14,6 +14,8 @@ import australia from "../assets/about/desktop/illustration-australia.svg";
 /* Desktop Images */
 import lgCommitment from "../assets/about/desktop/image-commitment.jpg";
 import lgQuality from "../assets/about/desktop/image-quality.jpg";
+import mdCommitment from "../assets/about/tablet/image-commitment.jpg";
+import mdQuality from "../assets/about/tablet/image-quality.jpg";
 
 export default function AboutUs() {
   return (
@@ -34,6 +36,7 @@ export default function AboutUs() {
           <section className={styles.ourCommitmentContainer}>
             <picture className={styles.ourCommitmentImage}>
               <source srcSet={lgCommitment} media="(min-width: 1200px)" />
+              <source srcSet={mdCommitment} media="(min-width: 600px)" />
               <img
                 className={styles.ourCommitmentImage}
                 src={commitment}
@@ -63,6 +66,7 @@ export default function AboutUs() {
             <div className={styles.qualityImageWrapper}>
               <picture className={styles.qualityImageLg}>
                 <source srcSet={lgQuality} media="(min-width: 1200px)" />
+                <source srcSet={mdQuality} media="(min-width: 600px)" />
                 <img
                   className={styles.qualityImage}
                   src={quality}
