@@ -1,4 +1,4 @@
-/*Hero Section*/
+/*hero section*/
 
 .aboutUsHeroContainer {
   display: flex;
@@ -24,7 +24,7 @@
   mix-blend-mode: normal;
 }
 
-/* Our commitment section */
+/* our commitment section */
 
 .ourCommitmentContainer {
   display: grid;
@@ -41,7 +41,7 @@
   border-radius: var(--border-px);
 }
 
-/* Quality container */
+/* quality container */
 
 .qualityContainer {
   display: grid;
@@ -69,7 +69,7 @@
   bottom: 1em;
 }
 
-/* Our Headquarters section*/
+/* our headquarters section*/
 
 .hqContainer {
   display: grid;
@@ -102,6 +102,22 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+
+  /*Hero Section*/
+  .aboutUsHeroContainer {
+    background-image: url("../assets/about/tablet/image-hero-whitecup.jpg");
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 1em;
+    padding-left: 5em;
+  }
+
+  .aboutUsHeroText {
+    grid-column: 1/2;
+  }
+
+  
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
