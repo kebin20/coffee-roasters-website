@@ -5,7 +5,8 @@
   background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
   background-size: cover;
   padding: 6.25em 1.5em;
-  margin: 1.5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   border-radius: var(--border-px);
 }
 
