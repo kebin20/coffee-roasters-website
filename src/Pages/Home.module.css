@@ -243,7 +243,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.1fr 1fr 0.1fr;
     gap: 3em 0em;
-    margin: 1.5em 3.5em 13.5em 3.5em;
+    margin: 1.5em 2.5em 9em 2.5em;
   }
 
   .howItWorksTitle {
@@ -255,7 +255,7 @@
     height: 100%;
     align-items: flex-start;
     text-align: left;
-    gap: 3em;
+    gap: 2em;
     padding: 0em 2.5em 0em 0em;
     border-top: 1px solid var(--paleOrange);
   }
@@ -275,7 +275,7 @@
   }
 
   .stepNumber {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
 
   .stepTitle {

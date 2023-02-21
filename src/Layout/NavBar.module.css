@@ -33,7 +33,6 @@
   bottom: 0em;
   padding: 1.25em 1.5em;
   font-family: var(--title-font);
-  /* border-radius: 10px; */
   font-weight: 900;
   font-size: 1.5rem;
 }
@@ -52,7 +51,7 @@
 }
 
 .menuLink {
-  color: var(--darkBlue)
+  color: var(--darkBlue);
 }
 
 .hamburgerMenu {
@@ -114,6 +113,10 @@
     padding: 2em;
   }
 
+  .mobileLogo {
+    max-width: 100%;
+  }
+
   .mobileMenuItems {
     display: none;
   }
@@ -147,34 +150,6 @@
   .navBar {
     padding: 2.7em 5em;
   }
-
-  .mobileLogo {
-    max-width: 100%;
-  }
-
-  /* .mobileMenuItems {
-    display: none;
-  } */
-
-  /* .menuItems {
-    display: flex;
-    align-items: center;
-    margin-left: 1.5em;
-  }
-
-  .menuLink {
-    margin-left: 1.5em;
-    text-transform: uppercase;
-    color: var(--Grey);
-  } */
-
-  /* .menuLink:hover {
-    color: var(--darkGreyBlue);
-  } */
-
-  /* .hamburgerMenu {
-    display: none;
-  } */
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
