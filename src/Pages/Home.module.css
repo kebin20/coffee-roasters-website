@@ -2,7 +2,7 @@
 
 .homeHeroContainer {
   color: var(--lightCream);
-  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+  background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
   background-size: cover;
   padding: 6.25em 1.5em;
   margin: 1.5em;
@@ -141,13 +141,11 @@
   color: var(--paleOrange);
 }
 
-
-
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
   .homeHeroContainer {
     display: flex;
-    background: url("../assets/home/tablet/image-hero-coffeepress.jpg");
+    background: url('../assets/home/tablet/image-hero-coffeepress.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 1.5em;
@@ -159,6 +157,36 @@
     display: flex;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .collectionContainer {
+    position: relative;
+    margin-top: 12em;
+    margin-bottom: 12em;
+  }
+
+  .collectionContainerTitle {
+    font-size: 8rem;
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.8em;
+  }
+
+  .collectionItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 0;
+  }
+
+  .collectionImage {
+    grid-row: 1/3;
+  }
+
+  .collectionTitle {
+    align-self: center;
   }
 }
 /* Tablet landscape and larger */
@@ -172,7 +200,7 @@
     margin: 1em 5em 1em 5em;
     padding: 0;
     align-items: center;
-    background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+    background: url('../assets/home/desktop/image-hero-coffeepress.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -195,6 +223,12 @@
     margin: 14.5em 6.5em 12.5em 6.5em;
     position: relative;
     gap: 1em;
+  }
+
+  .collectionItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .collectionContainerTitle {

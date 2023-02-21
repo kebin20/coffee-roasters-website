@@ -41,7 +41,7 @@ export default function Home() {
               alt="gran espresso package"
               className={styles.collectionImage}
             />
-            <h2>Gran Espresso</h2>
+            <h2 className={styles.collectionTitle}>Gran Espresso</h2>
             <p>
               Light and flavorful blend with cocoa and black pepper for an
               intense experience
@@ -53,7 +53,7 @@ export default function Home() {
               alt="planalto package"
               className={styles.collectionImage}
             />
-            <h2>Planalto</h2>
+            <h2 className={styles.collectionTitle}>Planalto</h2>
             <p>
               Brazilian dark roast with rich and velvety body, and hints of
               fruits and nuts
@@ -65,7 +65,7 @@ export default function Home() {
               alt="piccollo package"
               className={styles.collectionImage}
             />
-            <h2>Piccollo</h2>
+            <h2 className={styles.collectionTitle}>Piccollo</h2>
             <p>
               Mild and smooth blend featuring notes of toasted almond and dried
               cherry
@@ -77,7 +77,7 @@ export default function Home() {
               alt="danche package"
               className={styles.collectionImage}
             />
-            <h2>Danche</h2>
+            <h2 className={styles.collectionTitle}>Danche</h2>
             <p>
               Ethiopian hand-harvested blend densely packed with vibrant fruit
               notes
