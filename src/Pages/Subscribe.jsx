@@ -13,7 +13,6 @@ import plan from '../planData.jsx';
 import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
-  // eslint-disable-next-line no-unused-vars
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState([]);
   const [orderContent, setOrderContent] = useState({

@@ -1,4 +1,4 @@
-/*Hero Section*/
+/*hero section*/
 
 .createPlanHeroContainer {
   display: flex;
@@ -79,6 +79,20 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  /*Hero Section*/
+
+  .createPlanHeroContainer {
+    background-image: url("../assets/plan/tablet/image-hero-blackcup.jpg");
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 1em;
+    padding-left: 5em;
+  }
+
+  .createPlanHeroText {
+    grid-column: 1/2;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
