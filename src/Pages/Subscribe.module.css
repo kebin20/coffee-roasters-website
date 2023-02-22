@@ -25,7 +25,7 @@
   mix-blend-mode: normal;
 }
 
-/* Plan Steps Section*/
+/* plan steps section*/
 
 .planStepsContainer {
   background-color: var(--darkBlue);
@@ -50,7 +50,7 @@
   color: var(--paleOrange);
 }
 
-/*Customize Plan Section*/
+/*customize plan section*/
 
 .customizePlanContainer {
   display: flex;
@@ -93,6 +93,47 @@
   .createPlanHeroText {
     grid-column: 1/2;
   }
+
+  /*Plan Step Section*/
+
+  .planStepsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    gap: 0;
+  }
+
+  .planWrapper {
+    align-self: flex-start;
+  }
+
+  .planStepWrapper {
+    position: relative;
+    justify-content: space-between;
+    border-top: 1px solid var(--paleOrange);
+    padding-right: 2em;
+  }
+
+  .circleEl {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--darkCyan);
+    border-radius: 50%;
+    top: -1em;
+    left: -0.9em;
+  }
+
+  .noTopBorder {
+    border-top: none;
+  }
+
+  .planStepWrapper > h2 {
+    font-size: var(--lg-font-size);
+  }
+
+  .planStepTitle {
+    margin-top: 0.7em;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
@@ -122,45 +163,14 @@
   /* PLAN STEP SECTION*/
 
   .planStepsContainer {
-    grid-template-columns: repeat(3, 1fr);
     margin: 8em 5em;
-    text-align: left;
     padding: 6.25em 8em 6.25em 6.25em;
-    gap: 0;
-  }
-
-  .planWrapper {
-    align-self: flex-start;
   }
 
   .planStepWrapper {
-    position: relative;
-    justify-content: space-between;
-    border-top: 1px solid var(--paleOrange);
     padding-right: 7em;
   }
 
-  .circleEl {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--darkCyan);
-    border-radius: 50%;
-    top: -1em;
-    left: -0.9em;
-  }
-
-  .noTopBorder {
-    border-top: none;
-  }
-
-  .planStepWrapper > h2 {
-    font-size: var(--lg-font-size);
-  }
-
-  .planStepTitle {
-    margin-top: 0.7em;
-  }
 
   /*CUSTOMIZE PLAN SECTION*/
 
