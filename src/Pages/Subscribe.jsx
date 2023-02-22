@@ -17,12 +17,12 @@ export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState([]);
   const [orderContent, setOrderContent] = useState({
-    coffeeMethod: "",
-    caffeineOption: "",
-    size:1,
-    type: "",
-    frequency: "",
-  })
+    coffeeMethod: '',
+    caffeineOption: '',
+    size: 1,
+    type: '',
+    frequency: '',
+  });
 
   useEffect(() => {
     const newPlanData = plan.map((item) => {
@@ -45,27 +45,30 @@ export default function Subscribe() {
       <PlanMenu
         key={item.id}
         plan={item}
-        onHoldChoice={(id) => holdChoice(item.id, id)}
+        onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
       />
     );
   });
 
-  function holdChoice(planId, optionId) {
+  function holdChoice(planId, optionId, event) {
+    event.preventDefault();
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
         if (plan.id !== planId) return plan;
         return {
           ...plan,
-          content: plan.content.map((option) => {
-            return option.id === optionId
-              ? { ...option, isSelected: !option.isSelected }
-              : { ...option, isSelected: false };
+          content: plan.content.map((option) => { 
+            if(option.id === optionId) {
+              console.log(event.target.value);
+              return { ...option, isSelected: !option.isSelected }
+            } else {
+              return { ...option, isSelected: false }
+            }
           }),
         };
       })
     );
   }
-
 
   return (
     <>

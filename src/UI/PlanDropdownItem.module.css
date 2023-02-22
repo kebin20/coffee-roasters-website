@@ -21,12 +21,14 @@
   font-family: var(--title-font);
   font-size: var(--md-font-size);
   color: inherit;
+  pointer-events: none;
 }
 
 .buttonText {
   font-family: var(--body-font);
   color: inherit;
   font-weight: 400;
+  pointer-events: none;
 }
 
 /* Tablet portrait and larger */

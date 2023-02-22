@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import styles from "./PlanMenu.module.css";
-import ArrowIcon from "../Layout/ArrowIcon";
-import PlanDropdownItem from "./PlanDropdownItem";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import styles from './PlanMenu.module.css';
+import ArrowIcon from '../Layout/ArrowIcon';
+import PlanDropdownItem from './PlanDropdownItem';
+import PropTypes from 'prop-types';
 
 export default function PlanMenu(props) {
   const [open, setOpen] = useState(true);
 
   const { content, menu } = props.plan;
 
-  function savePlanTitle(e) {
-    e.preventDefault();
-    console.log(e.target.value);
-  }
-
   const dropdownItems = content.map((item) => {
     return (
       <PlanDropdownItem
         key={item.id}
-        onClick={() => props.onHoldChoice(item.id)}
+        onClick={(event) => {
+          props.onHoldChoice(item.id, event);
+        }}
         content={item}
         isSelected={item.isSelected}
       />

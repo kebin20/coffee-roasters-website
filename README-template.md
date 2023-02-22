@@ -103,3 +103,5 @@ https://www.scaler.com/topics/text-gradient-css/
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
 
 https://stackoverflow.com/a/50885613
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events
