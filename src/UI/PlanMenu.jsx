@@ -39,5 +39,4 @@ PlanMenu.propTypes = {
     content: PropTypes.arrayOf(PropTypes.object).isRequired,
   }).isRequired,
   onHoldChoice: PropTypes.func.isRequired,
-  savePlanTitle: PropTypes.func.isRequired,
 };

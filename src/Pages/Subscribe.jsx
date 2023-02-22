@@ -19,7 +19,7 @@ export default function Subscribe() {
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
     caffeineOption: '',
-    size: 1,
+    size: "",
     type: '',
     frequency: '',
   });
