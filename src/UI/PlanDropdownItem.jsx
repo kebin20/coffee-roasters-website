@@ -1,21 +1,21 @@
-import React from "react";
-import styles from "./PlanDropdownItem.module.css";
-import PropTypes from "prop-types";
+import React from 'react';
+import styles from './PlanDropdownItem.module.css';
+import PropTypes from 'prop-types';
 
 export default function PlanDropdownItem(props) {
   const buttonSelectedStyling = {
     backgroundColor: props.isSelected
-      ? "var(--darkCyan)"
-      : "var(--big-select-option-default)",
-    color: props.isSelected ? "var(--lightCream)" : "var(--darkBlue)",
-    transition: "background-color 0.2s ease-in-out",
+      ? 'var(--darkCyan)'
+      : 'var(--big-select-option-default)',
+    color: props.isSelected ? 'var(--lightCream)' : 'var(--darkBlue)',
+    transition: 'background-color 0.2s ease-in-out',
   };
 
   return (
     <>
       <button
         className={styles.dropDownItem}
-        type={props.type || "button"}
+        type={props.type || 'button'}
         style={props.isSelected ? buttonSelectedStyling : null}
         onClick={props.onClick}
         value={props.content.title}

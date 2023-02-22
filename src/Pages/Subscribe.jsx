@@ -16,6 +16,13 @@ export default function Subscribe() {
   // eslint-disable-next-line no-unused-vars
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState([]);
+  const [orderContent, setOrderContent] = useState({
+    coffeeMethod: "",
+    caffeineOption: "",
+    size:1,
+    type: "",
+    frequency: "",
+  })
 
   useEffect(() => {
     const newPlanData = plan.map((item) => {
@@ -143,7 +150,7 @@ export default function Subscribe() {
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>{menuComponent}</ul>
-          <OrderSummary />
+          <OrderSummary orderContent={orderContent} />
           <MainButton>Create my plan!</MainButton>
         </div>
       </section>

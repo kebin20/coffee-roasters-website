@@ -9,17 +9,16 @@ export default function PlanMenu(props) {
 
   const { content, menu } = props.plan;
 
-  // function savePlanTitle(e) {
-  //   e.preventDefault();
-  //   console.log(e.target.value);
-  // }
+  function savePlanTitle(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+  }
 
   const dropdownItems = content.map((item) => {
     return (
       <PlanDropdownItem
         key={item.id}
         onClick={() => props.onHoldChoice(item.id)}
-        // onSavePlanTitle={props.savePlanTitle}
         content={item}
         isSelected={item.isSelected}
       />
