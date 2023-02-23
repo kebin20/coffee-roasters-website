@@ -30,12 +30,6 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-}
-/* Tablet landscape and larger */
-@media only screen and (min-width: 900px) {
-}
-/* Desktop and larger */
-@media only screen and (min-width: 1200px) {
   .dropdownItems {
     flex-direction: row;
     gap: 2em;
@@ -45,6 +39,12 @@
     justify-content: space-between;
     padding-top: 0;
   }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
