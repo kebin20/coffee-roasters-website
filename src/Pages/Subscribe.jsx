@@ -58,7 +58,6 @@ export default function Subscribe() {
           ...plan,
           content: plan.content.map((option) => { 
             if(option.id === optionId) {
-              console.log(event.target.value);
               return { ...option, isSelected: !option.isSelected }
             } else {
               return { ...option, isSelected: false }
