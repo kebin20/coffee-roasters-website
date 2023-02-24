@@ -41,8 +41,6 @@ export default function Subscribe() {
   }, []);
 
   const menuComponent = planOption.map((item) => {
-    console.log(item.menu.includes('Want us to grind them?') ? "yes" : "no");
-
     return (
       <PlanMenu
         key={item.id}
