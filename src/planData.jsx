@@ -1,6 +1,7 @@
 const plan = [
   {
     menu: 'How do you drink your coffee?',
+    category: 'method',
     content: [
       {
         title: 'Capsule',
@@ -23,6 +24,7 @@ const plan = [
   },
   {
     menu: 'What type of coffee?',
+    category: 'coffeeType',
     content: [
       {
         title: 'Single Origin',
@@ -46,6 +48,7 @@ const plan = [
   },
   {
     menu: 'How much would you like?',
+    category: 'amount',
     content: [
       {
         title: '250g',
@@ -69,6 +72,7 @@ const plan = [
   },
   {
     menu: 'Want us to grind them?',
+    category: 'grind',
     content: [
       {
         title: 'Wholebean',
@@ -91,6 +95,7 @@ const plan = [
   },
   {
     menu: 'How often should we deliver?',
+    category: 'delivery',
     content: [
       {
         title: 'Every week',

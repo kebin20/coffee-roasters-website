@@ -15,10 +15,11 @@ import styles from './Subscribe.module.css';
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState([]);
+  const [isCapsule, setIsCapsule] = useState(false);
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
     caffeineOption: '',
-    size: "",
+    size: '',
     type: '',
     frequency: '',
   });
@@ -44,6 +45,7 @@ export default function Subscribe() {
       <PlanMenu
         key={item.id}
         plan={item}
+        isCapsule={isCapsule}
         onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
       />
     );
@@ -56,12 +58,14 @@ export default function Subscribe() {
         if (plan.id !== planId) return plan;
         return {
           ...plan,
-          content: plan.content.map((option) => { 
-            if(option.id === optionId) {
-              console.log(event.target.value);
-              return { ...option, isSelected: !option.isSelected }
+          content: plan.content.map((option) => {
+            event.target.value === 'Capsule'
+              ? setIsCapsule(true)
+              : setIsCapsule(false);
+            if (option.id === optionId) {
+              return { ...option, isSelected: !option.isSelected };
             } else {
-              return { ...option, isSelected: false }
+              return { ...option, isSelected: false };
             }
           }),
         };
