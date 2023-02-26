@@ -12,10 +12,6 @@ export default defineConfig({
       typescript: true,
     }),
   ],
-  esbuild: {
-    jsxFactory: "React.createElement",
-    jsxFragment: "React.Fragment",
-  },
   optimizeDeps: {
     include: ["react", "react-dom"],
   },
