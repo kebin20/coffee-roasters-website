@@ -93,7 +93,7 @@
 .whyUsFeaturesContainer {
   display: flex;
   position: absolute;
-  bottom: 38em;
+  bottom: 36em;
   height: 40%;
   flex-direction: column;
   gap: 2em;

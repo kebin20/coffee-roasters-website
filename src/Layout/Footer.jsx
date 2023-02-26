@@ -32,7 +32,7 @@ export default function Footer() {
           </Link>
         </li>
         <li>
-            <Link to="/coffee" className={styles.menuLink}>
+            <Link to="/coffee" className={styles.footerLinks}>
               types of coffee
             </Link>
           </li>
