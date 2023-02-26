@@ -1,5 +1,3 @@
-import reactRefresh from "@vitejs/plugin-react-refresh";
-
 // vite.config.js
 import checker from "vite-plugin-checker";
 import { defineConfig } from "vite";
@@ -13,12 +11,11 @@ export default defineConfig({
       // e.g. use TypeScript check
       typescript: true,
     }),
-    reactRefresh(),
   ],
-  // esbuild: {
-  //   jsxFactory: "React.createElement",
-  //   jsxFragment: "React.Fragment",
-  // },
+  esbuild: {
+    jsxFactory: "React.createElement",
+    jsxFragment: "React.Fragment",
+  },
   optimizeDeps: {
     include: ["react", "react-dom"],
   },
