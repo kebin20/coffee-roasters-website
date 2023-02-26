@@ -31,6 +31,11 @@ export default function Footer() {
             create your plan
           </Link>
         </li>
+        <li>
+            <Link to="/coffee" className={styles.menuLink}>
+              types of coffee
+            </Link>
+          </li>
       </ul>
       <div className={styles.socialLinksContainer}>
         <a href="#">

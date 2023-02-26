@@ -1,12 +1,18 @@
 import React from 'react';
 import styles from './Coffee.module.css';
-import { Link } from 'react-router-dom';
+import Wrapper from '../UI/Wrapper';
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
 
 export default function Coffee(props) {
   return (
-    <li>
-      <h2></h2>
-      <p></p>
-    </li>
+    <Wrapper>
+      <NavBar />
+      <li>
+        <h2>Test</h2>
+        <p>Test</p>
+      </li>
+      <Footer />
+    </Wrapper>
   );
 }

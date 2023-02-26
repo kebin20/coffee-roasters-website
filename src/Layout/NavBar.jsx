@@ -37,6 +37,11 @@ export default function NavBar(props) {
               Create Your Plan
             </Link>
           </li>
+          <li>
+            <Link to="/coffee" className={styles.menuLink}>
+              Types of Coffee
+            </Link>
+          </li>
         </ul>
 
         <button onClick={toggleHamburgerMenu} className={styles.hamburgerMenu}>
@@ -73,6 +78,11 @@ export default function NavBar(props) {
           <li>
             <Link to="/subscribe" className={styles.menuLink}>
               Create Your Plan
+            </Link>
+          </li>
+          <li>
+            <Link to="/coffee" className={styles.menuLink}>
+              Types of Coffee
             </Link>
           </li>
         </ul>
