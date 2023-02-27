@@ -1,9 +1,5 @@
 ![](./screenshot.jpg)
 
-# Frontend Mentor - Coffeeroasters subscription site solution
-
-This is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -15,7 +11,7 @@ This is a solution to the [Coffeeroasters subscription site challenge on Fronten
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -45,63 +41,77 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [React Router](https://reactrouter.com/en/main) - React routing library
 
-
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Firstly, I learnt how to add an extra property to an object within a data array by the following code using useEffect. When the page renders, a unique ID (using nanoid()) will be added to each object in the array:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  useEffect(() => {
+    const newPlanData = plan.map((item) => {
+      return {
+        ...item,
+        id: nanoid(),
+        content: item.content.map((option) => {
+          return {
+            ...option,
+            id: nanoid(),
+          };
+        }),
+      };
+    });
+    setPlanOption(newPlanData);
+  }, []);
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+<!-- Next, I was struggling in keeping the active button select in order for me to maintain the active style state of each button when selected when customizing the plan, I reused my function from my Quizzical app with modifications as follows:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```
+ function holdChoice(planId, optionId, event) {
+    event.preventDefault();
+    setPlanOption((prevPlanOption) =>
+      prevPlanOption.map((plan) => {
+        if (plan.id !== planId) return plan;
+        return {
+          ...plan,
+          content: plan.content.map((option) => {
+            event.target.value === 'Capsule'
+              ? setIsCapsule(true)
+              : setIsCapsule(false);
+            if (option.id === optionId) {
+              return { ...option, isSelected: !option.isSelected };
+            } else {
+              return { ...option, isSelected: false };
+            }
+          }),
+        };
+      })
+    );
+  }
+  ``` -->
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+This website will be an ongoing project and function as a sandbox to implement new techniques and concepts.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Future implementations:
+
+- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.
+- Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan. In addition, add a add to shopping cart functionality to it too.
+- Enable user login to check their account by using BaaS like Firebase for the backend.
+- Migrating the project to TypeScript.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Scaler](https://www.scaler.com/topics/text-gradient-css/) - This helped me for creating the text gradient for the title within the homepage.
+- [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip) - This doc helped me to create the transparent looking style of the hamburger menu.
+- [StackOverflow](https://stackoverflow.com/a/50885613) - This SO thread helped me to understand how to add a br tag in React
+- [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) - This mdn doc helped me to disable the elements within the button element.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@kebin20](https://www.frontendmentor.io/profile/kebin20)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+# Frontend Mentor - Coffeeroasters subscription site solution
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
-
-
-https://www.scaler.com/topics/text-gradient-css/
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
-
-https://stackoverflow.com/a/50885613
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events
+This is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
