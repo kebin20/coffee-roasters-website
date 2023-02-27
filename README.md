@@ -1,4 +1,4 @@
-![](./screenshot.jpg)
+![homepage](./screenshots/homepage-desktop.PNG)
 
 ## Table of contents
 
