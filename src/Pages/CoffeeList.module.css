@@ -6,8 +6,10 @@
   align-items: center;
   text-align: center;
   color: var(--lightCream);
-  background-image: url('../assets/about/mobile/image-hero-whitecup.jpg');
+  background-image: url("../assets/coffee/coffee.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 6.25em 1.5em;
   border-radius: 10px;
   gap: 2em;

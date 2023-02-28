@@ -39,7 +39,7 @@ export default function NavBar(props) {
           </li>
           <li>
             <Link to="/coffee" className={styles.menuLink}>
-              Types of Coffee
+              Coffee
             </Link>
           </li>
         </ul>
@@ -82,7 +82,7 @@ export default function NavBar(props) {
           </li>
           <li>
             <Link to="/coffee" className={styles.menuLink}>
-              Types of Coffee
+              Coffee
             </Link>
           </li>
         </ul>
