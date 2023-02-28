@@ -13,12 +13,14 @@ export default function CoffeeList(props) {
         <h1>Common Coffees</h1>
         <ul className={styles.coffeeList}>
           {props.coffees.map((coffee) => {
-            <Coffee
-              key={coffee.id}
-              title={coffee.title}
-              description={coffee.description}
-              image={coffee.image}
-            />;
+            return (
+              <Coffee
+                key={coffee.id}
+                title={coffee.title}
+                description={coffee.description}
+                image={coffee.image}
+              />
+            );
           })}
         </ul>
       </section>

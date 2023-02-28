@@ -10,7 +10,7 @@ export default function App() {
   const [coffees, setCoffees] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  
+
   const fetchCoffeeHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -25,6 +25,9 @@ export default function App() {
       setError(error.message);
     }
     setIsLoading(false);
+
+    // Wait for 1 second before making the next request
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   }, []);
 
   useEffect(() => {
