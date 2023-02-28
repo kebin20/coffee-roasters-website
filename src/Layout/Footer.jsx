@@ -32,10 +32,10 @@ export default function Footer() {
           </Link>
         </li>
         <li>
-            <Link to="/coffee" className={styles.footerLinks}>
-              types of coffee
-            </Link>
-          </li>
+          <Link to="/coffee" className={styles.footerLinks}>
+            coffee
+          </Link>
+        </li>
       </ul>
       <div className={styles.socialLinksContainer}>
         <a href="#">

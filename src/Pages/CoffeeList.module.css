@@ -15,21 +15,35 @@
   gap: 2em;
 }
 
-.coffeeTitle {
+.coffeeHeroTitle {
   font-size: var(--semi-lg-font-size);
   line-height: 2.5rem;
 }
 
-.coffeeText {
+.coffeeHeroText {
   line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
 }
 
+/* coffee list section*/
+
+.coffeeListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 4em 0em;
+}
+
 .coffeeList {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.coffeeListTitle {
+  text-align: center;
 }
 
 /* Tablet portrait and larger */

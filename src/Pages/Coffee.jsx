@@ -4,10 +4,10 @@ import styles from './Coffee.module.css';
 
 export default function Coffee(props) {
   return (
-    <li styles={styles.coffee}>
-      <img src="" alt="" />
+    <li className={styles.coffee}>
+      <img src={props.image} alt="" className={styles.coffeeImages}/>
       <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <p className={styles.description}>{props.description}</p>
     </li>
   );
 }

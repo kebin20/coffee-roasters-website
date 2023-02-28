@@ -1,3 +1,20 @@
+.coffee {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  font-weight: initial;
+}
+
+.coffeeImages {
+  max-width: 100%;
+  border-radius: var(--border-px);
+}
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
@@ -6,6 +23,10 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .coffeeImages {
+    max-width: 40%;
+    border-radius: var(--border-px);
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
