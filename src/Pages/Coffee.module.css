@@ -1,20 +1,12 @@
-.coffee {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #230052;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  text-align: center;
-  color: white;
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
 }
-
-.coffee h2 {
-  font-size: 2rem;
-  color: #f7e702;
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
 }
-
-.coffee h3 {
-  color: #eccf77;
-  margin: 0;
-  font-size: 1rem;
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
 }

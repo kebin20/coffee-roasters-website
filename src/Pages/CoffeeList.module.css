@@ -1,5 +1,44 @@
+/*hero section*/
+
+.coffeeHeroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--lightCream);
+  background-image: url('../assets/about/mobile/image-hero-whitecup.jpg');
+  background-size: cover;
+  padding: 6.25em 1.5em;
+  border-radius: 10px;
+  gap: 2em;
+}
+
+.coffeeTitle {
+  font-size: var(--semi-lg-font-size);
+  line-height: 2.5rem;
+}
+
+.coffeeText {
+  line-height: 25px;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+}
+
 .coffeeList {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
 }
