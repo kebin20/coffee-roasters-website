@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+/* eslint-disable no-undef */
+import React, { useEffect, useState, useCallback } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './Pages/Home';
-import AboutUs from './Pages/AboutUs';
-import Subscribe from './Pages/Subscribe';
-import CoffeeList from './Pages/CoffeeList';
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Subscribe from "./Pages/Subscribe";
+import CoffeeList from "./Pages/CoffeeList";
 
 export default function App() {
   const [coffees, setCoffees] = useState([]);
@@ -15,9 +16,9 @@ export default function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://api.sampleapis.com/coffee/hot');
+      const response = await fetch("https://api.sampleapis.com/coffee/hot");
       if (!response.ok) {
-        throw new Error('Oops! Something went wrong!');
+        throw new Error("Oops! Something went wrong!");
       }
       const data = await response.json();
       setCoffees(data);
