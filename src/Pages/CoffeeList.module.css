@@ -34,12 +34,41 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  /*Hero Section*/
+  .coffeeHeroContainer {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 1em;
+    padding-left: 5em;
+  }
+
+  .coffeeText {
+    grid-column: 1/2;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .coffeeHeroContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+    justify-items: start;
+    text-align: left;
+    padding: 8.5em 5.3em;
+  }
+
+  .coffeeText {
+    grid-row: 2/3;
+  }
+
+  .aboutUsHeroTitle {
+    font-size: var(--xl-font-size);
+  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
