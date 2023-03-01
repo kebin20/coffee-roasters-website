@@ -1,5 +1,7 @@
 ![homepage](./screenshots/homepage-desktop.PNG)
 
+# Coffee Roasters Website
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -63,7 +65,7 @@ Firstly, I learnt how to add an extra property to an object within a data array 
   }, []);
 ```
 
-<!-- Next, I was struggling in keeping the active button select in order for me to maintain the active style state of each button when selected when customizing the plan, I reused my function from my Quizzical app with modifications as follows:
+Next, I was struggling in keeping the active button select in order for me to maintain the active style state of each button when selected when customizing the plan, I reused my function from my Quizzical app with modifications as follows:
 
 ```
  function holdChoice(planId, optionId, event) {
@@ -87,7 +89,7 @@ Firstly, I learnt how to add an extra property to an object within a data array 
       })
     );
   }
-  ``` -->
+  ```
 
 ### Continued development
 
@@ -95,8 +97,8 @@ This website will be an ongoing project and function as a sandbox to implement n
 
 Future implementations:
 
-- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.
-- Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan. In addition, add a add to shopping cart functionality to it too.
+~- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.~ COMPLETED
+- Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan. In addition, add a "add to shopping cart" functionality to it too.
 - Enable user login to check their account by using BaaS like Firebase for the backend.
 - Migrating the project to TypeScript.
 
@@ -112,6 +114,6 @@ Future implementations:
 
 - Frontend Mentor - [@kebin20](https://www.frontendmentor.io/profile/kebin20)
 
-# Frontend Mentor - Coffeeroasters subscription site solution
+## Frontend Mentor - Coffeeroasters subscription site solution
 
 This is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
