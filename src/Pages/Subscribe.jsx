@@ -5,7 +5,7 @@ import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
 import MainButton from '../UI/MainButton';
 import OrderModal from '../UI/OrderModal';
-import PlanMenu from '../UI/PlanMenu';
+// import PlanMenu from '../UI/PlanMenu';
 import OrderSummary from '../UI/OrderSummary';
 
 import plan from '../planData.jsx';
@@ -40,16 +40,16 @@ export default function Subscribe() {
     setPlanOption(newPlanData);
   }, []);
 
-  const menuComponent = planOption.map((item) => {
-    return (
-      <PlanMenu
-        key={item.id}
-        plan={item}
-        isCapsule={isCapsule}
-        onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
-      />
-    );
-  });
+  // const menuComponent = planOption.map((item) => {
+  //   return (
+  //     <PlanMenu
+  //       key={item.id}
+  //       plan={item}
+  //       isCapsule={isCapsule}
+  //       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
+  //     />
+  //   );
+  // });
 
   function holdChoice(planId, optionId, event) {
     event.preventDefault();
@@ -155,7 +155,7 @@ export default function Subscribe() {
         </aside>
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
-          <ul className={styles.planWrapper}>{menuComponent}</ul>
+          <ul className={styles.planWrapper}></ul>
           <OrderSummary orderContent={orderContent} />
           <MainButton>Create my plan!</MainButton>
         </div>
