@@ -8,6 +8,13 @@ import OrderModal from '../UI/OrderModal';
 // import PlanMenu from '../UI/PlanMenu';
 import OrderSummary from '../UI/OrderSummary';
 
+/*Menu Items */
+import Amount from '../UI/Selections/Amount';
+import CoffeeType from '../UI/Selections/CoffeeType';
+import Delivery from '../UI/Selections/Delivery';
+import Grind from '../UI/Selections/Grind';
+import Method from '../UI/Selections/Method';
+
 import plan from '../planData.jsx';
 
 import styles from './Subscribe.module.css';
@@ -51,11 +58,31 @@ export default function Subscribe() {
   //   );
   // });
 
-  function holdChoice(planId, optionId, event) {
-    event.preventDefault();
+  // function holdChoice(planId, optionId, event) {
+  //   event.preventDefault();
+  //   setPlanOption((prevPlanOption) =>
+  //     prevPlanOption.map((plan) => {
+  //       if (plan.id !== planId) return plan;
+  //       return {
+  //         ...plan,
+  //         content: plan.content.map((option) => {
+  //           event.target.value === 'Capsule'
+  //             ? setIsCapsule(true)
+  //             : setIsCapsule(false);
+  //           if (option.id === optionId) {
+  //             return { ...option, isSelected: !option.isSelected };
+  //           } else {
+  //             return { ...option, isSelected: false };
+  //           }
+  //         }),
+  //       };
+  //     })
+  //   );
+  // }
+
+  function holdChoice(optionId, event) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
-        if (plan.id !== planId) return plan;
         return {
           ...plan,
           content: plan.content.map((option) => {
@@ -155,7 +182,33 @@ export default function Subscribe() {
         </aside>
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
-          <ul className={styles.planWrapper}></ul>
+          <ul className={styles.planWrapper}>
+            <Amount
+              plan={plan}
+              isCapsule={isCapsule}
+              onHoldChoice={(id, event) => holdChoice(id, event)}
+            />
+            <CoffeeType
+              plan={plan}
+              isCapsule={isCapsule}
+              onHoldChoice={(id, event) => holdChoice(id, event)}
+            />
+            <Delivery
+              plan={plan}
+              isCapsule={isCapsule}
+              onHoldChoice={(id, event) => holdChoice(id, event)}
+            />
+            <Grind
+              plan={plan}
+              isCapsule={isCapsule}
+              onHoldChoice={(id, event) => holdChoice(id, event)}
+            />
+            <Method
+              plan={plan}
+              isCapsule={isCapsule}
+              onHoldChoice={(id, event) => holdChoice(id, event)}
+            />
+          </ul>
           <OrderSummary orderContent={orderContent} />
           <MainButton>Create my plan!</MainButton>
         </div>
