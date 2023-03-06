@@ -15,7 +15,7 @@ export default function MainButton(props) {
 }
 
 MainButton.propTypes = {
-  type: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
