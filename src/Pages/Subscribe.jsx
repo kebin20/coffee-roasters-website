@@ -9,7 +9,7 @@ import OrderModal from '../UI/OrderModal';
 import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
-import Amount from '../UI/Selections/Amount';
+// import Amount from '../UI/Selections/Amount';
 // import CoffeeType from '../UI/Selections/CoffeeType';
 // import Delivery from '../UI/Selections/Delivery';
 // import Grind from '../UI/Selections/Grind';
@@ -100,6 +100,9 @@ export default function Subscribe() {
     );
   }
 
+console.log(planOption)
+console.log(plan)
+
   return (
     <>
       <NavBar />
@@ -183,11 +186,11 @@ export default function Subscribe() {
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
-            <Amount
+            {/* <Amount
               plan={planOption[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
-            />
+            /> */}
             {/* <CoffeeType
               plan={plan[1]}
               isCapsule={isCapsule}
