@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 export default function Method(props) {
   const [open, setOpen] = useState(true);
 
-  const { content, menu } = props.plan;
+  const { content, plan } = props.plan;
+
+  console.log(plan)
 
   const dropdownItems = content.map((item) => {
     return (
@@ -25,7 +27,7 @@ export default function Method(props) {
   return (
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
-        <span className={styles.selectionButtonText}>{menu}</span>
+        <span className={styles.selectionButtonText}>{plan.menu}</span>
         <ArrowIcon />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>
@@ -34,7 +36,6 @@ export default function Method(props) {
 }
 
 Method.propTypes = {
-  menu: PropTypes.string.isRequired,
-  content: PropTypes.arrayOf(PropTypes.object).isRequired,
+  content: PropTypes.arrayOf(PropTypes.object),
   onHoldChoice: PropTypes.func.isRequired,
 };

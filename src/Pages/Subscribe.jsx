@@ -10,10 +10,10 @@ import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
 import Amount from '../UI/Selections/Amount';
-import CoffeeType from '../UI/Selections/CoffeeType';
-import Delivery from '../UI/Selections/Delivery';
-import Grind from '../UI/Selections/Grind';
-import Method from '../UI/Selections/Method';
+// import CoffeeType from '../UI/Selections/CoffeeType';
+// import Delivery from '../UI/Selections/Delivery';
+// import Grind from '../UI/Selections/Grind';
+// import Method from '../UI/Selections/Method';
 
 import plan from '../planData.jsx';
 
@@ -184,30 +184,30 @@ export default function Subscribe() {
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Amount
-              plan={plan}
+              plan={plan[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />
-            <CoffeeType
-              plan={plan}
+            {/* <CoffeeType
+              plan={plan[1]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />
             <Delivery
-              plan={plan}
+              plan={plan[2]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />
             <Grind
-              plan={plan}
+              plan={plan[3]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />
             <Method
-              plan={plan}
+              plan={plan[4]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
-            />
+            /> */}
           </ul>
           <OrderSummary orderContent={orderContent} />
           <MainButton>Create my plan!</MainButton>
