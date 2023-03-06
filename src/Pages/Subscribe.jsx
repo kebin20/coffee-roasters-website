@@ -184,7 +184,7 @@ export default function Subscribe() {
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Amount
-              plan={plan[0]}
+              plan={planOption[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />

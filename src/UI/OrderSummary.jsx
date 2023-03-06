@@ -18,9 +18,9 @@ export default function OrderSummary(props) {
 }
 
 OrderSummary.propTypes = {
-  coffeeMethod: PropTypes.string.isRequired,
-  caffeineOption: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  frequency: PropTypes.string.isRequired,
+  coffeeMethod: PropTypes.string,
+  caffeineOption: PropTypes.string,
+  size: PropTypes.string,
+  type: PropTypes.string,
+  frequency: PropTypes.string,
 };
