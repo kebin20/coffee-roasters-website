@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
@@ -48,7 +48,6 @@ export default function Subscribe() {
   }
 
   function holdChoice(planId, optionId, event) {
-    event.preventDefault();
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
         if (plan.id !== planId) return plan;

@@ -11,6 +11,7 @@
 .dropDownItem:active,
 .dropDownItem:focus {
   background-color: var(--darkCyan);
+  color: var(--lightCream);
 }
 
 .dropDownItem:hover {
