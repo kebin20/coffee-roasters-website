@@ -6,12 +6,14 @@ import PropTypes from 'prop-types';
 
 export default function Amount(props) {
   const [open, setOpen] = useState(true);
-  const [AmountValue, setAmountValue] = useState('');
+  const [amount, setAmount] = useState('');
 
   const { content, menu } = props.plan;
 
   function handleClick(event) {
-    console.log(event.target.value);
+    const amountValue = event.target.value;
+    setAmount(amountValue);
+    
   }
 
   const dropdownItems = content.map((item) => {
