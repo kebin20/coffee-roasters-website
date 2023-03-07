@@ -7,11 +7,16 @@ export default function OrderSummary(props) {
     props.orderContent;
 
   return (
-    <div className={styles.orderSummary}>
-      <h1 className={styles.orderSummaryTitle}>Order Summary</h1>
-      <p className={styles.orderSummaryContent}>
-        “I drink my coffee as {coffeeMethod}, with a {caffeineOption} type of
-        bean. {size} ground ala {type}, sent to me {frequency}.”
+    <div className={styles.orderSummary__container}>
+      <h1 className={styles.orderSummary__h1}>Order Summary</h1>
+      <p className={styles.orderSummary__p}>
+        “I drink my coffee as{' '}
+        <span className={styles.orderSummary__span}>{coffeeMethod}</span>, with
+        a <span className={styles.orderSummary__span}>{caffeineOption}</span>{' '}
+        type of bean. <span className={styles.orderSummary__span}>{size}</span>{' '}
+        ground ala <span className={styles.orderSummary__span}>{type}</span>,
+        sent to me{' '}
+        <span className={styles.orderSummary__span}>{frequency}</span>.”
       </p>
     </div>
   );

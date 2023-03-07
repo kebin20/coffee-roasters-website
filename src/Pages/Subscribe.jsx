@@ -30,6 +30,18 @@ export default function Subscribe() {
     frequency: '',
   });
 
+  function handleAmountBtn(value) {
+    console.log('Button value:', value);
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        coffeeMethod: value,
+      };
+    });
+  }
+
+  console.log(orderContent);
+
   function holdChoice(optionId, event) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
@@ -137,6 +149,7 @@ export default function Subscribe() {
               plan={planOption[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
+              onButtonClick={handleAmountBtn}
             />
             {/* <CoffeeType
               plan={plan[1]}
@@ -172,51 +185,51 @@ export default function Subscribe() {
 
 // import PlanMenu from '../UI/PlanMenu';
 
-  // useEffect(() => {
-  //   const newPlanData = plan.map((item) => {
-  //     return {
-  //       ...item,
-  //       id: nanoid(),
-  //       content: item.content.map((option) => {
-  //         return {
-  //           ...option,
-  //           id: nanoid(),
-  //         };
-  //       }),
-  //     };
-  //   });
-  //   setPlanOption(newPlanData);
-  // }, []);
+// useEffect(() => {
+//   const newPlanData = plan.map((item) => {
+//     return {
+//       ...item,
+//       id: nanoid(),
+//       content: item.content.map((option) => {
+//         return {
+//           ...option,
+//           id: nanoid(),
+//         };
+//       }),
+//     };
+//   });
+//   setPlanOption(newPlanData);
+// }, []);
 
-  // const menuComponent = planOption.map((item) => {
-  //   return (
-  //     <PlanMenu
-  //       key={item.id}
-  //       plan={item}
-  //       isCapsule={isCapsule}
-  //       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
-  //     />
-  //   );
-  // });
+// const menuComponent = planOption.map((item) => {
+//   return (
+//     <PlanMenu
+//       key={item.id}
+//       plan={item}
+//       isCapsule={isCapsule}
+//       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
+//     />
+//   );
+// });
 
-  // function holdChoice(planId, optionId, event) {
-  //   event.preventDefault();
-  //   setPlanOption((prevPlanOption) =>
-  //     prevPlanOption.map((plan) => {
-  //       if (plan.id !== planId) return plan;
-  //       return {
-  //         ...plan,
-  //         content: plan.content.map((option) => {
-  //           event.target.value === 'Capsule'
-  //             ? setIsCapsule(true)
-  //             : setIsCapsule(false);
-  //           if (option.id === optionId) {
-  //             return { ...option, isSelected: !option.isSelected };
-  //           } else {
-  //             return { ...option, isSelected: false };
-  //           }
-  //         }),
-  //       };
-  //     })
-  //   );
-  // }
+// function holdChoice(planId, optionId, event) {
+//   event.preventDefault();
+//   setPlanOption((prevPlanOption) =>
+//     prevPlanOption.map((plan) => {
+//       if (plan.id !== planId) return plan;
+//       return {
+//         ...plan,
+//         content: plan.content.map((option) => {
+//           event.target.value === 'Capsule'
+//             ? setIsCapsule(true)
+//             : setIsCapsule(false);
+//           if (option.id === optionId) {
+//             return { ...option, isSelected: !option.isSelected };
+//           } else {
+//             return { ...option, isSelected: false };
+//           }
+//         }),
+//       };
+//     })
+//   );
+// }
