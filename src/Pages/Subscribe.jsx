@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { nanoid } from 'nanoid';
+import React, { useState } from 'react';
 
 import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
@@ -9,7 +8,7 @@ import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
 import Amount from '../UI/Selections/Amount';
-// import CoffeeType from '../UI/Selections/CoffeeType';
+import CoffeeType from '../UI/Selections/CoffeeType';
 // import Delivery from '../UI/Selections/Delivery';
 // import Grind from '../UI/Selections/Grind';
 // import Method from '../UI/Selections/Method';
@@ -31,7 +30,15 @@ export default function Subscribe() {
   });
 
   function handleAmountBtn(value) {
-    console.log('Button value:', value);
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        size: value,
+      };
+    });
+  }
+
+  function handleCoffeTypeBtn(value) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -40,11 +47,11 @@ export default function Subscribe() {
     });
   }
 
-  console.log(orderContent);
-
-  function holdChoice(optionId, event) {
+  function holdChoice(planId, optionId, event) {
+    event.preventDefault();
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
+        if (plan.id !== planId) return plan;
         return {
           ...plan,
           content: plan.content.map((option) => {
@@ -148,25 +155,30 @@ export default function Subscribe() {
             <Amount
               plan={planOption[0]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) => holdChoice(id, event)}
+              onHoldChoice={(id, event) =>
+                holdChoice(planOption[0].id, id, event)
+              }
               onButtonClick={handleAmountBtn}
             />
-            {/* <CoffeeType
-              plan={plan[1]}
+            <CoffeeType
+              plan={planOption[1]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) => holdChoice(id, event)}
+              onHoldChoice={(id, event) =>
+                holdChoice(planOption[1].id, id, event)
+              }
+              onButtonClick={handleCoffeTypeBtn}
             />
-            <Delivery
+            {/* <Delivery
               plan={plan[2]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
-            />
-            <Grind
+            /> */}
+            {/* <Grind
               plan={plan[3]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
-            />
-            <Method
+            /> */}
+            {/* <Method
               plan={plan[4]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}

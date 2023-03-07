@@ -13,7 +13,7 @@ export default function Amount(props) {
   function handleClick(event) {
     const amountValue = event.target.value;
     setAmount(amountValue);
-    props.onButtonClick(amount)
+    props.onButtonClick(amount);
   }
 
   const dropdownItems = content.map((item) => {

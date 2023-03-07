@@ -6,8 +6,15 @@ import PropTypes from 'prop-types';
 
 export default function CoffeeType(props) {
   const [open, setOpen] = useState(true);
+  const [coffeeType, setCoffeeType] = useState('');
 
-  const { content, plan } = props.plan;
+  const { content, menu } = props.plan;
+
+  function handleClick(event) {
+    const coffeeTypeValue = event.target.value;
+    setCoffeeType(coffeeTypeValue);
+    props.onButtonClick(coffeeType);
+  }
 
   const dropdownItems = content.map((item) => {
     return (
@@ -15,8 +22,10 @@ export default function CoffeeType(props) {
         key={item.id}
         onClick={(event) => {
           props.onHoldChoice(item.id, event);
+          handleClick(event);
         }}
-        content={item}
+        title={item.title}
+        description={item.description}
         isSelected={item.isSelected}
       />
     );
@@ -25,7 +34,7 @@ export default function CoffeeType(props) {
   return (
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
-        <span className={styles.selectionButtonText}>{plan.menu}</span>
+        <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>
