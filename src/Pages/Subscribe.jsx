@@ -5,7 +5,6 @@ import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
 import MainButton from '../UI/MainButton';
 import OrderModal from '../UI/OrderModal';
-// import PlanMenu from '../UI/PlanMenu';
 import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
@@ -21,7 +20,7 @@ import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
-  // const [planOption, setPlanOption] = useState(plan);
+  const [planOption, setPlanOption] = useState(plan);
   const [isCapsule, setIsCapsule] = useState(false);
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
@@ -30,56 +29,6 @@ export default function Subscribe() {
     type: '',
     frequency: '',
   });
-
-  // useEffect(() => {
-  //   const newPlanData = plan.map((item) => {
-  //     return {
-  //       ...item,
-  //       id: nanoid(),
-  //       content: item.content.map((option) => {
-  //         return {
-  //           ...option,
-  //           id: nanoid(),
-  //         };
-  //       }),
-  //     };
-  //   });
-  //   setPlanOption(newPlanData);
-  // }, []);
-
-
-  // const menuComponent = planOption.map((item) => {
-  //   return (
-  //     <PlanMenu
-  //       key={item.id}
-  //       plan={item}
-  //       isCapsule={isCapsule}
-  //       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
-  //     />
-  //   );
-  // });
-
-  // function holdChoice(planId, optionId, event) {
-  //   event.preventDefault();
-  //   setPlanOption((prevPlanOption) =>
-  //     prevPlanOption.map((plan) => {
-  //       if (plan.id !== planId) return plan;
-  //       return {
-  //         ...plan,
-  //         content: plan.content.map((option) => {
-  //           event.target.value === 'Capsule'
-  //             ? setIsCapsule(true)
-  //             : setIsCapsule(false);
-  //           if (option.id === optionId) {
-  //             return { ...option, isSelected: !option.isSelected };
-  //           } else {
-  //             return { ...option, isSelected: false };
-  //           }
-  //         }),
-  //       };
-  //     })
-  //   );
-  // }
 
   function holdChoice(optionId, event) {
     setPlanOption((prevPlanOption) =>
@@ -185,7 +134,7 @@ export default function Subscribe() {
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Amount
-              plan={plan[0]}
+              plan={planOption[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
             />
@@ -218,3 +167,56 @@ export default function Subscribe() {
     </>
   );
 }
+
+/* PREV SOLUTION*/
+
+// import PlanMenu from '../UI/PlanMenu';
+
+  // useEffect(() => {
+  //   const newPlanData = plan.map((item) => {
+  //     return {
+  //       ...item,
+  //       id: nanoid(),
+  //       content: item.content.map((option) => {
+  //         return {
+  //           ...option,
+  //           id: nanoid(),
+  //         };
+  //       }),
+  //     };
+  //   });
+  //   setPlanOption(newPlanData);
+  // }, []);
+
+  // const menuComponent = planOption.map((item) => {
+  //   return (
+  //     <PlanMenu
+  //       key={item.id}
+  //       plan={item}
+  //       isCapsule={isCapsule}
+  //       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
+  //     />
+  //   );
+  // });
+
+  // function holdChoice(planId, optionId, event) {
+  //   event.preventDefault();
+  //   setPlanOption((prevPlanOption) =>
+  //     prevPlanOption.map((plan) => {
+  //       if (plan.id !== planId) return plan;
+  //       return {
+  //         ...plan,
+  //         content: plan.content.map((option) => {
+  //           event.target.value === 'Capsule'
+  //             ? setIsCapsule(true)
+  //             : setIsCapsule(false);
+  //           if (option.id === optionId) {
+  //             return { ...option, isSelected: !option.isSelected };
+  //           } else {
+  //             return { ...option, isSelected: false };
+  //           }
+  //         }),
+  //       };
+  //     })
+  //   );
+  // }

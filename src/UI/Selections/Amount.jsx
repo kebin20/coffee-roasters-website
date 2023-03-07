@@ -6,10 +6,13 @@ import PropTypes from 'prop-types';
 
 export default function Amount(props) {
   const [open, setOpen] = useState(true);
+  const [AmountValue, setAmountValue] = useState('');
 
   const { content, menu } = props.plan;
 
-console.log(props.plan, "plan")
+  function handleClick(event) {
+    console.log(event.target.value);
+  }
 
   const dropdownItems = content.map((item) => {
     return (
@@ -17,6 +20,7 @@ console.log(props.plan, "plan")
         key={item.id}
         onClick={(event) => {
           props.onHoldChoice(item.id, event);
+          handleClick(event);
         }}
         title={item.title}
         description={item.description}
