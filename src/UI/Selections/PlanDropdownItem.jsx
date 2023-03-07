@@ -18,12 +18,11 @@ export default function PlanDropdownItem(props) {
         type={props.type || 'button'}
         style={props.isSelected ? buttonSelectedStyling : null}
         onClick={props.onClick}
-        value={props.content.title}
-        name={props.name}
+        value={props.title}
         disabled={props.disabled}
       >
-        <span className={styles.buttonTitle}>{props.content.title}</span> <br />
-        <span className={styles.buttonText}>{props.content.description}</span>
+        <span className={styles.buttonTitle}>{props.title}</span> <br />
+        <span className={styles.buttonText}>{props.description}</span>
       </button>
     </>
   );
@@ -31,9 +30,9 @@ export default function PlanDropdownItem(props) {
 
 PlanDropdownItem.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
   type: PropTypes.string,
   style: PropTypes.object,
   savePlanTitle: PropTypes.func,

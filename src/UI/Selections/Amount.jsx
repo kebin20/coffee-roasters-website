@@ -7,6 +7,10 @@ import PropTypes from 'prop-types';
 export default function Amount(props) {
   const [open, setOpen] = useState(true);
 
+  const { content, menu } = props.plan;
+
+console.log(props.plan, "plan")
+
   const dropdownItems = content.map((item) => {
     return (
       <PlanDropdownItem
@@ -14,7 +18,8 @@ export default function Amount(props) {
         onClick={(event) => {
           props.onHoldChoice(item.id, event);
         }}
-        content={props.plan.content}
+        title={item.title}
+        description={item.description}
         isSelected={item.isSelected}
       />
     );
@@ -23,7 +28,7 @@ export default function Amount(props) {
   return (
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
-        <span className={styles.selectionButtonText}>{props.plan.menu}</span>
+        <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>

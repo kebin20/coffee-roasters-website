@@ -9,7 +9,7 @@ import OrderModal from '../UI/OrderModal';
 import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
-// import Amount from '../UI/Selections/Amount';
+import Amount from '../UI/Selections/Amount';
 // import CoffeeType from '../UI/Selections/CoffeeType';
 // import Delivery from '../UI/Selections/Delivery';
 // import Grind from '../UI/Selections/Grind';
@@ -21,7 +21,7 @@ import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
-  const [planOption, setPlanOption] = useState([]);
+  // const [planOption, setPlanOption] = useState(plan);
   const [isCapsule, setIsCapsule] = useState(false);
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
@@ -31,21 +31,22 @@ export default function Subscribe() {
     frequency: '',
   });
 
-  useEffect(() => {
-    const newPlanData = plan.map((item) => {
-      return {
-        ...item,
-        id: nanoid(),
-        content: item.content.map((option) => {
-          return {
-            ...option,
-            id: nanoid(),
-          };
-        }),
-      };
-    });
-    setPlanOption(newPlanData);
-  }, []);
+  // useEffect(() => {
+  //   const newPlanData = plan.map((item) => {
+  //     return {
+  //       ...item,
+  //       id: nanoid(),
+  //       content: item.content.map((option) => {
+  //         return {
+  //           ...option,
+  //           id: nanoid(),
+  //         };
+  //       }),
+  //     };
+  //   });
+  //   setPlanOption(newPlanData);
+  // }, []);
+
 
   // const menuComponent = planOption.map((item) => {
   //   return (
@@ -99,9 +100,6 @@ export default function Subscribe() {
       })
     );
   }
-
-console.log(planOption)
-console.log(plan)
 
   return (
     <>
@@ -186,11 +184,11 @@ console.log(plan)
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
-            {/* <Amount
-              plan={planOption[0]}
+            <Amount
+              plan={plan[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) => holdChoice(id, event)}
-            /> */}
+            />
             {/* <CoffeeType
               plan={plan[1]}
               isCapsule={isCapsule}
