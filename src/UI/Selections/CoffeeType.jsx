@@ -10,7 +10,7 @@ export default function CoffeeType(props) {
   const { content, menu } = props.plan;
 
   function handleClick(event) {
-    event.preventDefault()
+    event.preventDefault();
     props.onButtonClick(event.target.value);
   }
 

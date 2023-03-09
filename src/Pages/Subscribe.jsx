@@ -29,7 +29,7 @@ export default function Subscribe() {
     frequency: '',
   });
 
-  function handleAmountBtn(value) {
+  function handleCoffeeMethodBtn(value) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -157,7 +157,7 @@ export default function Subscribe() {
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[0].id, id, event)
               }
-              onButtonClick={handleAmountBtn}
+              onButtonClick={handleCoffeeMethodBtn}
             />
             <CoffeeType
               plan={planOption[1]}
@@ -170,17 +170,26 @@ export default function Subscribe() {
             <Delivery
               plan={planOption[2]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) => holdChoice(planOption[2].id, event)}
+              onHoldChoice={(id, event) =>
+                holdChoice(planOption[2].id, id, event)
+              }
+              onButtonClick={handleDeliveryBtn}
             />
             <Grind
               plan={planOption[3]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) => holdChoice(planOption[3].id, event)}
+              onHoldChoice={(id, event) =>
+                holdChoice(planOption[3].id, id, event)
+              }
+              onButtonClick={handleGrindTypeBtn}
             />
             <Method
               plan={planOption[4]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) => holdChoice(planOption[4].id, event)}
+              onHoldChoice={(id, event) =>
+                holdChoice(planOption[4].id, id, event)
+              }
+              onButtonClick={handleMethodBtn}
             />
           </ul>
           <OrderSummary orderContent={orderContent} />
