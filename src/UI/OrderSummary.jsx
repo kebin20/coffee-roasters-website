@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './OrderSummary.module.css';
 
 export default function OrderSummary(props) {
-  const { coffeeMethod, caffeineOption, size, type, frequency } =
+  const { coffeeMethod, coffeeType, amount, grindType, delivery } =
     props.orderContent;
 
   return (
@@ -12,11 +12,11 @@ export default function OrderSummary(props) {
       <p className={styles.orderSummary__p}>
         “I drink my coffee as{' '}
         <span className={styles.orderSummary__span}>{coffeeMethod}</span>, with
-        a <span className={styles.orderSummary__span}>{caffeineOption}</span>{' '}
-        type of bean. <span className={styles.orderSummary__span}>{size}</span>{' '}
-        ground ala <span className={styles.orderSummary__span}>{type}</span>,
-        sent to me{' '}
-        <span className={styles.orderSummary__span}>{frequency}</span>.”
+        a <span className={styles.orderSummary__span}>{coffeeType}</span> type
+        of bean. <span className={styles.orderSummary__span}>{amount}</span>{' '}
+        ground ala{' '}
+        <span className={styles.orderSummary__span}>{grindType}</span>, sent to
+        me <span className={styles.orderSummary__span}>{delivery}</span>.”
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ const plan = [
   {
     id: nanoid(),
     menu: 'How do you drink your coffee?',
-    category: 'method',
+    category: 'coffeeMethod',
     content: [
       {
         id: nanoid(),

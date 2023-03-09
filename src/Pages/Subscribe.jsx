@@ -23,10 +23,10 @@ export default function Subscribe() {
   const [isCapsule, setIsCapsule] = useState(false);
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
-    caffeineOption: '',
-    size: '',
-    type: '',
-    frequency: '',
+    coffeeType: '',
+    amount: '',
+    grindType: '',
+    delivery: '',
   });
 
   function handleCoffeeMethodBtn(value) {
@@ -38,11 +38,38 @@ export default function Subscribe() {
     });
   }
 
-  function handleCoffeTypeBtn(value) {
+  function handleCoffeeTypeBtn(value) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
-        type: value,
+        coffeeType: value,
+      };
+    });
+  }
+
+  function handleDeliveryBtn(value) {
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        delivery: value,
+      };
+    });
+  }
+
+  function handleGrindTypeBtn(value) {
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        grindType: value,
+      };
+    });
+  }
+
+  function handleAmountBtn(value) {
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        amount: value,
       };
     });
   }
@@ -151,7 +178,7 @@ export default function Subscribe() {
         {confirmPlan && <OrderModal />}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
-            <Amount
+            <Method
               plan={planOption[0]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
@@ -165,15 +192,15 @@ export default function Subscribe() {
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[1].id, id, event)
               }
-              onButtonClick={handleCoffeTypeBtn}
+              onButtonClick={handleCoffeeTypeBtn}
             />
-            <Delivery
+            <Amount
               plan={planOption[2]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[2].id, id, event)
               }
-              onButtonClick={handleDeliveryBtn}
+              onButtonClick={handleAmountBtn}
             />
             <Grind
               plan={planOption[3]}
@@ -183,13 +210,13 @@ export default function Subscribe() {
               }
               onButtonClick={handleGrindTypeBtn}
             />
-            <Method
+            <Delivery
               plan={planOption[4]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[4].id, id, event)
               }
-              onButtonClick={handleMethodBtn}
+              onButtonClick={handleDeliveryBtn}
             />
           </ul>
           <OrderSummary orderContent={orderContent} />
