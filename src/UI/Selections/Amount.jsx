@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 export default function Amount(props) {
   const [open, setOpen] = useState(true);
 
-  const { content, menu } = props.plan;
+  const { content } = props.plan;
 
   function handleClick(event) {
     event.preventDefault();

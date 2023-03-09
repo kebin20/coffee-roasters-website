@@ -7,7 +7,12 @@ import PropTypes from 'prop-types';
 export default function Delivery(props) {
   const [open, setOpen] = useState(true);
 
-  const { content, plan } = props.plan;
+  const { content } = props.plan;
+
+  function handleClick(event) {
+    event.preventDefault();
+    props.onButtonClick(event.target.value);
+  }
 
   const dropdownItems = content.map((item) => {
     return (
@@ -15,8 +20,10 @@ export default function Delivery(props) {
         key={item.id}
         onClick={(event) => {
           props.onHoldChoice(item.id, event);
+          handleClick(event);
         }}
-        content={item}
+        title={item.title}
+        description={item.description}
         isSelected={item.isSelected}
       />
     );
@@ -25,7 +32,7 @@ export default function Delivery(props) {
   return (
     <li className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
-        <span className={styles.selectionButtonText}>{plan.menu}</span>
+        <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>
