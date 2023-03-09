@@ -29,16 +29,10 @@ export default function Subscribe() {
     frequency: '',
   });
 
-  function handleAmountBtn(value) {
-    setOrderContent((prevOrder) => {
-      return {
-        ...prevOrder,
-        size: value,
-      };
-    });
-  }
+  console.log(orderContent)
 
-  function handleCoffeTypeBtn(value) {
+  function handleAmountBtn(value) {
+    // debugger
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -47,7 +41,17 @@ export default function Subscribe() {
     });
   }
 
+  function handleCoffeTypeBtn(value) {
+    setOrderContent((prevOrder) => {
+      return {
+        ...prevOrder,
+        type: value,
+      };
+    });
+  }
+
   function holdChoice(planId, optionId, event) {
+    // debugger
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
         if (plan.id !== planId) return plan;
