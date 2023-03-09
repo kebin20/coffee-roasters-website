@@ -175,7 +175,7 @@ export default function Subscribe() {
             </li>
           </ul>
         </aside>
-        {confirmPlan && <OrderModal />}
+        {confirmPlan && <OrderModal orderContent={orderContent} />}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Method
@@ -220,7 +220,9 @@ export default function Subscribe() {
             />
           </ul>
           <OrderSummary orderContent={orderContent} />
-          <MainButton>Create my plan!</MainButton>
+          <MainButton onClick={() => setConfirmPlan(true)}>
+            Create my plan!
+          </MainButton>
         </div>
       </section>
       <Footer />

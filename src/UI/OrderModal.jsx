@@ -1,18 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./OrderModal.module.css";
-import MainButton from "./MainButton";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './OrderModal.module.css';
+import MainButton from './MainButton';
 
 export default function OrderModal(props) {
+  const { coffeeMethod, coffeeType, amount, grindType, delivery } =
+    props.orderContent;
+
   return (
     <div className={styles.backdrop}>
       <div className={styles.orderModal}>
         <h1 className={styles.orderModalTitle}>Order Summary</h1>
         <div className={styles.orderModalSummaryWrapper}>
-          <p className={styles.orderModalSummary}>
-            “I drink my coffee as {props.coffeeMethod}, with a{" "}
-            {props.caffeineOption} type of bean. {props.size} ground ala{" "}
-            {props.type}, sent to me {props.frequency}.”
+        <p className={styles.orderModal__p}>
+        “I drink my coffee as{' '}
+        <span className={styles.orderModal__span}>{coffeeMethod}</span>, with
+        a <span className={styles.orderModal__span}>{coffeeType}</span> type
+        of bean. <span className={styles.orderModal__span}>{amount}</span>{' '}
+        ground ala{' '}
+        <span className={styles.orderModal__span}>{grindType}</span>, sent to
+        me <span className={styles.orderModal__span}>{delivery}</span>.”
           </p>
           <p className={styles.doubleCheckOrder}>
             Is this correct? You can proceed to checkout or go back to plan
