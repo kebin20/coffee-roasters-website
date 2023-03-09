@@ -6,15 +6,12 @@ import PropTypes from 'prop-types';
 
 export default function Amount(props) {
   const [open, setOpen] = useState(true);
-  const [amount, setAmount] = useState('');
 
   const { content, menu } = props.plan;
 
   function handleClick(event) {
-    event.preventDefault()
-    const amountValue = event.target.value;
-    setAmount(amountValue);
-    props.onButtonClick(amount);
+    event.preventDefault();
+    props.onButtonClick(event.target.value);
   }
 
   const dropdownItems = content.map((item) => {
@@ -22,7 +19,7 @@ export default function Amount(props) {
       <PlanDropdownItem
         key={item.id}
         onClick={(event) => {
-          // props.onHoldChoice(item.id, event);
+          props.onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={item.title}

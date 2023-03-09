@@ -6,14 +6,12 @@ import PropTypes from 'prop-types';
 
 export default function CoffeeType(props) {
   const [open, setOpen] = useState(true);
-  const [coffeeType, setCoffeeType] = useState('');
 
   const { content, menu } = props.plan;
 
   function handleClick(event) {
-    const coffeeTypeValue = event.target.value;
-    setCoffeeType(coffeeTypeValue);
-    props.onButtonClick(coffeeType);
+    event.preventDefault()
+    props.onButtonClick(event.target.value);
   }
 
   const dropdownItems = content.map((item) => {
