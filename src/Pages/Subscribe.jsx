@@ -8,7 +8,7 @@ import OrderSummary from '../UI/OrderSummary';
 
 /*Menu Items */
 import Amount from '../UI/Selections/Amount';
-import CoffeeType from '../UI/Selections/CoffeeType';
+// import CoffeeType from '../UI/Selections/CoffeeType';
 // import Delivery from '../UI/Selections/Delivery';
 // import Grind from '../UI/Selections/Grind';
 // import Method from '../UI/Selections/Method';
@@ -50,27 +50,27 @@ export default function Subscribe() {
     });
   }
 
-  function holdChoice(planId, optionId, event) {
-    // debugger
-    setPlanOption((prevPlanOption) =>
-      prevPlanOption.map((plan) => {
-        if (plan.id !== planId) return plan;
-        return {
-          ...plan,
-          content: plan.content.map((option) => {
-            event.target.value === 'Capsule'
-              ? setIsCapsule(true)
-              : setIsCapsule(false);
-            if (option.id === optionId) {
-              return { ...option, isSelected: !option.isSelected };
-            } else {
-              return { ...option, isSelected: false };
-            }
-          }),
-        };
-      })
-    );
-  }
+  // function holdChoice(planId, optionId, event) {
+  //   // debugger
+  //   setPlanOption((prevPlanOption) =>
+  //     prevPlanOption.map((plan) => {
+  //       if (plan.id !== planId) return plan;
+  //       return {
+  //         ...plan,
+  //         content: plan.content.map((option) => {
+  //           event.target.value === 'Capsule'
+  //             ? setIsCapsule(true)
+  //             : setIsCapsule(false);
+  //           if (option.id === optionId) {
+  //             return { ...option, isSelected: !option.isSelected };
+  //           } else {
+  //             return { ...option, isSelected: false };
+  //           }
+  //         }),
+  //       };
+  //     })
+  //   );
+  // }
 
   return (
     <>
@@ -158,19 +158,19 @@ export default function Subscribe() {
             <Amount
               plan={planOption[0]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) =>
-                holdChoice(planOption[0].id, id, event)
-              }
+              // onHoldChoice={(id, event) =>
+              //   holdChoice(planOption[0].id, id, event)
+              // }
               onButtonClick={handleAmountBtn}
             />
-            <CoffeeType
+            {/* <CoffeeType
               plan={planOption[1]}
               isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[1].id, id, event)
               }
               onButtonClick={handleCoffeTypeBtn}
-            />
+            /> */}
             {/* <Delivery
               plan={plan[2]}
               isCapsule={isCapsule}

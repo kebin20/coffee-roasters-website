@@ -11,6 +11,7 @@ export default function Amount(props) {
   const { content, menu } = props.plan;
 
   function handleClick(event) {
+    event.preventDefault()
     const amountValue = event.target.value;
     setAmount(amountValue);
     props.onButtonClick(amount);
@@ -21,7 +22,7 @@ export default function Amount(props) {
       <PlanDropdownItem
         key={item.id}
         onClick={(event) => {
-          props.onHoldChoice(item.id, event);
+          // props.onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={item.title}
