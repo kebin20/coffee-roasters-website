@@ -107,8 +107,10 @@ Future implementations:
 
 - [Scaler](https://www.scaler.com/topics/text-gradient-css/) - This helped me for creating the text gradient for the title within the homepage.
 - [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip) - This doc helped me to create the transparent looking style of the hamburger menu.
-- [StackOverflow](https://stackoverflow.com/a/50885613) - This SO thread helped me to understand how to add a br tag in React
+- [Stack Overflow](https://stackoverflow.com/a/50885613) - This SO thread helped me to understand how to add a br tag in React
+- [Stack Overflow](https://stackoverflow.com/questions/51498816/how-to-conditionally-apply-styles-in-a-react-component-with-css-modules) - This thread helped me with conditional styling
 - [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) - This mdn doc helped me to disable the elements within the button element.
+
 
 ## Author
 

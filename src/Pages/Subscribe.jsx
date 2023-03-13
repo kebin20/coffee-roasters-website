@@ -180,7 +180,6 @@ export default function Subscribe() {
           <ul className={styles.planWrapper}>
             <Method
               plan={planOption[0]}
-              isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[0].id, id, event)
               }
@@ -188,7 +187,6 @@ export default function Subscribe() {
             />
             <CoffeeType
               plan={planOption[1]}
-              isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[1].id, id, event)
               }
@@ -196,7 +194,6 @@ export default function Subscribe() {
             />
             <Amount
               plan={planOption[2]}
-              isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[2].id, id, event)
               }
@@ -212,7 +209,6 @@ export default function Subscribe() {
             />
             <Delivery
               plan={planOption[4]}
-              isCapsule={isCapsule}
               onHoldChoice={(id, event) =>
                 holdChoice(planOption[4].id, id, event)
               }

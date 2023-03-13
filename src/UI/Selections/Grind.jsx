@@ -25,6 +25,7 @@ export default function Grind(props) {
         title={item.title}
         description={item.description}
         isSelected={item.isSelected}
+        isCapsule={props.isCapsule}
       />
     );
   });

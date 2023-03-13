@@ -11,17 +11,17 @@ export default function PlanDropdownItem(props) {
     transition: 'background-color 0.2s ease-in-out',
   };
 
-
+  const isCapsuleSelected = props.isCapsule ? styles.disabled : '';
 
   return (
     <>
       <button
-        className={styles.dropDownItem}
+        className={`${styles.dropDownItem} ${isCapsuleSelected}`}
         type={props.type || 'button'}
         style={props.isSelected ? buttonSelectedStyling : null}
         onClick={props.onClick}
         value={props.title}
-        disabled={props.disabled}
+        disabled={props.isCapsule ? true : false}
       >
         <span className={styles.buttonTitle}>{props.title}</span> <br />
         <span className={styles.buttonText}>{props.description}</span>
