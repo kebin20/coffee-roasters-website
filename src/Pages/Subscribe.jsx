@@ -81,7 +81,15 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            event.target.value === 'Capsule' ? setIsCapsule(true) : null;
+            // event.target.value === 'Capsule' ? setIsCapsule(true) : "";
+            if (event.target.value === 'Capsule') {
+              setIsCapsule(true);
+            } else if (
+              event.target.value === 'Filter' ||
+              event.target.value === 'Espresso'
+            ) {
+              setIsCapsule(false);
+            }
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
