@@ -81,9 +81,7 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            event.target.value === 'Capsule'
-              ? setIsCapsule(true)
-              : setIsCapsule(false);
+            event.target.value === 'Capsule' ? setIsCapsule(true) : null;
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
