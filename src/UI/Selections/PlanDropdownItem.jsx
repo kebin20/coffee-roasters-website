@@ -13,6 +13,8 @@ export default function PlanDropdownItem(props) {
 
   const isCapsuleSelected = props.isCapsule ? styles.disabled : '';
 
+console.log(props.isCapsule)
+
   return (
     <>
       <button
