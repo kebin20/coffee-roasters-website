@@ -215,7 +215,7 @@ export default function Subscribe() {
               onButtonClick={handleDeliveryBtn}
             />
           </ul>
-          <OrderSummary orderContent={orderContent} />
+          <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
           <MainButton onClick={() => setConfirmPlan(true)}>
             Create my plan!
           </MainButton>

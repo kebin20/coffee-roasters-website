@@ -10,13 +10,16 @@ export default function OrderSummary(props) {
     <div className={styles.orderSummary__container}>
       <h1 className={styles.orderSummary__h1}>Order Summary</h1>
       <p className={styles.orderSummary__p}>
-        “I drink my coffee as{' '}
+        “I drink my coffee {props.isCapsule ? ' using ' : ' as '}
         <span className={styles.orderSummary__span}>{coffeeMethod}</span>, with
         a <span className={styles.orderSummary__span}>{coffeeType}</span> type
         of bean. <span className={styles.orderSummary__span}>{amount}</span>{' '}
-        ground ala{' '}
-        <span className={styles.orderSummary__span}>{grindType}</span>, sent to
-        me <span className={styles.orderSummary__span}>{delivery}</span>.”
+        ground{' '}
+        {!props.isCapsule && (
+          <span className={styles.orderSummary__span}>ala {grindType}</span>
+        )}
+        , sent to me{' '}
+        <span className={styles.orderSummary__span}>{delivery}</span>.”
       </p>
     </div>
   );
