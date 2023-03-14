@@ -181,7 +181,9 @@ export default function Subscribe() {
             </li>
           </ul>
         </aside>
-        {confirmPlan && <OrderModal orderContent={orderContent} />}
+        {confirmPlan && (
+          <OrderModal orderContent={orderContent} isCapsule={isCapsule} />
+        )}
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Method
