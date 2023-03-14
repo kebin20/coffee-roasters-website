@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
@@ -13,7 +13,7 @@ import Delivery from "../components/Selections/Delivery";
 import Grind from "../components/Selections/Grind";
 import Method from "../components/Selections/Method";
 
-import plan from "../planData.jsx";
+import plan from "../PlanData.tsx";
 
 import styles from "./Subscribe.module.css";
 
@@ -22,9 +22,9 @@ export default function Subscribe() {
   const [planOption, setPlanOption] = useState(plan);
 
   const [isCapsule, setIsCapsule] = useState(false);
-  const [standardRate, setStandardRate] = useState(false);
-  const [doubleRate, setDoubleRate] = useState(false);
-  const [quadRate, setQuadRate] = useState(false);
+  // const [standardRate, setStandardRate] = useState(false);
+  // const [doubleRate, setDoubleRate] = useState(false);
+  // const [quadRate, setQuadRate] = useState(false);
 
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: "",
@@ -94,8 +94,8 @@ export default function Subscribe() {
             ) {
               setIsCapsule(false);
             }
-            if (event.target.value === "250g") {
-            }
+            // if (event.target.value === "250g") {
+            // }
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {

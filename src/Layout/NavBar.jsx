@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import coffeeRoastersLogo from "../assets/shared/desktop/logo.svg";
 
-export default function NavBar(props) {
+export default function NavBar() {
   const [toggle, setToggle] = useState(false);
 
   function toggleHamburgerMenu() {
@@ -40,6 +40,11 @@ export default function NavBar(props) {
           <li>
             <Link to="/coffee" className={styles.menuLink}>
               Coffee
+            </Link>
+          </li>
+          <li>
+            <Link to="/registration" className={styles.menuLink}>
+              Register
             </Link>
           </li>
         </ul>
@@ -83,6 +88,11 @@ export default function NavBar(props) {
           <li>
             <Link to="/coffee" className={styles.menuLink}>
               Coffee
+            </Link>
+          </li>
+          <li>
+            <Link to="/registration" className={styles.menuLink}>
+              Register
             </Link>
           </li>
         </ul>

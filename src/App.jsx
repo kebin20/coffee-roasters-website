@@ -1,11 +1,12 @@
 /* eslint-disable no-undef */
-import React, { useEffect, useState, useCallback } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState, useCallback } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './Pages/Home';
-import AboutUs from './Pages/AboutUs';
-import Subscribe from './Pages/Subscribe';
-import CoffeeList from './Pages/CoffeeList';
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Subscribe from "./Pages/Subscribe";
+import CoffeeList from "./Pages/CoffeeList";
+import Registration from "./Pages/Registration";
 
 export default function App() {
   const [coffees, setCoffees] = useState([]);
@@ -16,9 +17,9 @@ export default function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://api.sampleapis.com/coffee/hot');
+      const response = await fetch("https://api.sampleapis.com/coffee/hot");
       if (!response.ok) {
-        throw new Error('Oops! Something went wrong!');
+        throw new Error("Oops! Something went wrong!");
       }
       const data = await response.json();
       const adjustedData = data.slice(0, -3);
@@ -53,6 +54,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/registration" element={<Registration />} />
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/subscribe" element={<Subscribe />} />
