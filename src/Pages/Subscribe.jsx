@@ -20,7 +20,12 @@ import styles from './Subscribe.module.css';
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
+
   const [isCapsule, setIsCapsule] = useState(false);
+  const [standardRate, setStandardRate] = useState(false);
+  const [doubleRate, setDoubleRate] = useState(false);
+  const [quadRate, setQuadRate] = useState(false);
+
   const [orderContent, setOrderContent] = useState({
     coffeeMethod: '',
     coffeeType: '',
@@ -81,7 +86,6 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            // event.target.value === 'Capsule' ? setIsCapsule(true) : "";
             if (event.target.value === 'Capsule') {
               setIsCapsule(true);
             } else if (
@@ -89,6 +93,8 @@ export default function Subscribe() {
               event.target.value === 'Espresso'
             ) {
               setIsCapsule(false);
+            }
+            if (event.target.value === '250g') {
             }
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
