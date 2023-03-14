@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import NavBar from '../Layout/NavBar';
-import Footer from '../Layout/Footer';
-import MainButton from '../UI/MainButton';
-import OrderModal from '../UI/OrderModal';
-import OrderSummary from '../UI/OrderSummary';
+import NavBar from "../Layout/NavBar";
+import Footer from "../Layout/Footer";
+import MainButton from "../UI/MainButton";
+import OrderModal from "../components/OrderModal";
+import OrderSummary from "../components/OrderSummary";
 
 /*Menu Items */
-import Amount from '../UI/Selections/Amount';
-import CoffeeType from '../UI/Selections/CoffeeType';
-import Delivery from '../UI/Selections/Delivery';
-import Grind from '../UI/Selections/Grind';
-import Method from '../UI/Selections/Method';
+import Amount from "../components/Selections/Amount";
+import CoffeeType from "../components/Selections/CoffeeType";
+import Delivery from "../components/Selections/Delivery";
+import Grind from "../components/Selections/Grind";
+import Method from "../components/Selections/Method";
 
-import plan from '../planData.jsx';
+import plan from "../planData.jsx";
 
-import styles from './Subscribe.module.css';
+import styles from "./Subscribe.module.css";
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
@@ -27,11 +27,11 @@ export default function Subscribe() {
   const [quadRate, setQuadRate] = useState(false);
 
   const [orderContent, setOrderContent] = useState({
-    coffeeMethod: '',
-    coffeeType: '',
-    amount: '',
-    grindType: '',
-    delivery: '',
+    coffeeMethod: "",
+    coffeeType: "",
+    amount: "",
+    grindType: "",
+    delivery: "",
   });
 
   function handleCoffeeMethodBtn(value) {
@@ -86,15 +86,15 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            if (event.target.value === 'Capsule') {
+            if (event.target.value === "Capsule") {
               setIsCapsule(true);
             } else if (
-              event.target.value === 'Filter' ||
-              event.target.value === 'Espresso'
+              event.target.value === "Filter" ||
+              event.target.value === "Espresso"
             ) {
               setIsCapsule(false);
             }
-            if (event.target.value === '250g') {
+            if (event.target.value === "250g") {
             }
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };

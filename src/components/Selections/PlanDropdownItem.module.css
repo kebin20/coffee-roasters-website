@@ -1,0 +1,59 @@
+.dropDownItem {
+  text-align: left;
+  background-color: var(--big-select-option-default);
+  color: var(--darkBlue);
+  border: none;
+  border-radius: var(--border-px);
+  padding: 1.5em;
+  cursor: pointer;
+}
+
+.dropDownItem:active,
+.dropDownItem:focus {
+  background-color: var(--darkCyan);
+  color: var(--lightCream);
+}
+
+.dropDownItem:hover {
+  background-color: var(--paleOrange);
+}
+
+.buttonTitle {
+  font-family: var(--title-font);
+  font-size: var(--md-font-size);
+  color: inherit;
+  pointer-events: none;
+}
+
+.buttonText {
+  font-family: var(--body-font);
+  color: inherit;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: var(--big-select-option-default);
+  color: var(--darkBlue);
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+  .dropDownItem {
+    padding: 2.5em 2em 6em 2em;
+  }
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
+}

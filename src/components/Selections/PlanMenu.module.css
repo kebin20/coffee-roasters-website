@@ -1,0 +1,51 @@
+.dropdownItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.selectionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.selectionButton {
+  border: none;
+  text-align: left;
+  background-color: var(--lightCream);
+  font-family: var(--title-font);
+  font-weight: 900;
+  font-size: var(--md-font-size);
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1em 0em;
+  gap: 1em;
+}
+.selectionButtonText {
+  color: var(--Grey);
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+  .dropdownItems {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .selectionButton {
+    justify-content: space-between;
+    padding-top: 0;
+  }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
+}

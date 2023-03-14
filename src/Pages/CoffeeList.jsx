@@ -19,7 +19,9 @@ export default function CoffeeList(props) {
           </p>
         </section>
         <section className={styles.coffeeListContainer}>
-          <h2 className={styles.coffeeListTitle}>What kind of coffees are there?</h2>
+          <h2 className={styles.coffeeListTitle}>
+            What kind of coffees are there?
+          </h2>
           <ul className={styles.coffeeList}>
             {props.coffees.map((coffee) => {
               return (
