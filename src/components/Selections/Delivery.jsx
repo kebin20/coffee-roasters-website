@@ -22,17 +22,15 @@ export default function Delivery(props) {
     if (secondWeight) {
       const splitContentArray = content[0].description.split(' ');
       splitContentArray.splice(0, 1, '$13.00');
-      const joinedContent = splitContentArray.join(' ');
-      newContent = joinedContent;
-      return newContent;
+      const joinedFirstContent = splitContentArray.join(' ');
+      newContent = joinedFirstContent;
     } else if (thirdWeight && !secondWeight) {
       const splitContentArray = content[0].description.split(' ');
       splitContentArray.splice(0, 1, '$22.00');
-      const joinedContent = splitContentArray.join(' ');
-      newContent = joinedContent;
+      const joinedSecondContent = splitContentArray.join(' ');
+      newContent = joinedSecondContent;
     } else {
       newContent = content[0].description;
-      return newContent;
     }
     setConditionalContent(newContent);
   }, []);
