@@ -17,7 +17,7 @@ export default function Delivery(props) {
     props.onButtonClick(event.target.value);
   }
 
-  useEffect(() => {
+  function createConditionalContent() {
     let newContent;
     if (secondWeight) {
       const splitContentArray = content[0].description.split(' ');
@@ -33,7 +33,11 @@ export default function Delivery(props) {
       newContent = content[0].description;
     }
     setConditionalContent(newContent);
-  }, []);
+  }
+
+  useEffect(() => {
+    createConditionalContent();
+  }, [props.weight]);
 
   console.log(conditionalContent);
 
