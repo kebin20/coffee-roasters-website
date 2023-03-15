@@ -1,37 +1,40 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import NavBar from "../Layout/NavBar";
-import Footer from "../Layout/Footer";
-import MainButton from "../UI/MainButton";
-import OrderModal from "../components/OrderModal";
-import OrderSummary from "../components/OrderSummary";
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
+import MainButton from '../UI/MainButton';
+import OrderModal from '../components/OrderModal';
+import OrderSummary from '../components/OrderSummary';
 
 /*Menu Items */
-import Amount from "../components/Selections/Amount";
-import CoffeeType from "../components/Selections/CoffeeType";
-import Delivery from "../components/Selections/Delivery";
-import Grind from "../components/Selections/Grind";
-import Method from "../components/Selections/Method";
+import Amount from '../components/Selections/Amount';
+import CoffeeType from '../components/Selections/CoffeeType';
+import Delivery from '../components/Selections/Delivery';
+import Grind from '../components/Selections/Grind';
+import Method from '../components/Selections/Method';
 
-import plan from "../PlanData.tsx";
+import plan from '../PlanData.tsx';
 
-import styles from "./Subscribe.module.css";
+import styles from './Subscribe.module.css';
 
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
 
   const [isCapsule, setIsCapsule] = useState(false);
-  // const [standardRate, setStandardRate] = useState(false);
-  // const [doubleRate, setDoubleRate] = useState(false);
-  // const [quadRate, setQuadRate] = useState(false);
+
+  const [weight, setWeight] = useState({
+    firstWeight: false,
+    secondWeight: false,
+    thirdWeight: false,
+  });
 
   const [orderContent, setOrderContent] = useState({
-    coffeeMethod: "",
-    coffeeType: "",
-    amount: "",
-    grindType: "",
-    delivery: "",
+    coffeeMethod: '',
+    coffeeType: '',
+    amount: '',
+    grindType: '',
+    delivery: '',
   });
 
   function handleCoffeeMethodBtn(value) {
@@ -86,16 +89,42 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            if (event.target.value === "Capsule") {
+            if (event.target.value === 'Capsule') {
               setIsCapsule(true);
             } else if (
-              event.target.value === "Filter" ||
-              event.target.value === "Espresso"
+              event.target.value === 'Filter' ||
+              event.target.value === 'Espresso'
             ) {
               setIsCapsule(false);
             }
-            // if (event.target.value === "250g") {
-            // }
+            if (event.target.value === '250g') {
+              setWeight((prevWeight) => {
+                return {
+                  ...prevWeight,
+                  firstWeight: true,
+                  secondWeight: false,
+                  thirdWeight: false,
+                };
+              });
+            } else if (event.target.value === '500g') {
+              setWeight((prevWeight) => {
+                return {
+                  ...prevWeight,
+                  firstWeight: false,
+                  secondWeight: true,
+                  thirdWeight: false,
+                };
+              });
+            } else {
+              setWeight((prevWeight) => {
+                return {
+                  ...prevWeight,
+                  firstWeight: false,
+                  secondWeight: false,
+                  thirdWeight: true,
+                };
+              });
+            }
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
@@ -227,6 +256,7 @@ export default function Subscribe() {
                 holdChoice(planOption[4].id, id, event)
               }
               onButtonClick={handleDeliveryBtn}
+              weight={weight}
             />
           </ul>
           <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
