@@ -44,6 +44,7 @@ export default function Subscribe() {
   const [isCapsule, setIsCapsule] = useState(false);
   const [weight, setWeight] = useState(weightState);
   const [frequency, setFrequency] = useState(frequencyState);
+  const [shippingPrice, setShippingPrice] = useState();
 
   function handleCoffeeMethodBtn(value) {
     setOrderContent((prevOrder) => {
@@ -149,6 +150,32 @@ export default function Subscribe() {
     setFrequency(frequencyValue);
   }
 
+  function displayShippingPrice() {
+    let price;
+    if (frequency.isWeekSelected && weight.firstWeight) {
+      price = 7.2 * 4;
+    } else if (frequency.isFortnightSelected && weight.firstWeight) {
+      price = 9.6 * 2;
+    } else if (frequency.isMonthSelected && weight.firstWeight) {
+      price = 12.0;
+    } else if (frequency.isWeekSelected && weight.secondWeight) {
+      price = 13.0 * 4;
+    } else if (frequency.isFortnightSelected && weight.secondWeight) {
+      price = 17.5 * 2;
+    } else if (frequency.isMonthSelected && weight.secondWeight) {
+      price = 22.0;
+    } else if (frequency.isWeekSelected && weight.thirdWeight) {
+      price = 22.0 * 4;
+    } else if (frequency.isFortnightSelected && weight.thirdWeight) {
+      price = 32.0 * 2;
+    } else if (frequency.isMonthSelected && weight.thirdWeight) {
+      price = 42.0;
+    }
+    setShippingPrice(price);
+  }
+
+  console.log(shippingPrice);
+
   function holdChoice(planId, optionId, event) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
@@ -159,6 +186,7 @@ export default function Subscribe() {
             setCapsuleBoolean(event);
             setWeightBoolean(event);
             setFrequencyBoolean(event);
+            displayShippingPrice();
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
