@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import NavBar from '../Layout/NavBar';
 import Footer from '../Layout/Footer';
@@ -174,6 +174,10 @@ export default function Subscribe() {
     setShippingPrice(price);
   }
 
+useEffect(() => {
+  displayShippingPrice()
+},[])
+
   console.log(shippingPrice);
 
   function holdChoice(planId, optionId, event) {
@@ -186,7 +190,6 @@ export default function Subscribe() {
             setCapsuleBoolean(event);
             setWeightBoolean(event);
             setFrequencyBoolean(event);
-            displayShippingPrice();
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
