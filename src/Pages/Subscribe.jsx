@@ -144,7 +144,7 @@ export default function Subscribe() {
       frequencyValue = {
         isWeekSelected: true,
         isFortnightSelected: false,
-        isMonthSelected: true,
+        isMonthSelected: false,
       };
     }
     setFrequency(frequencyValue);
@@ -170,6 +170,8 @@ export default function Subscribe() {
       price = 32.0 * 2;
     } else if (frequency.isMonthSelected && weight.thirdWeight) {
       price = 42.0;
+    } else {
+      price = 0
     }
     setShippingPrice(price);
   }
@@ -178,7 +180,7 @@ export default function Subscribe() {
     displayShippingPrice();
   }, [weight, frequency]);
 
-  console.log(shippingPrice);
+  console.log(shippingPrice, weight, frequency);
 
   function holdChoice(planId, optionId, event) {
     setPlanOption((prevPlanOption) =>
@@ -188,8 +190,6 @@ export default function Subscribe() {
           ...plan,
           content: plan.content.map((option) => {
             setCapsuleBoolean(event);
-            setWeightBoolean(event);
-            setFrequencyBoolean(event);
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
@@ -310,6 +310,7 @@ export default function Subscribe() {
                 holdChoice(planOption[2].id, id, event)
               }
               onButtonClick={handleAmountBtn}
+              onSetWeight={setWeightBoolean}
             />
             <Grind
               plan={planOption[3]}
@@ -325,6 +326,7 @@ export default function Subscribe() {
                 holdChoice(planOption[4].id, id, event)
               }
               onButtonClick={handleDeliveryBtn}
+              onSetFrequency={setFrequencyBoolean}
               weight={weight}
             />
           </ul>

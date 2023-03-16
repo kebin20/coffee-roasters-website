@@ -21,6 +21,7 @@ export default function Amount(props) {
         onClick={(event) => {
           props.onHoldChoice(item.id, event);
           handleClick(event);
+          props.onSetWeight(event)
         }}
         title={item.title}
         description={item.description}

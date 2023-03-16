@@ -9,6 +9,7 @@ export default function Delivery({
   plan,
   weight,
   onHoldChoice,
+  onSetFrequency,
 }) {
   const { content, menu } = plan;
 
@@ -97,6 +98,7 @@ export default function Delivery({
         onClick={(event, id) => {
           onHoldChoice(id, event);
           handleClick(event);
+          onSetFrequency(event);
         }}
         title={content[0].title}
         description={description.week}
@@ -106,6 +108,7 @@ export default function Delivery({
         onClick={(event, id) => {
           onHoldChoice(id, event);
           handleClick(event);
+          onSetFrequency(event);
         }}
         title={content[1].title}
         description={description.fortnight}
@@ -115,6 +118,7 @@ export default function Delivery({
         onClick={(event, id) => {
           onHoldChoice(id, event);
           handleClick(event);
+          onSetFrequency(event);
         }}
         title={content[2].title}
         description={description.month}
