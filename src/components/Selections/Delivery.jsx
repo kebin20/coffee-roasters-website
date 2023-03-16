@@ -4,18 +4,30 @@ import ArrowIcon from '../../UI/ArrowIcon';
 import PlanDropdownItem from './PlanDropdownItem';
 import PropTypes from 'prop-types';
 
-export default function Delivery(props) {
-  const { content, menu } = props.plan;
+export default function Delivery({ plan, weight, onHoldChoice }) {
+  const { content, menu } = plan;
 
   const [open, setOpen] = useState(true);
   const [description, setDescription] = useState({});
 
-  const { firstWeight, secondWeight, thirdWeight } = props.weight;
+  const { firstWeight, secondWeight, thirdWeight } = weight;
 
   function handleClick(event) {
     event.preventDefault();
     props.onButtonClick(event.target.value);
   }
+
+  const fiveHundredGramsPrices = {
+    firstWeight: '$13.00',
+    secondWeight: '$17.50',
+    thirdWeight: '$22.00',
+  };
+
+  const thousandGramsPrices = {
+    firstWeight: '$22.00',
+    secondWeight: '$32.50',
+    thirdWeight: '$42.00',
+  };
 
   function createConditionalDescription() {
     let modWeekDescription;
@@ -26,9 +38,13 @@ export default function Delivery(props) {
       const splitWeekDescriptionArr = content[0].description.split(' ');
       const splitFortnightDescriptionArr = content[1].description.split(' ');
       const splitMonthDescriptionArr = content[2].description.split(' ');
-      splitWeekDescriptionArr.splice(0, 1, '$13.00');
-      splitFortnightDescriptionArr.splice(0, 1, '$17.50');
-      splitMonthDescriptionArr.splice(0, 1, '$22.00');
+      splitWeekDescriptionArr.splice(0, 1, fiveHundredGramsPrices.firstWeight);
+      splitFortnightDescriptionArr.splice(
+        0,
+        1,
+        fiveHundredGramsPrices.secondWeight
+      );
+      splitMonthDescriptionArr.splice(0, 1, fiveHundredGramsPrices.thirdWeight);
       const joinedFirstWeekDescription = splitWeekDescriptionArr.join(' ');
       const joinedFirstFortnightDescription =
         splitFortnightDescriptionArr.join(' ');
@@ -40,9 +56,13 @@ export default function Delivery(props) {
       const splitWeekDescriptionArr = content[0].description.split(' ');
       const splitFortnightDescriptionArr = content[1].description.split(' ');
       const splitMonthDescriptionArr = content[2].description.split(' ');
-      splitWeekDescriptionArr.splice(0, 1, '$22.00');
-      splitFortnightDescriptionArr.splice(0, 1, '$32.00');
-      splitMonthDescriptionArr.splice(0, 1, '$42.00');
+      splitWeekDescriptionArr.splice(0, 1, thousandGramsPrices.firstWeight);
+      splitFortnightDescriptionArr.splice(
+        0,
+        1,
+        thousandGramsPrices.secondWeight
+      );
+      splitMonthDescriptionArr.splice(0, 1, thousandGramsPrices.thirdWeight);
       const joinedSecondWeekDescription = splitWeekDescriptionArr.join(' ');
       const joinedSecondFortnightDescription =
         splitFortnightDescriptionArr.join(' ');
@@ -64,13 +84,13 @@ export default function Delivery(props) {
 
   useEffect(() => {
     createConditionalDescription();
-  }, [props.weight]);
+  }, [weight]);
 
   const dropdownItems = (
     <>
       <PlanDropdownItem
         onClick={(event) => {
-          props.onHoldChoice(item.id, event);
+          onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={content[0].title}
@@ -79,7 +99,7 @@ export default function Delivery(props) {
       />
       <PlanDropdownItem
         onClick={(event) => {
-          props.onHoldChoice(item.id, event);
+          onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={content[1].title}
@@ -88,7 +108,7 @@ export default function Delivery(props) {
       />
       <PlanDropdownItem
         onClick={(event) => {
-          props.onHoldChoice(item.id, event);
+          onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={content[2].title}
