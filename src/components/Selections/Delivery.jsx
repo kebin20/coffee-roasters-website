@@ -4,7 +4,12 @@ import ArrowIcon from '../../UI/ArrowIcon';
 import PlanDropdownItem from './PlanDropdownItem';
 import PropTypes from 'prop-types';
 
-export default function Delivery({ plan, weight, onHoldChoice }) {
+export default function Delivery({
+  onButtonClick,
+  plan,
+  weight,
+  onHoldChoice,
+}) {
   const { content, menu } = plan;
 
   const [open, setOpen] = useState(true);
@@ -14,7 +19,7 @@ export default function Delivery({ plan, weight, onHoldChoice }) {
 
   function handleClick(event) {
     event.preventDefault();
-    props.onButtonClick(event.target.value);
+    onButtonClick(event.target.value);
   }
 
   const fiveHundredGramsPrices = {
@@ -89,8 +94,8 @@ export default function Delivery({ plan, weight, onHoldChoice }) {
   const dropdownItems = (
     <>
       <PlanDropdownItem
-        onClick={(event) => {
-          onHoldChoice(item.id, event);
+        onClick={(event, id) => {
+          onHoldChoice(id, event);
           handleClick(event);
         }}
         title={content[0].title}
@@ -98,8 +103,8 @@ export default function Delivery({ plan, weight, onHoldChoice }) {
         isSelected={content[0].isSelected}
       />
       <PlanDropdownItem
-        onClick={(event) => {
-          onHoldChoice(item.id, event);
+        onClick={(event, id) => {
+          onHoldChoice(id, event);
           handleClick(event);
         }}
         title={content[1].title}
@@ -107,8 +112,8 @@ export default function Delivery({ plan, weight, onHoldChoice }) {
         isSelected={content[1].isSelected}
       />
       <PlanDropdownItem
-        onClick={(event) => {
-          onHoldChoice(item.id, event);
+        onClick={(event, id) => {
+          onHoldChoice(id, event);
           handleClick(event);
         }}
         title={content[2].title}
