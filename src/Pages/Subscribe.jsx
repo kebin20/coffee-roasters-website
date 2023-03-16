@@ -174,9 +174,9 @@ export default function Subscribe() {
     setShippingPrice(price);
   }
 
-useEffect(() => {
-  displayShippingPrice()
-},[])
+  useEffect(() => {
+    displayShippingPrice();
+  }, [weight, frequency]);
 
   console.log(shippingPrice);
 
