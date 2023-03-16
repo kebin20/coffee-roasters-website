@@ -31,12 +31,19 @@ const weightState = {
   thirdWeight: false,
 };
 
+const frequencyState = {
+  isWeekSelected: false,
+  isFortnightSelected: false,
+  isMonthSelected: false,
+};
+
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
-  const [isCapsule, setIsCapsule] = useState(false);
   const [orderContent, setOrderContent] = useState(initialState);
+  const [isCapsule, setIsCapsule] = useState(false);
   const [weight, setWeight] = useState(weightState);
+  const [frequency, setFrequency] = useState(frequencyState);
 
   function handleCoffeeMethodBtn(value) {
     setOrderContent((prevOrder) => {
@@ -83,6 +90,65 @@ export default function Subscribe() {
     });
   }
 
+  function setCapsuleBoolean(event) {
+    if (event.target.value === 'Capsule') {
+      setIsCapsule(true);
+    } else if (
+      event.target.value === 'Filter' ||
+      event.target.value === 'Espresso'
+    ) {
+      setIsCapsule(false);
+    }
+  }
+
+  function setWeightBoolean(event) {
+    let weightValue = weight;
+    if (event.target.value === '250g') {
+      weightValue = {
+        firstWeight: true,
+        secondWeight: false,
+        thirdWeight: false,
+      };
+    } else if (event.target.value === '500g') {
+      weightValue = {
+        firstWeight: false,
+        secondWeight: true,
+        thirdWeight: false,
+      };
+    } else {
+      weightValue = {
+        firstWeight: false,
+        secondWeight: false,
+        thirdWeight: true,
+      };
+    }
+    setWeight(weightValue);
+  }
+
+  function setFrequencyBoolean(event) {
+    let frequencyValue = frequency;
+    if (event.target.value === 'Every 2 weeks') {
+      frequencyValue = {
+        isWeekSelected: false,
+        isFortnightSelected: true,
+        isMonthSelected: false,
+      };
+    } else if (event.target.value === 'Every month') {
+      frequencyValue = {
+        isWeekSelected: false,
+        isFortnightSelected: false,
+        isMonthSelected: true,
+      };
+    } else {
+      frequencyValue = {
+        isWeekSelected: true,
+        isFortnightSelected: false,
+        isMonthSelected: true,
+      };
+    }
+    setFrequency(frequencyValue);
+  }
+
   function holdChoice(planId, optionId, event) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
@@ -90,37 +156,9 @@ export default function Subscribe() {
         return {
           ...plan,
           content: plan.content.map((option) => {
-            if (event.target.value === 'Capsule') {
-              setIsCapsule(true);
-            } else if (
-              event.target.value === 'Filter' ||
-              event.target.value === 'Espresso'
-            ) {
-              setIsCapsule(false);
-            }
-
-            let weightValue = weight;
-            if (event.target.value === '250g') {
-              weightValue = {
-                firstWeight: true,
-                secondWeight: false,
-                thirdWeight: false,
-              };
-            } else if (event.target.value === '500g') {
-              weightValue = {
-                firstWeight: false,
-                secondWeight: true,
-                thirdWeight: false,
-              };
-            } else {
-              weightValue = {
-                firstWeight: false,
-                secondWeight: false,
-                thirdWeight: true,
-              };
-            }
-            setWeight(weightValue);
-
+            setCapsuleBoolean(event);
+            setWeightBoolean(event);
+            setFrequencyBoolean(event);
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
