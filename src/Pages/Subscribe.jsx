@@ -17,25 +17,26 @@ import plan from '../PlanData.tsx';
 
 import styles from './Subscribe.module.css';
 
+const initialState = {
+  coffeeMethod: '',
+  coffeeType: '',
+  amount: '',
+  grindType: '',
+  delivery: '',
+};
+
+const weightState = {
+  firstWeight: false,
+  secondWeight: false,
+  thirdWeight: false,
+};
+
 export default function Subscribe() {
   const [confirmPlan, setConfirmPlan] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
-
   const [isCapsule, setIsCapsule] = useState(false);
-
-  const [weight, setWeight] = useState({
-    firstWeight: false,
-    secondWeight: false,
-    thirdWeight: false,
-  });
-
-  const [orderContent, setOrderContent] = useState({
-    coffeeMethod: '',
-    coffeeType: '',
-    amount: '',
-    grindType: '',
-    delivery: '',
-  });
+  const [orderContent, setOrderContent] = useState(initialState);
+  const [weight, setWeight] = useState(weightState);
 
   function handleCoffeeMethodBtn(value) {
     setOrderContent((prevOrder) => {
@@ -97,34 +98,29 @@ export default function Subscribe() {
             ) {
               setIsCapsule(false);
             }
+
+            let weightValue = weight;
             if (event.target.value === '250g') {
-              setWeight((prevWeight) => {
-                return {
-                  ...prevWeight,
-                  firstWeight: true,
-                  secondWeight: false,
-                  thirdWeight: false,
-                };
-              });
+              weightValue = {
+                firstWeight: true,
+                secondWeight: false,
+                thirdWeight: false,
+              };
             } else if (event.target.value === '500g') {
-              setWeight((prevWeight) => {
-                return {
-                  ...prevWeight,
-                  firstWeight: false,
-                  secondWeight: true,
-                  thirdWeight: false,
-                };
-              });
+              weightValue = {
+                firstWeight: false,
+                secondWeight: true,
+                thirdWeight: false,
+              };
             } else {
-              setWeight((prevWeight) => {
-                return {
-                  ...prevWeight,
-                  firstWeight: false,
-                  secondWeight: false,
-                  thirdWeight: true,
-                };
-              });
+              weightValue = {
+                firstWeight: false,
+                secondWeight: false,
+                thirdWeight: true,
+              };
             }
+            setWeight(weightValue);
+
             if (option.id === optionId) {
               return { ...option, isSelected: !option.isSelected };
             } else {
