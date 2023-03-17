@@ -7,6 +7,8 @@ export default function OrderModal(props) {
   const { coffeeMethod, coffeeType, amount, grindType, delivery } =
     props.orderContent;
 
+  const { isCapsule, shippingPrice } = props;
+
   return (
     <div className={styles.backdrop}>
       <div className={styles.orderModal}>
@@ -18,7 +20,7 @@ export default function OrderModal(props) {
             a <span className={styles.orderModalSpan}>{coffeeType}</span> type
             of bean. <span className={styles.orderModalSpan}>{amount}</span>{' '}
             ground{' '}
-            {!props.isCapsule && (
+            {!isCapsule && (
               <>
                 <span>ala </span>
                 <span className={styles.orderModalSpan}>{grindType}</span>
@@ -32,7 +34,7 @@ export default function OrderModal(props) {
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.
           </p>
-          <MainButton>Checkout - $14.00/mo</MainButton>
+          <MainButton>Checkout - ${shippingPrice.toFixed(2)}/mo</MainButton>
         </div>
       </div>
     </div>
@@ -44,5 +46,4 @@ OrderModal.propTypes = {
   caffeineOption: PropTypes.string,
   size: PropTypes.string,
   type: PropTypes.string,
-  frequency: PropTypes.string,
 };

@@ -180,8 +180,6 @@ export default function Subscribe() {
     displayShippingPrice();
   }, [weight, frequency]);
 
-  console.log(shippingPrice, weight, frequency);
-
   function holdChoice(planId, optionId, event) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
@@ -285,7 +283,7 @@ export default function Subscribe() {
           <OrderModal
             orderContent={orderContent}
             isCapsule={isCapsule}
-            frequency={frequency}
+            shippingPrice={shippingPrice}
           />
         )}
         <div className={styles.planContainer}>
