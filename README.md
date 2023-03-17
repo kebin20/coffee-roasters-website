@@ -14,7 +14,6 @@
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -40,6 +39,7 @@ Users should be able to:
 - CSS Grid
 - CSS Modules
 - Mobile-first workflow
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript - Strongly typed programming language on top of JS
 - [React](https://reactjs.org/) - JS library
 - [React Router](https://reactrouter.com/en/main) - React routing library
 
@@ -89,7 +89,7 @@ Next, I was struggling in keeping the active button select in order for me to ma
       })
     );
   }
-  ```
+```
 
 ### Continued development
 
@@ -98,10 +98,10 @@ This website will be an ongoing project and function as a sandbox to implement n
 Future implementations:
 
 ~- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.~ COMPLETED
+
 - Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan. In addition, add a "add to shopping cart" functionality to it too.
 - Enable user login to check their account by using BaaS like Firebase for the backend.
 - Migrating the project to TypeScript.
-
 
 ### Useful resources
 
@@ -110,7 +110,6 @@ Future implementations:
 - [Stack Overflow](https://stackoverflow.com/a/50885613) - This SO thread helped me to understand how to add a br tag in React
 - [Stack Overflow](https://stackoverflow.com/questions/51498816/how-to-conditionally-apply-styles-in-a-react-component-with-css-modules) - This thread helped me with conditional styling
 - [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) - This mdn doc helped me to disable the elements within the button element.
-
 
 ## Author
 
