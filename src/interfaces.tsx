@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
 export interface MainButtonType {
-  type: 'button' | 'submit' | 'reset' | undefined;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-  disabled: boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
   children?: ReactNode;
 }
 
@@ -18,7 +18,7 @@ export interface CoffeeItemType {
   description: string;
 }
 
-export interface OrderModalType {
+export interface OrderSummaryType {
   orderContent: {
     coffeeMethod: string;
     coffeeType: string;
@@ -28,5 +28,10 @@ export interface OrderModalType {
   };
   isCapsule: boolean;
   shippingPrice: number;
-  closeModal: () => void;
+  closeModal?: () => void;
+}
+
+export interface OrderModalType extends OrderSummaryType {
+  shippingPrice: number;
+  closeModal?: () => void;
 }
