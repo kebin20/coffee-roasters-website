@@ -38,7 +38,7 @@ const frequencyState = {
 };
 
 export default function Subscribe() {
-  const [confirmPlan, setConfirmPlan] = useState(false);
+  const [openOrderModal, setOpenOrderModal] = useState(false);
   const [planOption, setPlanOption] = useState(plan);
   const [orderContent, setOrderContent] = useState(initialState);
   const [isCapsule, setIsCapsule] = useState(false);
@@ -171,7 +171,7 @@ export default function Subscribe() {
     } else if (frequency.isMonthSelected && weight.thirdWeight) {
       price = 42.0;
     } else {
-      price = 0
+      price = 0;
     }
     setShippingPrice(price);
   }
@@ -279,11 +279,12 @@ export default function Subscribe() {
             </li>
           </ul>
         </aside>
-        {confirmPlan && (
+        {openOrderModal && (
           <OrderModal
             orderContent={orderContent}
             isCapsule={isCapsule}
             shippingPrice={shippingPrice}
+            closeModal={() => setOpenOrderModal(false)}
           />
         )}
         <div className={styles.planContainer}>
@@ -329,7 +330,7 @@ export default function Subscribe() {
             />
           </ul>
           <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
-          <MainButton onClick={() => setConfirmPlan(true)}>
+          <MainButton onClick={() => setOpenOrderModal(true)}>
             Create my plan!
           </MainButton>
         </div>
