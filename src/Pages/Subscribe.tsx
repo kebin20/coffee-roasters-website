@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import NavBar from '../Layout/NavBar';
-import Footer from '../Layout/Footer';
-import MainButton from '../UI/MainButton';
-import OrderModal from '../components/OrderModal';
-import OrderSummary from '../components/OrderSummary';
+import NavBar from "../Layout/NavBar";
+import Footer from "../Layout/Footer";
+import MainButton from "../UI/MainButton";
+import OrderModal from "../components/OrderModal";
+import OrderSummary from "../components/OrderSummary";
 
 /*Menu Items */
-import Amount from '../components/Selections/Amount';
-import CoffeeType from '../components/Selections/CoffeeType';
-import Delivery from '../components/Selections/Delivery';
-import Grind from '../components/Selections/Grind';
-import Method from '../components/Selections/Method';
+import Amount from "../components/Selections/Amount";
+import CoffeeType from "../components/Selections/CoffeeType";
+import Delivery from "../components/Selections/Delivery";
+import Grind from "../components/Selections/Grind";
+import Method from "../components/Selections/Method";
 
-import plan from '../PlanData';
+import plan from "../PlanData";
 
-import styles from './Subscribe.module.css';
+import styles from "./Subscribe.module.css";
 
 const initialState = {
-  coffeeMethod: '',
-  coffeeType: '',
-  amount: '',
-  grindType: '',
-  delivery: '',
+  coffeeMethod: "",
+  coffeeType: "",
+  amount: "",
+  grindType: "",
+  delivery: "",
 };
 
 const weightState = {
@@ -49,7 +49,7 @@ export default function Subscribe() {
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
   const planHasContent = Object.values(orderContent).every(
-    (value) => value !== ''
+    (value) => value !== ""
   );
 
   function handleCoffeeMethodBtn(value: string) {
@@ -99,9 +99,9 @@ export default function Subscribe() {
 
   function setCapsuleBoolean(event: MouseEvent) {
     const target = event.target as HTMLInputElement;
-    if (target.value === 'Capsule') {
+    if (target.value === "Capsule") {
       setIsCapsule(true);
-    } else if (target.value === 'Filter' || target.value === 'Espresso') {
+    } else if (target.value === "Filter" || target.value === "Espresso") {
       setIsCapsule(false);
     }
   }
@@ -109,13 +109,13 @@ export default function Subscribe() {
   function setWeightBoolean(event: MouseEvent) {
     const target = event.target as HTMLInputElement;
     let weightValue = weight;
-    if (target.value === '250g') {
+    if (target.value === "250g") {
       weightValue = {
         firstWeight: true,
         secondWeight: false,
         thirdWeight: false,
       };
-    } else if (target.value === '500g') {
+    } else if (target.value === "500g") {
       weightValue = {
         firstWeight: false,
         secondWeight: true,
@@ -134,13 +134,13 @@ export default function Subscribe() {
   function setFrequencyBoolean(event: MouseEvent) {
     const target = event.target as HTMLInputElement;
     let frequencyValue = frequency;
-    if (target.value === 'Every 2 weeks') {
+    if (target.value === "Every 2 weeks") {
       frequencyValue = {
         isWeekSelected: false,
         isFortnightSelected: true,
         isMonthSelected: false,
       };
-    } else if (target.value === 'Every month') {
+    } else if (target.value === "Every month") {
       frequencyValue = {
         isWeekSelected: false,
         isFortnightSelected: false,
@@ -311,7 +311,7 @@ export default function Subscribe() {
             />
             <Amount
               plan={planOption[2]}
-              onHoldChoice={(id, event) =>
+              onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[2].id, id, event)
               }
               onButtonClick={handleAmountBtn}

@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from "react";
 
 export interface MainButtonType {
-  type?: 'button' | 'submit' | 'reset' | undefined;
+  type?: "button" | "submit" | "reset" | undefined;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   children?: ReactNode;
@@ -27,11 +27,19 @@ export interface OrderSummaryType {
     delivery: string;
   };
   isCapsule: boolean;
-  shippingPrice: number;
-  closeModal?: () => void;
 }
 
 export interface OrderModalType extends OrderSummaryType {
   shippingPrice: number;
   closeModal?: () => void;
+}
+
+export interface DropdownItemType {
+  id?: React.Key | null | undefined;
+  isSelected: boolean;
+  isCapsule?: boolean;
+  type?: "button" | "submit" | "reset" | undefined;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  title: string;
+  description: string;
 }
