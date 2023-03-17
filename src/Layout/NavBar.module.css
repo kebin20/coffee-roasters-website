@@ -125,7 +125,7 @@
   .menuItems {
     display: flex;
     align-items: center;
-    margin-left: 1.5em;
+    margin-left: 0.5em;
   }
 
   .menuLink {

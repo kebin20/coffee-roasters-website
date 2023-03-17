@@ -1,4 +1,4 @@
-/* our commitment section*/
+/* hero section*/
 
 .homeHeroContainer {
   color: var(--lightCream);
@@ -197,15 +197,16 @@
 
   .whyUs {
     height: 75em;
+    margin-bottom: 0;
   }
 
   .whyUsTitle {
     font-size: var(--lg-font-size);
   }
 
-  .whyUsBgContainer {
+  /* .whyUsBgContainer {
     height: 55%;
-  }
+  } */
 
   .whyUsContainer {
     background-color: var(--darkBlue);
@@ -283,11 +284,11 @@
   }
 }
 /* Tablet landscape and larger */
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
   .whyUs {
     height: 135vh;
   }
-}
+} */
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
   /* HERO SECTION */
@@ -304,12 +305,19 @@
 
   .heroWrapper {
     display: flex;
-    align-items: flex-start;
     text-align: left;
     padding: 5.3em 35em 5.3em 5.3em;
+    min-width: 1280px;
+    min-height: 600px;
+    justify-content: center;
   }
 
-  /*COLLECTION SECION */
+  .homeHeroTitle {
+    font-size: var(--xxl-font-size);
+    line-height: 1;
+  }
+
+  /*COLLECTION SECTION */
 
   .collectionContainer {
     grid-template-columns: repeat(4, 1fr);
@@ -338,20 +346,22 @@
   /*WHY US SECTION*/
 
   .whyUs {
-    height: auto;
+    /* height: auto; */
     margin: 5em;
+    margin-bottom: 0;
   }
 
   .whyUsContainer {
-    height: 55vh;
+    /* height: 55vh; */
     border-radius: var(--border-px);
+    padding: 7em;
   }
 
   .whyUsFeaturesContainer {
     flex-direction: row;
-    height: 100%;
+    /* height: 100%; */
     margin: 1em 6em;
-    top: 65%;
+    top: 31%;
   }
 
   .whyUsTitle {
@@ -371,7 +381,7 @@
   /*HOW IT WORKS SECTION*/
 
   .howItWorks {
-    margin: 25em 3.5em 8em 11em;
+    margin: 0em 3.5em 8em 11em;
   }
 
   .steps {
@@ -413,7 +423,7 @@
     bottom: -10em;
   }
 
-  .whyUsBgContainer {
+  /* .whyUsBgContainer {
     height: 56vh;
-  }
+  } */
 }
