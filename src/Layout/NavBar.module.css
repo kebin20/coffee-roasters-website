@@ -35,6 +35,7 @@
   font-family: var(--title-font);
   font-weight: 900;
   font-size: 1.5rem;
+  z-index: 1;
 }
 
 .mobileMenuItems > li {
