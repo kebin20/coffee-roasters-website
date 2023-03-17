@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './MainButton.module.css';
+import {MainButtonType} from '../interfaces'
 
-export default function MainButton(props) {
+export default function MainButton(props: MainButtonType) {
   return (
     <button
       className={styles.mainButton}
@@ -14,9 +14,3 @@ export default function MainButton(props) {
     </button>
   );
 }
-
-MainButton.propTypes = {
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  onClick: PropTypes.func,
-  children: PropTypes.node.isRequired,
-};

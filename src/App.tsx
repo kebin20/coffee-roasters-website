@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
