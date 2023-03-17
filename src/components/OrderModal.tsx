@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styles from './OrderModal.module.css';
 import MainButton from '../UI/MainButton';
+import { OrderModalType } from '../interfaces';
 
-export default function OrderModal(props) {
+export default function OrderModal(props: OrderModalType) {
   const [confirmCheckout, setConfirmCheckout] = useState(false);
 
   const { coffeeMethod, coffeeType, amount, grindType, delivery } =
@@ -51,7 +51,11 @@ export default function OrderModal(props) {
             </div>
           )}
           {!confirmCheckout && (
-            <MainButton onClick={() => setConfirmCheckout(true)}>
+            <MainButton
+              onClick={() => setConfirmCheckout(true)}
+              type={undefined}
+              disabled={false}
+            >
               Checkout - ${shippingPrice.toFixed(2)}/mo
             </MainButton>
           )}
@@ -63,10 +67,3 @@ export default function OrderModal(props) {
     </div>
   );
 }
-
-OrderModal.propTypes = {
-  coffeeMethod: PropTypes.string,
-  caffeineOption: PropTypes.string,
-  size: PropTypes.string,
-  type: PropTypes.string,
-};

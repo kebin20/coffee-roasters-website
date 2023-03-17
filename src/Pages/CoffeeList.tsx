@@ -1,11 +1,12 @@
-import React from "react";
-import styles from "./CoffeeList.module.css";
-import Wrapper from "../UI/Wrapper";
-import NavBar from "../Layout/NavBar";
-import Footer from "../Layout/Footer";
-import Coffee from "./Coffee";
+import React from 'react';
+import styles from './CoffeeList.module.css';
+import Wrapper from '../UI/Wrapper';
+import NavBar from '../Layout/NavBar';
+import Footer from '../Layout/Footer';
+import Coffee from './Coffee';
+import { CoffeeItemType } from 'src/interfaces';
 
-export default function CoffeeList(props) {
+export default function CoffeeList({ coffees }) {
   return (
     <>
       <NavBar />
@@ -23,7 +24,7 @@ export default function CoffeeList(props) {
             What kind of coffees are there?
           </h2>
           <ul className={styles.coffeeList}>
-            {props.coffees.map((coffee) => {
+            {coffees.map((coffee: CoffeeItemType) => {
               return (
                 <Coffee
                   key={coffee.id}

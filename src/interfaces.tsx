@@ -12,7 +12,21 @@ export interface PropsType {
 }
 
 export interface CoffeeItemType {
+  id?: string;
   image: string;
   title: string;
   description: string;
+}
+
+export interface OrderModalType {
+  orderContent: {
+    coffeeMethod: string;
+    coffeeType: string;
+    amount: string;
+    grindType: string;
+    delivery: string;
+  };
+  isCapsule: boolean;
+  shippingPrice: number;
+  closeModal: () => void;
 }

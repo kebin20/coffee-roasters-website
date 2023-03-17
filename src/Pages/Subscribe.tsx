@@ -44,7 +44,7 @@ export default function Subscribe() {
   const [isCapsule, setIsCapsule] = useState(false);
   const [weight, setWeight] = useState(weightState);
   const [frequency, setFrequency] = useState(frequencyState);
-  const [shippingPrice, setShippingPrice] = useState();
+  const [shippingPrice, setShippingPrice] = useState(0);
 
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
@@ -52,7 +52,7 @@ export default function Subscribe() {
     (value) => value !== ''
   );
 
-  function handleCoffeeMethodBtn(value) {
+  function handleCoffeeMethodBtn(value: string) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -61,7 +61,7 @@ export default function Subscribe() {
     });
   }
 
-  function handleCoffeeTypeBtn(value) {
+  function handleCoffeeTypeBtn(value: string) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -70,7 +70,7 @@ export default function Subscribe() {
     });
   }
 
-  function handleDeliveryBtn(value) {
+  function handleDeliveryBtn(value: string) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -79,7 +79,7 @@ export default function Subscribe() {
     });
   }
 
-  function handleGrindTypeBtn(value) {
+  function handleGrindTypeBtn(value: string) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -88,7 +88,7 @@ export default function Subscribe() {
     });
   }
 
-  function handleAmountBtn(value) {
+  function handleAmountBtn(value: string) {
     setOrderContent((prevOrder) => {
       return {
         ...prevOrder,
@@ -97,26 +97,25 @@ export default function Subscribe() {
     });
   }
 
-  function setCapsuleBoolean(event) {
-    if (event.target.value === 'Capsule') {
+  function setCapsuleBoolean(event: MouseEvent) {
+    const target = event.target as HTMLInputElement;
+    if (target.value === 'Capsule') {
       setIsCapsule(true);
-    } else if (
-      event.target.value === 'Filter' ||
-      event.target.value === 'Espresso'
-    ) {
+    } else if (target.value === 'Filter' || target.value === 'Espresso') {
       setIsCapsule(false);
     }
   }
 
-  function setWeightBoolean(event) {
+  function setWeightBoolean(event: MouseEvent) {
+    const target = event.target as HTMLInputElement;
     let weightValue = weight;
-    if (event.target.value === '250g') {
+    if (target.value === '250g') {
       weightValue = {
         firstWeight: true,
         secondWeight: false,
         thirdWeight: false,
       };
-    } else if (event.target.value === '500g') {
+    } else if (target.value === '500g') {
       weightValue = {
         firstWeight: false,
         secondWeight: true,
@@ -132,15 +131,16 @@ export default function Subscribe() {
     setWeight(weightValue);
   }
 
-  function setFrequencyBoolean(event) {
+  function setFrequencyBoolean(event: MouseEvent) {
+    const target = event.target as HTMLInputElement;
     let frequencyValue = frequency;
-    if (event.target.value === 'Every 2 weeks') {
+    if (target.value === 'Every 2 weeks') {
       frequencyValue = {
         isWeekSelected: false,
         isFortnightSelected: true,
         isMonthSelected: false,
       };
-    } else if (event.target.value === 'Every month') {
+    } else if (target.value === 'Every month') {
       frequencyValue = {
         isWeekSelected: false,
         isFortnightSelected: false,
@@ -157,7 +157,7 @@ export default function Subscribe() {
   }
 
   function displayShippingPrice() {
-    let price;
+    let price: number;
     if (frequency.isWeekSelected && weight.firstWeight) {
       price = 7.2 * 4;
     } else if (frequency.isFortnightSelected && weight.firstWeight) {
@@ -186,7 +186,7 @@ export default function Subscribe() {
     displayShippingPrice();
   }, [weight, frequency]);
 
-  function holdChoice(planId, optionId, event) {
+  function holdChoice(planId: string, optionId: string, event: MouseEvent) {
     setPlanOption((prevPlanOption) =>
       prevPlanOption.map((plan) => {
         if (plan.id !== planId) return plan;
@@ -339,6 +339,7 @@ export default function Subscribe() {
           <MainButton
             onClick={() => setOpenOrderModal(true)}
             disabled={planHasContent ? false : true}
+            type={undefined}
           >
             Create my plan!
           </MainButton>
