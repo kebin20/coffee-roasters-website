@@ -97,11 +97,17 @@ This website will be an ongoing project and function as a sandbox to implement n
 
 Future implementations:
 
-~- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.~ COMPLETED
+~- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.~ (COMPLETED)
 
-- Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan. In addition, add a "add to shopping cart" functionality to it too.
+- Migrating the project to TypeScript. (WIP)
+
+- Enable user to create a personal account. (WIP)
+
 - Enable user login to check their account by using BaaS like Firebase for the backend.
-- Migrating the project to TypeScript.
+
+- Create another "Shop" page to display around 6 items for sale and the ability to add it to the custom order plan.
+
+- Add a "add to shopping cart" functionality.
 
 ### Useful resources
 
