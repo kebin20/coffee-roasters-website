@@ -1,4 +1,4 @@
-.orderSummary__container {
+.orderSummaryContainer {
   width: 100%;
   background-color: var(--darkBlue);
   color: var(--Grey);
@@ -10,7 +10,7 @@
   gap: 1em;
 }
 
-.orderSummary__h1 {
+.orderSummaryTitle {
   color: var(--Gray);
   text-transform: uppercase;
   font-size: initial;
@@ -18,7 +18,7 @@
   font-family: var(--body-font);
 }
 
-.orderSummary__p {
+.orderSummaryText {
   color: var(--lightCream);
   font-family: var(--title-font);
   font-size: 1.5rem;
@@ -26,6 +26,6 @@
   line-height: 40px;
 }
 
-.orderSummary__span {
+.orderSummarySpan {
   color: var(--darkCyan);
 }
