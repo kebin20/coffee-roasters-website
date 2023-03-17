@@ -13,7 +13,7 @@ import Delivery from '../components/Selections/Delivery';
 import Grind from '../components/Selections/Grind';
 import Method from '../components/Selections/Method';
 
-import plan from '../PlanData.tsx';
+import plan from '../PlanData';
 
 import styles from './Subscribe.module.css';
 

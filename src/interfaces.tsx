@@ -10,3 +10,9 @@ export interface MainButtonType {
 export interface PropsType {
   children?: ReactNode;
 }
+
+export interface CoffeeItemType {
+  image: string;
+  title: string;
+  description: string;
+}
