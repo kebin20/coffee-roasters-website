@@ -46,6 +46,12 @@ export default function Subscribe() {
   const [frequency, setFrequency] = useState(frequencyState);
   const [shippingPrice, setShippingPrice] = useState();
 
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+  const planHasContent = Object.values(orderContent).every(
+    (value) => value !== ''
+  );
+
   function handleCoffeeMethodBtn(value) {
     setOrderContent((prevOrder) => {
       return {
@@ -330,7 +336,10 @@ export default function Subscribe() {
             />
           </ul>
           <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
-          <MainButton onClick={() => setOpenOrderModal(true)}>
+          <MainButton
+            onClick={() => setOpenOrderModal(true)}
+            disabled={planHasContent ? false : true}
+          >
             Create my plan!
           </MainButton>
         </div>
@@ -339,56 +348,3 @@ export default function Subscribe() {
     </>
   );
 }
-
-/* PREV SOLUTION*/
-
-// import PlanMenu from '../UI/PlanMenu';
-
-// useEffect(() => {
-//   const newPlanData = plan.map((item) => {
-//     return {
-//       ...item,
-//       id: nanoid(),
-//       content: item.content.map((option) => {
-//         return {
-//           ...option,
-//           id: nanoid(),
-//         };
-//       }),
-//     };
-//   });
-//   setPlanOption(newPlanData);
-// }, []);
-
-// const menuComponent = planOption.map((item) => {
-//   return (
-//     <PlanMenu
-//       key={item.id}
-//       plan={item}
-//       isCapsule={isCapsule}
-//       onHoldChoice={(id, event) => holdChoice(item.id, id, event)}
-//     />
-//   );
-// });
-
-// function holdChoice(planId, optionId, event) {
-//   event.preventDefault();
-//   setPlanOption((prevPlanOption) =>
-//     prevPlanOption.map((plan) => {
-//       if (plan.id !== planId) return plan;
-//       return {
-//         ...plan,
-//         content: plan.content.map((option) => {
-//           event.target.value === 'Capsule'
-//             ? setIsCapsule(true)
-//             : setIsCapsule(false);
-//           if (option.id === optionId) {
-//             return { ...option, isSelected: !option.isSelected };
-//           } else {
-//             return { ...option, isSelected: false };
-//           }
-//         }),
-//       };
-//     })
-//   );
-// }
