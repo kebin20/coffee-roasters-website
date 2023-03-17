@@ -42,10 +42,13 @@ export default function OrderModal(props) {
             </>
           )}
           {confirmCheckout && (
-            <h2 className={styles.orderModalTitle}>
-              Thank you for your order! Please check out for more information on
-              our range of coffee
-            </h2>
+            <div className={styles.checkout}>
+              <h2>Thank you for your order!</h2>
+              <p>
+                Please explore our website for more information on our range of
+                coffee.
+              </p>
+            </div>
           )}
           {!confirmCheckout && (
             <MainButton onClick={() => setConfirmCheckout(true)}>
