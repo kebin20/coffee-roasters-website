@@ -14,10 +14,8 @@ export default function Amount({
 
   const { content, menu } = plan;
 
-  function handleClick(event: {
-    target: HTMLInputElement;
-    preventDefault: () => void;
-  }) {
+  //https://stackoverflow.com/questions/71569958/type-mouseeventhtmlbuttonelement-mouseevent-is-not-assignable-to-type-mous
+  function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     const target = event.target as HTMLInputElement;
     event.preventDefault();
     onButtonClick(target.value);

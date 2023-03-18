@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styles from './PlanMenu.module.css';
-import ArrowIcon from '../../UI/ArrowIcon';
-import PlanDropdownItem from './PlanDropdownItem';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import styles from "./PlanMenu.module.css";
+import ArrowIcon from "../../UI/ArrowIcon";
+import PlanDropdownItem from "./PlanDropdownItem";
 
 export default function Delivery({
   onButtonClick,
@@ -18,32 +17,33 @@ export default function Delivery({
 
   const { firstWeight, secondWeight, thirdWeight } = weight;
 
-  function handleClick(event) {
+  function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    const target = event.target as HTMLInputElement;
     event.preventDefault();
-    onButtonClick(event.target.value);
+    onButtonClick(target.value);
   }
 
   const fiveHundredGramsPrices = {
-    firstWeight: '$13.00',
-    secondWeight: '$17.50',
-    thirdWeight: '$22.00',
+    firstWeight: "$13.00",
+    secondWeight: "$17.50",
+    thirdWeight: "$22.00",
   };
 
   const thousandGramsPrices = {
-    firstWeight: '$22.00',
-    secondWeight: '$32.50',
-    thirdWeight: '$42.00',
+    firstWeight: "$22.00",
+    secondWeight: "$32.50",
+    thirdWeight: "$42.00",
   };
 
   function createConditionalDescription() {
-    let modWeekDescription;
-    let modFortnightDescription;
-    let modMonthDescription;
+    let modWeekDescription: string;
+    let modFortnightDescription: string;
+    let modMonthDescription: string;
 
     if (secondWeight && !firstWeight && !thirdWeight) {
-      const splitWeekDescriptionArr = content[0].description.split(' ');
-      const splitFortnightDescriptionArr = content[1].description.split(' ');
-      const splitMonthDescriptionArr = content[2].description.split(' ');
+      const splitWeekDescriptionArr = content[0].description.split(" ");
+      const splitFortnightDescriptionArr = content[1].description.split(" ");
+      const splitMonthDescriptionArr = content[2].description.split(" ");
       splitWeekDescriptionArr.splice(0, 1, fiveHundredGramsPrices.firstWeight);
       splitFortnightDescriptionArr.splice(
         0,
@@ -51,17 +51,17 @@ export default function Delivery({
         fiveHundredGramsPrices.secondWeight
       );
       splitMonthDescriptionArr.splice(0, 1, fiveHundredGramsPrices.thirdWeight);
-      const joinedFirstWeekDescription = splitWeekDescriptionArr.join(' ');
+      const joinedFirstWeekDescription = splitWeekDescriptionArr.join(" ");
       const joinedFirstFortnightDescription =
-        splitFortnightDescriptionArr.join(' ');
-      const joinedFirstMonthDescription = splitMonthDescriptionArr.join(' ');
+        splitFortnightDescriptionArr.join(" ");
+      const joinedFirstMonthDescription = splitMonthDescriptionArr.join(" ");
       modWeekDescription = joinedFirstWeekDescription;
       modFortnightDescription = joinedFirstFortnightDescription;
       modMonthDescription = joinedFirstMonthDescription;
     } else if (thirdWeight && !secondWeight && !firstWeight) {
-      const splitWeekDescriptionArr = content[0].description.split(' ');
-      const splitFortnightDescriptionArr = content[1].description.split(' ');
-      const splitMonthDescriptionArr = content[2].description.split(' ');
+      const splitWeekDescriptionArr = content[0].description.split(" ");
+      const splitFortnightDescriptionArr = content[1].description.split(" ");
+      const splitMonthDescriptionArr = content[2].description.split(" ");
       splitWeekDescriptionArr.splice(0, 1, thousandGramsPrices.firstWeight);
       splitFortnightDescriptionArr.splice(
         0,
@@ -69,10 +69,10 @@ export default function Delivery({
         thousandGramsPrices.secondWeight
       );
       splitMonthDescriptionArr.splice(0, 1, thousandGramsPrices.thirdWeight);
-      const joinedSecondWeekDescription = splitWeekDescriptionArr.join(' ');
+      const joinedSecondWeekDescription = splitWeekDescriptionArr.join(" ");
       const joinedSecondFortnightDescription =
-        splitFortnightDescriptionArr.join(' ');
-      const joinedSecondMonthDescription = splitMonthDescriptionArr.join(' ');
+        splitFortnightDescriptionArr.join(" ");
+      const joinedSecondMonthDescription = splitMonthDescriptionArr.join(" ");
       modWeekDescription = joinedSecondWeekDescription;
       modFortnightDescription = joinedSecondFortnightDescription;
       modMonthDescription = joinedSecondMonthDescription;
@@ -137,8 +137,3 @@ export default function Delivery({
     </li>
   );
 }
-
-Delivery.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.object),
-  onHoldChoice: PropTypes.func.isRequired,
-};

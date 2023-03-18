@@ -297,14 +297,14 @@ export default function Subscribe() {
           <ul className={styles.planWrapper}>
             <Method
               plan={planOption[0]}
-              onHoldChoice={(id, event) =>
+              onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[0].id, id, event)
               }
               onButtonClick={handleCoffeeMethodBtn}
             />
             <CoffeeType
               plan={planOption[1]}
-              onHoldChoice={(id, event) =>
+              onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[1].id, id, event)
               }
               onButtonClick={handleCoffeeTypeBtn}
@@ -320,14 +320,14 @@ export default function Subscribe() {
             <Grind
               plan={planOption[3]}
               isCapsule={isCapsule}
-              onHoldChoice={(id, event) =>
+              onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[3].id, id, event)
               }
               onButtonClick={handleGrindTypeBtn}
             />
             <Delivery
               plan={planOption[4]}
-              onHoldChoice={(id, event) =>
+              onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[4].id, id, event)
               }
               onButtonClick={handleDeliveryBtn}

@@ -2,30 +2,36 @@ import React, { useState } from "react";
 import styles from "./PlanMenu.module.css";
 import ArrowIcon from "../../UI/ArrowIcon";
 import PlanDropdownItem from "./PlanDropdownItem";
-import PropTypes from "prop-types";
+import { DropdownItemType } from "src/interfaces";
 
-export default function Grind(props) {
+export default function Grind({
+  plan,
+  isCapsule,
+  onHoldChoice,
+  onButtonClick,
+}) {
   const [open, setOpen] = useState(true);
 
-  const { content, menu } = props.plan;
+  const { content, menu } = plan;
 
-  function handleClick(event) {
+  function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    const target = event.target as HTMLInputElement;
     event.preventDefault();
-    props.onButtonClick(event.target.value);
+    onButtonClick(target.value);
   }
 
-  const dropdownItems = content.map((item) => {
+  const dropdownItems = content.map((item: DropdownItemType) => {
     return (
       <PlanDropdownItem
         key={item.id}
         onClick={(event) => {
-          props.onHoldChoice(item.id, event);
+          onHoldChoice(item.id, event);
           handleClick(event);
         }}
         title={item.title}
         description={item.description}
         isSelected={item.isSelected}
-        isCapsule={props.isCapsule}
+        isCapsule={isCapsule}
       />
     );
   });
@@ -40,8 +46,3 @@ export default function Grind(props) {
     </li>
   );
 }
-
-Grind.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.object),
-  onHoldChoice: PropTypes.func.isRequired,
-};
