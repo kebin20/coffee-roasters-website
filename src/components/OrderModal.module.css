@@ -54,3 +54,22 @@
   align-items: center;
   gap: 1em;
 }
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 600px) {
+  .orderModal {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30%;
+  }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
+}
