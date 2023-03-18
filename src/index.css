@@ -34,7 +34,7 @@ Mobile: 654x800
   --lg-font-size: 2rem; /*32px*/
   --semi-lg-font-size: 1.75rem; /*28px*/
   --md-font-size: 1.5rem; /*24px*/
-  --sm-font-size: 1.2em;
+  --sm-font-size: 1.2em; /*19.2px*/
   --border-px: 10px;
 }
 
@@ -103,6 +103,18 @@ a {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media only screen and (min-width: 600px) {
