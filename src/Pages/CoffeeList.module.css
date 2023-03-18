@@ -68,16 +68,38 @@
 @media only screen and (min-width: 1200px) {
   .coffeeHeroContainer {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.3fr;
+    grid-template-rows: 0.5fr 1fr;
     gap: 1em;
     justify-items: start;
     text-align: left;
     padding: 8.5em 5.3em;
   }
 
+  .coffeeHeroTitle {
+    font-size: var(--xl-font-size);
+    line-height: 2.5rem;
+  }
+
+  .coffeeListTitle {
+    font-size: var(--lg-font-size);
+  }
+
   .coffeeText {
     grid-row: 2/3;
+  }
+
+  .coffeeListContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
+
+  .coffeeList {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0em 5em;
+    gap: 5em;
   }
 
   .aboutUsHeroTitle {

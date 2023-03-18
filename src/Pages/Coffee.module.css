@@ -6,13 +6,17 @@
   text-align: center;
 }
 
-.description {
+.coffeeItemDescription {
   font-weight: initial;
 }
 
 .coffeeImages {
   max-width: 100%;
   border-radius: var(--border-px);
+}
+
+.coffeeItemContent {
+  text-align: center;
 }
 
 /* Tablet portrait and larger */
@@ -23,8 +27,29 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
+  .coffee {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+  }
+
+  .coffeeItemContent {
+    text-align: left;
+  }
+
+  .coffeeItemTitle {
+    font-size: var(--semi-lg-font-size);
+    line-height: 2.5em;
+  }
+
+  .coffeeItemDescription {
+    font-size: var(--sm-font-size);
+  }
+
   .coffeeImages {
-    max-width: 40%;
+    grid-row: 1/3;
+    max-width: 80%;
     border-radius: var(--border-px);
   }
 }

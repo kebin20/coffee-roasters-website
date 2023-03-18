@@ -1,6 +1,6 @@
-import React from 'react';
-import { CoffeeItemType } from '../interfaces';
-import styles from './Coffee.module.css';
+import React from "react";
+import { CoffeeItemType } from "../interfaces";
+import styles from "./Coffee.module.css";
 
 export default function Coffee(props: CoffeeItemType) {
   const { image, description, title } = props;
@@ -13,8 +13,10 @@ export default function Coffee(props: CoffeeItemType) {
         alt="picture of coffee"
         className={styles.coffeeImages}
       />
-      <h2>{title}</h2>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.coffeeItemContent}>
+        <h2 className={styles.coffeeItemTitle}>{title}</h2>
+        <p className={styles.coffeeItemDescription}>{description}</p>
+      </div>
     </li>
   );
 }
