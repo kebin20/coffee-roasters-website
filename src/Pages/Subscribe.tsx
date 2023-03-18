@@ -48,7 +48,7 @@ export default function Subscribe() {
 
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
-  const planHasContent = Object.values(orderContent).every(
+  const planHasContent = Object.values(orderContent).some(
     (value) => value !== ""
   );
 
