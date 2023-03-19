@@ -13,14 +13,18 @@ export default function PlanDropdownItem(props: DropdownItemType) {
 
   const isCapsuleSelected = props.isCapsule ? styles.disabled : "";
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    props.onClick(event, props.id!);
+  };
+
   return (
     <>
       <button
         className={`${styles.dropDownItem} ${isCapsuleSelected}`}
         type={props.type || "button"}
         style={props.isSelected ? buttonSelectedStyling : undefined}
-        //https://stackoverflow.com/questions/73581794/how-to-solve-type-void-is-not-assignable-to-type-mouseeventhandlerhtmlelemen
-        onClick={() => props.onClick}
+        onClick={handleClick}
         value={props.title}
         disabled={props.isCapsule ? true : false}
       >
