@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./PlanMenu.module.css";
 import ArrowIcon from "../../UI/ArrowIcon";
 import PlanDropdownItem from "./PlanDropdownItem";
+import { Description } from "src/interfaces";
 
 export default function Delivery({
   onButtonClick,
@@ -14,7 +15,11 @@ export default function Delivery({
   const { content, menu } = plan;
 
   const [open, setOpen] = useState(true);
-  const [description, setDescription] = useState({});
+  const [description, setDescription] = useState<Description>({
+    week: "",
+    fortnight: "",
+    month: "",
+  });
 
   const { firstWeight, secondWeight, thirdWeight } = weight;
 
