@@ -19,7 +19,8 @@ export default function PlanDropdownItem(props: DropdownItemType) {
         className={`${styles.dropDownItem} ${isCapsuleSelected}`}
         type={props.type || "button"}
         style={props.isSelected ? buttonSelectedStyling : undefined}
-        onClick={props.onClick}
+        //https://stackoverflow.com/questions/73581794/how-to-solve-type-void-is-not-assignable-to-type-mouseeventhandlerhtmlelemen
+        onClick={() => props.onClick}
         value={props.title}
         disabled={props.isCapsule ? true : false}
       >
