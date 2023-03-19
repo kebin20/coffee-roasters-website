@@ -28,9 +28,14 @@
 
 .ourCommitmentContainer {
   display: grid;
-  margin-top: 6.5em;
   gap: 2em;
   text-align: center;
+}
+
+.ourCommitmentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .ourCommitmentTitle {
@@ -48,10 +53,16 @@
   text-align: center;
   gap: 2em;
   padding: 7.25em 1.5em 3.25em 1.5em;
-  margin-top: 9.5em;
+  margin-top: 4.5em;
   background-color: var(--darkBlue);
   color: var(--lightCream);
   border-radius: var(--border-px);
+}
+
+.qualityContentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .qualityTitle {
@@ -74,7 +85,6 @@
 .hqContainer {
   display: grid;
   gap: 2em;
-  margin-top: 7.5em;
   margin-bottom: 6em;
   text-align: center;
   justify-items: center;

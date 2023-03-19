@@ -1,22 +1,21 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-inline: 1.5em;
+  gap: 7.5em;
 }
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  /* .wrapper {
+    margin-bottom: 5.25em;
+  } */
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
-  .wrapper {
-    margin-left: 3.5em;
-    margin-right: 3.5em;
-  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 2500px) {
