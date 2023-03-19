@@ -16,7 +16,7 @@ export default function OrderSummary(props: OrderSummaryType) {
         bean. <span className={styles.orderSummarySpan}>{amount}</span> ground{" "}
         {!props.isCapsule && (
           <>
-            <span>ala</span>
+            <span>ala </span>
             <span className={styles.orderSummarySpan}>{grindType}</span>
           </>
         )}
