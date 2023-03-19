@@ -59,12 +59,12 @@
   }
 
   .coffeeHeroTitle {
-    font-size: var(--xl-font-size);
-    line-height: 2.5rem;
+    font-size: var(--semi-xxl-font-size);
+    line-height: 3rem;
   }
 
   .coffeeListTitle {
-    font-size: var(--lg-font-size);
+    font-size: var(--xl-font-size);
   }
 
   .coffeeText {
