@@ -146,19 +146,25 @@
 @media only screen and (min-width: 600px) {
   /*Hero Section */
   .homeHeroContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.5fr;
     background: url("../assets/home/tablet/image-hero-coffeepress.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 1.5em;
     margin-right: 1.5em;
-    padding: 6.5em 14.5em 6.5em 3.5em;
+    padding-left: 6em;
   }
 
   .heroWrapper {
     display: flex;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .homeHeroTitle {
+    font-size: var(--semi-xxl-font-size);
+    line-height: 1.2;
   }
 
   /* Collection Section */

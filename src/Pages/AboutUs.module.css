@@ -112,6 +112,10 @@
     padding-left: 5em;
   }
 
+  .aboutUsHeroTitle {
+    font-size: var(--lg-font-size);
+  }
+
   .aboutUsHeroText {
     grid-column: 1/2;
   }

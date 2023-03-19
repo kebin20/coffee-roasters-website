@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   color: var(--lightCream);
-  background-image: url('../assets/plan/mobile/image-hero-blackcup.jpg');
+  background-image: url("../assets/plan/mobile/image-hero-blackcup.jpg");
   background-size: cover;
   padding: 8.25em 1.5em;
   margin: 1.5em;
@@ -82,12 +82,17 @@
   /*Hero Section*/
 
   .createPlanHeroContainer {
-    background-image: url('../assets/plan/tablet/image-hero-blackcup.jpg');
+    background-image: url("../assets/plan/tablet/image-hero-blackcup.jpg");
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     gap: 1em;
     padding-left: 5em;
+  }
+
+  .createPlanHeroTitle {
+    font-size: var(--semi-xxl-font-size);
+    line-height: 2.5rem;
   }
 
   .createPlanHeroText {
@@ -144,6 +149,11 @@
   .sidebar {
     display: none;
   }
+
+  .planContainer {
+    align-items: center;
+    margin-bottom: 9em;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
@@ -153,7 +163,7 @@
   /*HERO SECTION*/
 
   .createPlanHeroContainer {
-    background-image: url('../assets/plan/desktop/image-hero-blackcup.jpg');
+    background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
     margin: 0em 5em;
     display: grid;
     grid-template-columns: 0.65fr 1fr;
@@ -191,10 +201,14 @@
     margin: 6em 5.5em;
   }
 
+  .planContainer {
+    align-items: flex-end;
+  }
+
   .sidebar {
     display: flex;
     justify-content: center;
-    font-family: 'Fraunces';
+    font-family: "Fraunces";
     color: var(--Grey);
   }
 

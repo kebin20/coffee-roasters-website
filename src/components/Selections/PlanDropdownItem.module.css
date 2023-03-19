@@ -44,6 +44,13 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  .dropDownItem {
+    padding: 2em 2em 5.25em 2em;
+  }
+
+  .buttonTitle {
+    line-height: 2;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
