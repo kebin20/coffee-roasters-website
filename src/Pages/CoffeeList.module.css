@@ -49,7 +49,7 @@
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
   /*Hero Section*/
-  .coffeeHeroContainer {
+  /* .coffeeHeroContainer {
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 0.5fr;
@@ -59,21 +59,15 @@
 
   .coffeeText {
     grid-column: 1/2;
-  }
-}
-/* Tablet landscape and larger */
-@media only screen and (min-width: 900px) {
-}
-/* Desktop and larger */
-@media only screen and (min-width: 1200px) {
+  } */
   .coffeeHeroContainer {
     display: grid;
-    grid-template-columns: 0.3fr;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr;
     gap: 1em;
     justify-items: start;
     text-align: left;
-    padding: 8.5em 5.3em;
+    padding: 5em;
   }
 
   .coffeeHeroTitle {
@@ -97,14 +91,25 @@
 
   .coffeeList {
     display: grid;
-    grid-template-columns: 1fr;
     margin: 0em 5em;
-    gap: 5em;
   }
 
   .aboutUsHeroTitle {
+    font-size: var(--lg-font-size);
+  }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+  .aboutUsHeroTitle {
     font-size: var(--xl-font-size);
   }
+
+  .coffeeHeroContainer {
+    padding: 7em;
+  }
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {

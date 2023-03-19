@@ -16,17 +16,12 @@
 }
 
 .coffeeItemContent {
+  padding: 2em;
   text-align: center;
 }
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-}
-/* Tablet landscape and larger */
-@media only screen and (min-width: 900px) {
-}
-/* Desktop and larger */
-@media only screen and (min-width: 1200px) {
   .coffee {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -38,6 +33,16 @@
     text-align: left;
   }
 
+  .coffeeImages {
+    grid-row: 1/3;
+    border-radius: var(--border-px);
+  }
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
   .coffeeItemTitle {
     font-size: var(--semi-lg-font-size);
     line-height: 2.5em;
@@ -45,12 +50,6 @@
 
   .coffeeItemDescription {
     font-size: var(--sm-font-size);
-  }
-
-  .coffeeImages {
-    grid-row: 1/3;
-    max-width: 80%;
-    border-radius: var(--border-px);
   }
 }
 /* Big desktop (4k) */

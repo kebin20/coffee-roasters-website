@@ -126,6 +126,7 @@
     display: flex;
     align-items: center;
     margin-left: 0.5em;
+    font-size: var(--xs-font-size);
   }
 
   .menuLink {
