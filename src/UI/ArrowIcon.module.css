@@ -1,5 +1,11 @@
 .arrow {
   width: 15%;
+  transition: all 0.7s;
+}
+
+.arrowUp {
+  transition: all 0.7s;
+  transform: rotateX(180deg);
 }
 
 /* Tablet portrait and larger */

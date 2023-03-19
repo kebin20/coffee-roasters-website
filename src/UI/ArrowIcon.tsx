@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ArrowIcon.module.css";
 
-export default function arrowIcon() {
+export default function arrowIcon({ open }) {
   return (
     <svg
-      className={styles.arrow}
+      className={open ? styles.arrowUp : styles.arrow}
       width="19"
       height="13"
       xmlns="http://www.w3.org/2000/svg"

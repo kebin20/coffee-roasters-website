@@ -42,7 +42,7 @@ export default function Amount({
     <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
-        <ArrowIcon />
+        <ArrowIcon open={open} />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>
     </li>
