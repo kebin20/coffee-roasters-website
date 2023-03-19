@@ -171,8 +171,8 @@
 
   .collectionContainer {
     position: relative;
-    margin-top: 12em;
-    margin-bottom: 12em;
+    margin-top: 20em;
+    margin-bottom: 15em;
   }
 
   .collectionContainerTitle {
@@ -326,6 +326,7 @@
   /*COLLECTION SECTION */
 
   .collectionContainer {
+    position: relative;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     margin-left: 4em;
@@ -341,12 +342,12 @@
   }
 
   .collectionContainerTitle {
-    font-size: 9rem;
+    font-size: 13rem;
     z-index: -10;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 1em;
+    bottom: 1.3em;
   }
 
   /*WHY US SECTION*/
