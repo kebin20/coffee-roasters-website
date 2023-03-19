@@ -9,6 +9,7 @@ export default function Amount({
   onButtonClick,
   onHoldChoice,
   onSetWeight,
+  id,
 }) {
   const [open, setOpen] = useState(true);
 
@@ -38,7 +39,7 @@ export default function Amount({
   });
 
   return (
-    <li className={styles.selectionItem}>
+    <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />

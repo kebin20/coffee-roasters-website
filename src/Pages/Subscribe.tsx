@@ -254,31 +254,31 @@ export default function Subscribe() {
         <aside className={styles.sidebar}>
           <ul className={styles.listOptions}>
             <li>
-              <a href="" className={styles.listItem}>
+              <a href="#method" className={styles.listItem}>
                 <span className={styles.stepNumber}>01</span>
                 <p className={styles.stepTitle}>Preferences</p>
               </a>
             </li>
             <li>
-              <a href="" className={styles.listItem}>
+              <a href="#coffee-type" className={styles.listItem}>
                 <span className={styles.stepNumber}>02</span>
                 <p className={styles.stepTitle}>Bean Type</p>
               </a>
             </li>
             <li>
-              <a href="" className={styles.listItem}>
+              <a href="#amount" className={styles.listItem}>
                 <span className={styles.stepNumber}>03</span>
                 <p className={styles.stepTitle}>Quantity</p>
               </a>
             </li>
             <li>
-              <a href="" className={styles.listItem}>
+              <a href="#grind" className={styles.listItem}>
                 <span className={styles.stepNumber}>04</span>
                 <p className={styles.stepTitle}>Grind Option</p>
               </a>
             </li>
             <li>
-              <a href="" className={styles.listItem}>
+              <a href="#delivery" className={styles.listItem}>
                 <span className={styles.stepNumber}>05</span>
                 <p className={styles.stepTitle}>Deliveries</p>
               </a>
@@ -296,6 +296,7 @@ export default function Subscribe() {
         <div className={styles.planContainer}>
           <ul className={styles.planWrapper}>
             <Method
+              id="method"
               plan={planOption[0]}
               onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[0].id, id, event)
@@ -303,6 +304,7 @@ export default function Subscribe() {
               onButtonClick={handleCoffeeMethodBtn}
             />
             <CoffeeType
+              id="coffee-type"
               plan={planOption[1]}
               onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[1].id, id, event)
@@ -310,6 +312,7 @@ export default function Subscribe() {
               onButtonClick={handleCoffeeTypeBtn}
             />
             <Amount
+              id="amount"
               plan={planOption[2]}
               onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[2].id, id, event)
@@ -318,6 +321,7 @@ export default function Subscribe() {
               onSetWeight={setWeightBoolean}
             />
             <Grind
+              id="grind"
               plan={planOption[3]}
               isCapsule={isCapsule}
               onHoldChoice={(id: string, event: MouseEvent) =>
@@ -326,6 +330,7 @@ export default function Subscribe() {
               onButtonClick={handleGrindTypeBtn}
             />
             <Delivery
+              id="delivery"
               plan={planOption[4]}
               onHoldChoice={(id: string, event: MouseEvent) =>
                 holdChoice(planOption[4].id, id, event)

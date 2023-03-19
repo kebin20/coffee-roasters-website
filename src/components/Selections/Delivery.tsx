@@ -9,6 +9,7 @@ export default function Delivery({
   weight,
   onHoldChoice,
   onSetFrequency,
+  id,
 }) {
   const { content, menu } = plan;
 
@@ -128,7 +129,7 @@ export default function Delivery({
   );
 
   return (
-    <li className={styles.selectionItem}>
+    <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />

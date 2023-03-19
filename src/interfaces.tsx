@@ -35,7 +35,7 @@ export interface OrderModalType extends OrderSummaryType {
 }
 
 export interface DropdownItemType {
-  id?: React.Key | null | undefined;
+  id?: string |  null | undefined;
   isSelected: boolean;
   isCapsule?: boolean;
   type?: "button" | "submit" | "reset" | undefined;

@@ -9,6 +9,7 @@ export default function Grind({
   isCapsule,
   onHoldChoice,
   onButtonClick,
+  id,
 }) {
   const [open, setOpen] = useState(true);
 
@@ -37,7 +38,7 @@ export default function Grind({
   });
 
   return (
-    <li className={styles.selectionItem}>
+    <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />

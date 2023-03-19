@@ -4,7 +4,7 @@ import ArrowIcon from "../../UI/ArrowIcon";
 import PlanDropdownItem from "./PlanDropdownItem";
 import { DropdownItemType } from "src/interfaces";
 
-export default function CoffeeType({ plan, onHoldChoice, onButtonClick }) {
+export default function CoffeeType({ plan, onHoldChoice, onButtonClick, id }) {
   const [open, setOpen] = useState(true);
 
   const { content, menu } = plan;
@@ -18,6 +18,7 @@ export default function CoffeeType({ plan, onHoldChoice, onButtonClick }) {
   const dropdownItems = content.map((item: DropdownItemType) => {
     return (
       <PlanDropdownItem
+        id={id}
         key={item.id}
         onClick={(event) => {
           onHoldChoice(item.id, event);
@@ -31,7 +32,7 @@ export default function CoffeeType({ plan, onHoldChoice, onButtonClick }) {
   });
 
   return (
-    <li className={styles.selectionItem}>
+    <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
         <ArrowIcon />
