@@ -9,9 +9,15 @@ function Registration() {
   return (
     <>
       <NavBar />
-      <h1 className={styles.registration__title}>Register with us today</h1>
-      <RegistrationForm />
-      <Footer />
+      <main>
+        <div className={styles.registrationHero}>
+          <h1 className={styles.registrationHeroTitle}>
+            Register with us today
+          </h1>
+        </div>
+        <RegistrationForm />
+        <Footer />
+      </main>
     </>
   );
 }
