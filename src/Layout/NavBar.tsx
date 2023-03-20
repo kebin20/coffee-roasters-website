@@ -42,11 +42,11 @@ export default function NavBar() {
               Coffee
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/registration" className={styles.menuLink}>
               Register
             </Link>
-          </li> */}
+          </li>
         </ul>
 
         <button onClick={toggleHamburgerMenu} className={styles.hamburgerMenu}>
