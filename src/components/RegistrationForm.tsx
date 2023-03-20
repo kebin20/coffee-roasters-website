@@ -1,4 +1,5 @@
 import React from "react";
+import MainButton from "../UI/MainButton";
 import useInput from "../hooks/use-input";
 import styles from "./RegistrationForm.module.css";
 
@@ -149,6 +150,9 @@ function RegistrationForm() {
             <p className={styles.errorText}>Password must not be empty.</p>
           )}
         </div>
+      </div>
+      <div className={styles.submitFormButton}>
+        <MainButton disabled={!formIsValid}>Register</MainButton>
       </div>
     </form>
   );
