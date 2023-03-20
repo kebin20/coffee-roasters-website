@@ -208,148 +208,150 @@ export default function Subscribe() {
   return (
     <>
       <NavBar />
-      <section className={styles.createPlanHeroContainer}>
-        <h1 className={styles.createPlanHeroTitle}>Create a plan</h1>
-        <p className={styles.createPlanHeroText}>
-          Build a subscription plan that best fits your needs. We offer an
-          assortment of the best artisan coffees from around the globe delivered
-          fresh to your door.
-        </p>
-      </section>
+      <main>
+        <section className={styles.createPlanHeroContainer}>
+          <h1 className={styles.createPlanHeroTitle}>Create a plan</h1>
+          <p className={styles.createPlanHeroText}>
+            Build a subscription plan that best fits your needs. We offer an
+            assortment of the best artisan coffees from around the globe
+            delivered fresh to your door.
+          </p>
+        </section>
 
-      <section className={styles.planStepsContainer}>
-        <div className={styles.planStepWrapper}>
-          <span className={styles.circleEl}></span>
-          <h1 className={styles.planStepTitle}>01</h1>
-          <h2>Pick your coffee</h2>
-          <p>
-            Select from our evolving range of artisan coffees. Our beans are
-            ethically sourced and we pay fair prices for them. There are new
-            coffees in all profiles every month for you to try out.
-          </p>
-        </div>
-        <div className={styles.planStepWrapper}>
-          <span className={styles.circleEl}></span>
-          <h1 className={styles.planStepTitle}>02</h1>
-          <h2>Choose the frequency</h2>
-          <p>
-            Customize your order frequency, quantity, even your roast style and
-            grind type. Pause, skip or cancel your subscription with no
-            commitment through our online portal.
-          </p>
-        </div>
-        <div className={`${styles.planStepWrapper} ${styles.noTopBorder}`}>
-          <span className={styles.circleEl}></span>
-          <h1 className={styles.planStepTitle}>03</h1>
-          <h2>Receive and enjoy!</h2>
-          <p>
-            We ship your package within 48 hours, freshly roasted. Sit back and
-            enjoy award-winning world-class coffees curated to provide a
-            distinct tasting experience.
-          </p>
-        </div>
-      </section>
+        <section className={styles.planStepsContainer}>
+          <div className={styles.planStepWrapper}>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.planStepTitle}>01</h1>
+            <h2>Pick your coffee</h2>
+            <p>
+              Select from our evolving range of artisan coffees. Our beans are
+              ethically sourced and we pay fair prices for them. There are new
+              coffees in all profiles every month for you to try out.
+            </p>
+          </div>
+          <div className={styles.planStepWrapper}>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.planStepTitle}>02</h1>
+            <h2>Choose the frequency</h2>
+            <p>
+              Customize your order frequency, quantity, even your roast style
+              and grind type. Pause, skip or cancel your subscription with no
+              commitment through our online portal.
+            </p>
+          </div>
+          <div className={`${styles.planStepWrapper} ${styles.noTopBorder}`}>
+            <span className={styles.circleEl}></span>
+            <h1 className={styles.planStepTitle}>03</h1>
+            <h2>Receive and enjoy!</h2>
+            <p>
+              We ship your package within 48 hours, freshly roasted. Sit back
+              and enjoy award-winning world-class coffees curated to provide a
+              distinct tasting experience.
+            </p>
+          </div>
+        </section>
 
-      <section className={styles.customizePlanContainer}>
-        <aside className={styles.sidebar}>
-          <ul className={styles.listOptions}>
-            <li>
-              <a href="#method" className={styles.listItem}>
-                <span className={styles.stepNumber}>01</span>
-                <p className={styles.stepTitle}>Preferences</p>
-              </a>
-            </li>
-            <li>
-              <a href="#coffee-type" className={styles.listItem}>
-                <span className={styles.stepNumber}>02</span>
-                <p className={styles.stepTitle}>Bean Type</p>
-              </a>
-            </li>
-            <li>
-              <a href="#amount" className={styles.listItem}>
-                <span className={styles.stepNumber}>03</span>
-                <p className={styles.stepTitle}>Quantity</p>
-              </a>
-            </li>
-            <li>
-              <a href="#grind" className={styles.listItem}>
-                <span className={styles.stepNumber}>04</span>
-                <p className={styles.stepTitle}>Grind Option</p>
-              </a>
-            </li>
-            <li>
-              <a href="#delivery" className={styles.listItem}>
-                <span className={styles.stepNumber}>05</span>
-                <p className={styles.stepTitle}>Deliveries</p>
-              </a>
-            </li>
-          </ul>
-        </aside>
-        {openOrderModal && (
-          <OrderModal
-            orderContent={orderContent}
-            isCapsule={isCapsule}
-            shippingPrice={shippingPrice}
-            closeModal={() => setOpenOrderModal(false)}
-          />
-        )}
-        <div className={styles.planContainer}>
-          <ul className={styles.planWrapper}>
-            <Method
-              id="method"
-              plan={planOption[0]}
-              onHoldChoice={(id: string, event: MouseEvent) =>
-                holdChoice(planOption[0].id, id, event)
-              }
-              onButtonClick={handleCoffeeMethodBtn}
-            />
-            <CoffeeType
-              id="coffee-type"
-              plan={planOption[1]}
-              onHoldChoice={(id: string, event: MouseEvent) =>
-                holdChoice(planOption[1].id, id, event)
-              }
-              onButtonClick={handleCoffeeTypeBtn}
-            />
-            <Amount
-              id="amount"
-              plan={planOption[2]}
-              onHoldChoice={(id: string, event: MouseEvent) =>
-                holdChoice(planOption[2].id, id, event)
-              }
-              onButtonClick={handleAmountBtn}
-              onSetWeight={setWeightBoolean}
-            />
-            <Grind
-              id="grind"
-              plan={planOption[3]}
+        <section className={styles.customizePlanContainer}>
+          <aside className={styles.sidebar}>
+            <ul className={styles.listOptions}>
+              <li>
+                <a href="#method" className={styles.listItem}>
+                  <span className={styles.stepNumber}>01</span>
+                  <p className={styles.stepTitle}>Preferences</p>
+                </a>
+              </li>
+              <li>
+                <a href="#coffee-type" className={styles.listItem}>
+                  <span className={styles.stepNumber}>02</span>
+                  <p className={styles.stepTitle}>Bean Type</p>
+                </a>
+              </li>
+              <li>
+                <a href="#amount" className={styles.listItem}>
+                  <span className={styles.stepNumber}>03</span>
+                  <p className={styles.stepTitle}>Quantity</p>
+                </a>
+              </li>
+              <li>
+                <a href="#grind" className={styles.listItem}>
+                  <span className={styles.stepNumber}>04</span>
+                  <p className={styles.stepTitle}>Grind Option</p>
+                </a>
+              </li>
+              <li>
+                <a href="#delivery" className={styles.listItem}>
+                  <span className={styles.stepNumber}>05</span>
+                  <p className={styles.stepTitle}>Deliveries</p>
+                </a>
+              </li>
+            </ul>
+          </aside>
+          {openOrderModal && (
+            <OrderModal
+              orderContent={orderContent}
               isCapsule={isCapsule}
-              onHoldChoice={(id: string, event: MouseEvent) =>
-                holdChoice(planOption[3].id, id, event)
-              }
-              onButtonClick={handleGrindTypeBtn}
+              shippingPrice={shippingPrice}
+              closeModal={() => setOpenOrderModal(false)}
             />
-            <Delivery
-              id="delivery"
-              plan={planOption[4]}
-              onHoldChoice={(id: string, event: MouseEvent) =>
-                holdChoice(planOption[4].id, id, event)
-              }
-              onButtonClick={handleDeliveryBtn}
-              onSetFrequency={setFrequencyBoolean}
-              weight={weight}
-            />
-          </ul>
-          <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
-          <MainButton
-            onClick={() => setOpenOrderModal(true)}
-            disabled={planHasContent ? false : true}
-            type={undefined}
-          >
-            Create my plan!
-          </MainButton>
-        </div>
-      </section>
+          )}
+          <div className={styles.planContainer}>
+            <ul className={styles.planWrapper}>
+              <Method
+                id="method"
+                plan={planOption[0]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[0].id, id, event)
+                }
+                onButtonClick={handleCoffeeMethodBtn}
+              />
+              <CoffeeType
+                id="coffee-type"
+                plan={planOption[1]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[1].id, id, event)
+                }
+                onButtonClick={handleCoffeeTypeBtn}
+              />
+              <Amount
+                id="amount"
+                plan={planOption[2]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[2].id, id, event)
+                }
+                onButtonClick={handleAmountBtn}
+                onSetWeight={setWeightBoolean}
+              />
+              <Grind
+                id="grind"
+                plan={planOption[3]}
+                isCapsule={isCapsule}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[3].id, id, event)
+                }
+                onButtonClick={handleGrindTypeBtn}
+              />
+              <Delivery
+                id="delivery"
+                plan={planOption[4]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[4].id, id, event)
+                }
+                onButtonClick={handleDeliveryBtn}
+                onSetFrequency={setFrequencyBoolean}
+                weight={weight}
+              />
+            </ul>
+            <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
+            <MainButton
+              onClick={() => setOpenOrderModal(true)}
+              disabled={planHasContent ? false : true}
+              type={undefined}
+            >
+              Create my plan!
+            </MainButton>
+          </div>
+        </section>
+      </main>
       <Footer />
     </>
   );
