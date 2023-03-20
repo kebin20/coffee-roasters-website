@@ -81,24 +81,22 @@ function RegistrationForm() {
 
   const firstNameInputClasses = firstNameInputHasError
     ? styles.formControlInvalid
-    : styles.formControl;
+    : "";
 
   const lastNameInputClasses = lastNameInputHasError
     ? styles.formControlInvalid
-    : styles.formControl;
+    : "";
 
-  const emailInputClasses = emailInputHasError
-    ? styles.formControlInvalid
-    : styles.formControl;
+  const emailInputClasses = emailInputHasError ? styles.formControlInvalid : "";
 
   const passwordInputClasses = passwordInputHasError
     ? styles.formControlInvalid
-    : styles.formControl;
+    : "";
 
   return (
     <form onSubmit={formSubmissionHandler}>
       <div className={styles.formInputGroup}>
-        <div className={firstNameInputClasses}>
+        <div className={`${firstNameInputClasses} ${styles.formControl}`}>
           <label htmlFor="first-name">First Name:</label>
           <input
             type="text"
@@ -111,7 +109,7 @@ function RegistrationForm() {
             <p className={styles.errorText}>First name must not be empty.</p>
           )}
         </div>
-        <div className={lastNameInputClasses}>
+        <div className={`${lastNameInputClasses} ${styles.formControl}`}>
           <label htmlFor="last-name">Last Name:</label>
           <input
             type="text"
@@ -124,7 +122,7 @@ function RegistrationForm() {
             <p className={styles.errorText}>Last name must not be empty.</p>
           )}
         </div>
-        <div className={emailInputClasses}>
+        <div className={`${emailInputClasses} ${styles.formControl}`}>
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -137,7 +135,7 @@ function RegistrationForm() {
             <p className={styles.errorText}>Email must not be empty.</p>
           )}
         </div>
-        <div className={passwordInputClasses}>
+        <div className={`${passwordInputClasses}${styles.formControl}`}>
           <label htmlFor="first-name">Password:</label>
           <input
             type="text"

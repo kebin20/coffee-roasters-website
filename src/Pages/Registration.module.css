@@ -1,21 +1,21 @@
 .registrationHero {
-
-}
-
-.registrationHeroTitle {
-
+  background-image: url("../assets/registration/menu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+  color: var(--lightCream);
+  border-radius: var(--border-px);
 }
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-  }
-  /* Tablet landscape and larger */
-  @media only screen and (min-width: 900px) {
-  }
-  /* Desktop and larger */
-  @media only screen and (min-width: 1200px) {
-  }
-  /* Big desktop (4k) */
-  @media only screen and (min-width: 1800px) {
-  }
-  
+}
+/* Tablet landscape and larger */
+@media only screen and (min-width: 900px) {
+}
+/* Desktop and larger */
+@media only screen and (min-width: 1200px) {
+}
+/* Big desktop (4k) */
+@media only screen and (min-width: 1800px) {
+}

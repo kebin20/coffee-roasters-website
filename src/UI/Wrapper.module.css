@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   margin-inline: 1.5em;
-  gap: 7.5em;
+  gap: 4.5em;
 }
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-  /* .wrapper {
-    margin-bottom: 5.25em;
-  } */
+  .wrapper {
+    gap: 7.5em;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
