@@ -3,16 +3,16 @@ import MainButton from "../UI/MainButton";
 import useInput from "../hooks/use-input";
 import styles from "./RegistrationForm.module.css";
 
-function notEmpty(value) {
+function notEmpty(value: string) {
   value.trim() !== "";
 }
 
-function isEmail(value) {
+function isEmail(value: string) {
   value.trim() !== "" && value.includes("@");
 }
 
 //https://stackoverflow.com/questions/72462253/how-to-set-password-validation-in-react
-function isPassword(value) {
+function isPassword(value: string) {
   value.length >= 8 &&
     /[A-Z]/.test(value) &&
     /[^a-zA-Z]/.test(value) &&
@@ -96,8 +96,11 @@ function RegistrationForm() {
   return (
     <form onSubmit={formSubmissionHandler}>
       <div className={styles.formInputGroup}>
+        <p className={styles.formDescription}>
+          Please fill the form below. Fields marked with * are required.
+        </p>
         <div className={`${firstNameInputClasses} ${styles.formControl}`}>
-          <label htmlFor="first-name">First Name:</label>
+          <label htmlFor="first-name">First Name*:</label>
           <input
             type="text"
             id="firstname"
@@ -110,7 +113,7 @@ function RegistrationForm() {
           )}
         </div>
         <div className={`${lastNameInputClasses} ${styles.formControl}`}>
-          <label htmlFor="last-name">Last Name:</label>
+          <label htmlFor="last-name">Last Name*:</label>
           <input
             type="text"
             id="lastname"
@@ -123,7 +126,7 @@ function RegistrationForm() {
           )}
         </div>
         <div className={`${emailInputClasses} ${styles.formControl}`}>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email*:</label>
           <input
             type="text"
             id="email"
@@ -135,8 +138,8 @@ function RegistrationForm() {
             <p className={styles.errorText}>Email must not be empty.</p>
           )}
         </div>
-        <div className={`${passwordInputClasses}${styles.formControl}`}>
-          <label htmlFor="first-name">Password:</label>
+        <div className={`${passwordInputClasses} ${styles.formControl}`}>
+          <label htmlFor="first-name">Password*:</label>
           <input
             type="text"
             id="password"

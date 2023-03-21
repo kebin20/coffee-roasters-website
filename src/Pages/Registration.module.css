@@ -2,11 +2,17 @@
   background-image: url("../assets/registration/menu.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 2em;
+  background-position: center;
+  padding: 4em;
   color: var(--lightCream);
   border-radius: var(--border-px);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
 }
 
+.registrationHeroText {
+  grid-column: 1/2;
+}
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
 }
