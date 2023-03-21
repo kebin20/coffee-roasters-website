@@ -4,19 +4,21 @@ import useInput from "../hooks/use-input";
 import styles from "./RegistrationForm.module.css";
 
 function notEmpty(value: string) {
-  value.trim() !== "";
+  return value.trim() !== "";
 }
 
 function isEmail(value: string) {
-  value.trim() !== "" && value.includes("@");
+  return value.trim() !== "" && value.includes("@");
 }
 
 //https://stackoverflow.com/questions/72462253/how-to-set-password-validation-in-react
 function isPassword(value: string) {
-  value.length >= 8 &&
+  return (
+    value.length >= 8 &&
     /[A-Z]/.test(value) &&
     /[^a-zA-Z]/.test(value) &&
-    /[0-9]/.test(value);
+    /[0-9]/.test(value)
+  );
 }
 
 function RegistrationForm() {
@@ -135,7 +137,9 @@ function RegistrationForm() {
             value={enteredEmail}
           />
           {emailInputHasError && (
-            <p className={styles.errorText}>Email must not be empty.</p>
+            <p className={styles.errorText}>
+              Email must not be empty and must contain an @ symbol.
+            </p>
           )}
         </div>
         <div className={`${passwordInputClasses} ${styles.formControl}`}>
@@ -148,7 +152,13 @@ function RegistrationForm() {
             value={enteredPassword}
           />
           {passwordInputHasError && (
-            <p className={styles.errorText}>Password must not be empty.</p>
+            <p className={styles.errorText}>
+              Password must contain: <br />
+              - One capital letter one special character
+              <br />
+              - One number
+              <br />- Minimum length of 8 characters
+            </p>
           )}
         </div>
       </div>
