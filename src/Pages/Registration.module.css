@@ -4,17 +4,24 @@
   background-size: cover;
   background-position: center;
   padding: 4em;
+  text-align: center;
   color: var(--lightCream);
   border-radius: var(--border-px);
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1fr;
 }
 
-.registrationHeroText {
-  grid-column: 1/2;
-}
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
+  .registrationHero {
+    grid-template-columns: 0.5fr 1fr;
+    padding: 8em;
+    text-align: left;
+  }
+
+  .registrationHeroText {
+    grid-column: 1/2;
+  }
 }
 /* Tablet landscape and larger */
 @media only screen and (min-width: 900px) {
