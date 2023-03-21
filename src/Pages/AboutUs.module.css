@@ -15,11 +15,9 @@
 
 .aboutUsHeroTitle {
   font-size: var(--semi-lg-font-size);
-  line-height: 2.5rem;
 }
 
 .aboutUsHeroText {
-  line-height: 25px;
   opacity: 0.8;
   mix-blend-mode: normal;
 }
@@ -49,14 +47,14 @@
 /* quality container */
 
 .qualityContainer {
+  background-color: var(--darkBlue);
+  color: var(--lightCream);
+  border-radius: var(--border-px);
   display: grid;
   text-align: center;
   gap: 2em;
   padding: 7.25em 1.5em 3.25em 1.5em;
   margin-top: 4.5em;
-  background-color: var(--darkBlue);
-  color: var(--lightCream);
-  border-radius: var(--border-px);
 }
 
 .qualityContentWrapper {
@@ -85,7 +83,6 @@
 .hqContainer {
   display: grid;
   gap: 2em;
-  margin-bottom: 6em;
   text-align: center;
   justify-items: center;
 }
@@ -139,7 +136,7 @@
   }
 
   .ourCommitmentTitle {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.5em;
   }
 
   .ourCommitmentImage {
@@ -195,11 +192,11 @@
     background-image: url("../assets/about/desktop/image-hero-whitecup.jpg");
     display: grid;
     grid-template-columns: 0.7fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
     gap: 1em;
     justify-items: start;
     text-align: left;
-    padding: 8.5em 5.3em;
+    padding: 8em 5em;
   }
 
   .aboutUsHeroText {
@@ -211,7 +208,6 @@
   }
 
   .ourCommitmentContainer {
-    padding: 10em 0em;
     margin: 0;
     align-items: center;
     text-align: left;
@@ -229,12 +225,12 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding-right: 8em;
+    padding-inline: 3em;
   }
 
   .qualityContainer {
     grid: auto/ 1fr 1fr;
-    padding: 0em 0em 7.2em 0em;
+    padding: 0em 0em 1em 0em;
     gap: 0;
   }
 
@@ -260,7 +256,7 @@
   }
 
   .hqContainer {
-    padding: 4em 5em 4em 5em;
+    padding: 0em 5em;
     column-gap: 0;
   }
 }

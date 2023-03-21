@@ -51,6 +51,7 @@
   .footer {
     flex-direction: row;
     padding: 3em 10em;
+    margin-top: 10em;
   }
 
   .linksContainer {
