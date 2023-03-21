@@ -342,13 +342,15 @@ export default function Subscribe() {
               />
             </ul>
             <OrderSummary orderContent={orderContent} isCapsule={isCapsule} />
-            <MainButton
-              onClick={() => setOpenOrderModal(true)}
-              disabled={planHasContent ? false : true}
-              type={undefined}
-            >
-              Create my plan!
-            </MainButton>
+            <div className={styles.createMyPlanButton}>
+              <MainButton
+                onClick={() => setOpenOrderModal(true)}
+                disabled={planHasContent ? false : true}
+                type={undefined}
+              >
+                Create my plan!
+              </MainButton>
+            </div>
           </div>
         </section>
       </main>

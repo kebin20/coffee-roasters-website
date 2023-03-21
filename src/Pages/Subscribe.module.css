@@ -77,6 +77,10 @@
   display: none;
 }
 
+.createMyPlanButton {
+  margin: auto;
+}
+
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
   /*Hero Section*/
@@ -152,7 +156,7 @@
 
   .planContainer {
     align-items: center;
-    margin-bottom: 9em;
+    margin-bottom: 5em;
   }
 }
 /* Tablet landscape and larger */
@@ -203,6 +207,7 @@
 
   .planContainer {
     align-items: flex-end;
+    margin-bottom: 0;
   }
 
   .sidebar {
@@ -238,6 +243,10 @@
 
   .stepNumber:hover {
     color: var(--darkCyan);
+  }
+
+  .createMyPlanButton {
+    margin: 0;
   }
 }
 /* Big desktop (4k) */

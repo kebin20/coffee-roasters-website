@@ -15,7 +15,7 @@
 @media only screen and (min-width: 600px) {
   .registrationHero {
     grid-template-columns: 0.5fr 1fr;
-    padding: 8em;
+    padding: 6em;
     text-align: left;
   }
 

@@ -8,7 +8,7 @@
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
   .wrapper {
-    gap: 7.5em;
+    gap: 6.5em;
   }
 }
 /* Tablet landscape and larger */
