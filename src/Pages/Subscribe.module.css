@@ -96,7 +96,7 @@
 
   .createPlanHeroTitle {
     font-size: var(--semi-xxl-font-size);
-    line-height: 2.5rem;
+    line-height: 1;
   }
 
   .createPlanHeroText {
@@ -182,6 +182,7 @@
 
   .createPlanHeroTitle {
     font-size: var(--xxl-font-size);
+    line-height: 1;
   }
 
   /* PLAN STEP SECTION*/
