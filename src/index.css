@@ -28,7 +28,8 @@ Mobile: 654x800
   --accordion-menu-hover: var(--main-button-hover);
   --title-font: "Fraunces", serif;
   --body-font: "Barlow", sans-serif;
-  --title-alternate-big: 9.4rem; /*150px*/
+  --title-alternate-big: 13.4rem;
+  --xxxl-font-size: 6rem; /*96px*/
   --xxl-font-size: 4.5rem; /*72px*/
   --semi-xxl-font-size: 3rem; /*48px*/
   --xl-font-size: 2.5rem; /*40px*/
@@ -60,7 +61,7 @@ body {
 body {
   font-size: 16px;
   font-family: "Barlow", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -87,11 +88,12 @@ h6 {
   font-family: "Fraunces", serif;
   font-weight: 900;
   overflow-wrap: break-word;
+  line-height: 1.5;
 }
 
 p {
   overflow-wrap: break-word;
-  line-height: 27px;
+  line-height: 1.5;
 }
 ul,
 li,
