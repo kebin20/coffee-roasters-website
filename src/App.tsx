@@ -21,8 +21,7 @@ export default function App() {
         throw new Error("Oops! Something went wrong!");
       }
       const data = await response.json();
-      const adjustedData = data.slice(0, -3);
-      setCoffees(adjustedData);
+      setCoffees(data);
     } catch (error) {
       setError(error.message);
     }
@@ -53,7 +52,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/registration" element={<Registration />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/subscribe" element={<Subscribe />} />
