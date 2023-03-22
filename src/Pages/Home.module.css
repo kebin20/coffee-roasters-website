@@ -292,6 +292,10 @@
     padding-right: 35em;
   }
 
+  .homeHeroTitle {
+    font-size: var(--xxl-font-size);
+  }
+
   /*COLLECTION SECTION */
 
   .collectionSection {
