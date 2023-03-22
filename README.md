@@ -16,7 +16,7 @@
 
 ## Overview
 
-### The challenge
+### Main Use Case
 
 Users should be able to:
 
@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/kebin20/coffee-roasters-website)
-- Live Site URL: [Coffee Roasters](https://your-live-site-url.com)
+- Live Site URL: [Coffee Roasters](shiny-lollipop-8dea8b.netlify.app/)
 
 ## My process
 
@@ -99,7 +99,7 @@ Future implementations:
 
 ~- Create a "Types of Coffee" page to display common coffee types by fetching data from a Coffee API.~ (COMPLETED)
 
-- Migrating the project to TypeScript. (WIP)
+~- Migrating the project to TypeScript.~ (COMPLETED)
 
 - Enable user to create a personal account. (WIP)
 
