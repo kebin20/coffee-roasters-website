@@ -35,10 +35,6 @@
     gap: 2em;
   }
 
-  .dropDownItem {
-    padding-bottom: 5.25em;
-  }
-
   .selectionButton {
     justify-content: space-between;
     padding-top: 0;

@@ -2,7 +2,7 @@
 
 .homeHeroSection {
   color: var(--lightCream);
-  background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
   background-size: cover;
   padding: 6.25em 1.5em;
   border-radius: var(--border-px);
@@ -138,7 +138,7 @@
   .homeHeroSection {
     display: grid;
     grid-template-columns: 0.5fr;
-    background: url('../assets/home/tablet/image-hero-coffeepress.jpg');
+    background: url("../assets/home/tablet/image-hero-coffeepress.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-left: 6em;
@@ -276,7 +276,7 @@
   .homeHeroSection {
     display: flex;
     align-items: center;
-    background: url('../assets/home/desktop/image-hero-coffeepress.jpg');
+    background: url("../assets/home/desktop/image-hero-coffeepress.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 0 0 6em;
@@ -285,10 +285,10 @@
   .heroContainer {
     display: flex;
     text-align: left;
-    min-width: 80rem;
-    min-height: 38rem;
+    width: 80rem;
+    height: 38rem;
     justify-content: center;
-    padding-right: 49em;
+    padding-right: 35em;
   }
 
   /*COLLECTION SECTION */

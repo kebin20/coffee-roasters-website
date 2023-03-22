@@ -21,7 +21,7 @@ export default function PlanDropdownItem(props: DropdownItemType) {
   return (
     <>
       <button
-        className={`${styles.dropDownItem} ${isCapsuleSelected}`}
+        className={`${styles.ddItem} ${isCapsuleSelected}`}
         type={props.type || "button"}
         style={props.isSelected ? buttonSelectedStyling : undefined}
         onClick={handleClick}

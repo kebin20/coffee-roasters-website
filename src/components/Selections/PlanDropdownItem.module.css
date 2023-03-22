@@ -1,4 +1,4 @@
-.dropDownItem {
+.ddItem {
   text-align: left;
   background-color: var(--big-select-option-default);
   color: var(--darkBlue);
@@ -8,13 +8,13 @@
   cursor: pointer;
 }
 
-.dropDownItem:active,
-.dropDownItem:focus {
+.ddItem:active,
+.ddItem:focus {
   background-color: var(--darkCyan);
   color: var(--lightCream);
 }
 
-.dropDownItem:hover {
+.ddItem:hover {
   background-color: var(--paleOrange);
 }
 
@@ -44,7 +44,7 @@
 
 /* Tablet portrait and larger */
 @media only screen and (min-width: 600px) {
-  .dropDownItem {
+  .ddItem {
     padding: 2em 2em 5.25em 2em;
   }
 
@@ -57,9 +57,6 @@
 }
 /* Desktop and larger */
 @media only screen and (min-width: 1200px) {
-  .dropDownItem {
-    padding: 2.5em 2em 6em 2em;
-  }
 }
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
