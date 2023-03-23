@@ -263,7 +263,7 @@
 /* Big desktop (4k) */
 @media only screen and (min-width: 1800px) {
   .qualityImage {
-    bottom: -25em;
+    bottom: -20em;
     right: 12em;
   }
 }
