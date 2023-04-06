@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
 import Wrapper from "../UI/Wrapper";
-import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
 
 /* Images */
@@ -20,7 +19,6 @@ import mdQuality from "../assets/about/tablet/image-quality.jpg";
 export default function AboutUs() {
   return (
     <>
-      <NavBar />
       <main>
         <Wrapper>
           <section className={styles.aboutUsHeroContainer}>

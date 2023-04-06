@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import MainButton from "../UI/MainButton";
 import Wrapper from "../UI/Wrapper";
-import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
 
 /* Images */
@@ -18,7 +17,6 @@ import truck from "../assets/home/desktop/icon-truck.svg";
 export default function Home() {
   return (
     <>
-      <NavBar />
       <main>
         <Wrapper>
           <section className={styles.homeHeroSection}>

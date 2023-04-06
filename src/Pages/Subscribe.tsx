@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
 import MainButton from "../UI/MainButton";
 import OrderModal from "../components/OrderModal";
@@ -207,7 +206,6 @@ export default function Subscribe() {
 
   return (
     <>
-      <NavBar />
       <main>
         <section className={styles.createPlanHeroContainer}>
           <h1 className={styles.createPlanHeroTitle}>Create a plan</h1>

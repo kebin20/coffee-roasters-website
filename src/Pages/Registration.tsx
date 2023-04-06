@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Registration.module.css";
 
-import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
 import RegistrationForm from "../components/RegistrationForm";
 import Wrapper from "../UI/Wrapper";
@@ -9,7 +8,6 @@ import Wrapper from "../UI/Wrapper";
 function Registration() {
   return (
     <>
-      <NavBar />
       <main>
         <Wrapper>
           <div className={styles.registrationHero}>

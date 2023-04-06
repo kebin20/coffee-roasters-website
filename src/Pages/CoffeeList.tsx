@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./CoffeeList.module.css";
 import Wrapper from "../UI/Wrapper";
-import NavBar from "../Layout/NavBar";
 import Footer from "../Layout/Footer";
 import Coffee from "../components/Coffee";
 import { CoffeeItemType } from "src/interfaces";
@@ -9,7 +8,6 @@ import { CoffeeItemType } from "src/interfaces";
 export default function CoffeeList({ coffees }) {
   return (
     <>
-      <NavBar />
       <main>
         <Wrapper>
           <section className={styles.coffeeHeroContainer}>
