@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import styles from "./NavBar.module.css";
-import coffeeRoastersLogo from "../assets/shared/desktop/logo.svg";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './NavBar.module.css';
+import coffeeRoastersLogo from '../assets/shared/desktop/logo.svg';
 
 export default function NavBar() {
   const [toggle, setToggle] = useState(false);
@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <nav className={styles.navBar}>
       <div className={styles.navFlexContainer}>
-        <Link to="/">
+        <Link onClick={() => setToggle(false)} to="/">
           <img
             className={styles.mobileLogo}
             src={coffeeRoastersLogo}
@@ -23,27 +23,47 @@ export default function NavBar() {
 
         <ul className={styles.menuItems}>
           <li>
-            <Link to="/" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/"
+              className={styles.menuLink}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/aboutus" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/aboutus"
+              className={styles.menuLink}
+            >
               About Us
             </Link>
           </li>
           <li>
-            <Link to="/subscribe" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/subscribe"
+              className={styles.menuLink}
+            >
               Create Your Plan
             </Link>
           </li>
           <li>
-            <Link to="/coffee" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/coffee"
+              className={styles.menuLink}
+            >
               Coffee
             </Link>
           </li>
           <li>
-            <Link to="/registration" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/registration"
+              className={styles.menuLink}
+            >
               Register
             </Link>
           </li>
@@ -71,27 +91,43 @@ export default function NavBar() {
       {toggle && (
         <ul className={styles.mobileMenuItems}>
           <li>
-            <Link to="/" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/"
+              className={styles.menuLink}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/aboutus" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/aboutus"
+              className={styles.menuLink}
+            >
               About Us
             </Link>
           </li>
           <li>
-            <Link to="/subscribe" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/subscribe"
+              className={styles.menuLink}
+            >
               Create Your Plan
             </Link>
           </li>
           <li>
-            <Link to="/coffee" className={styles.menuLink}>
+            <Link
+              onClick={() => setToggle(false)}
+              to="/coffee"
+              className={styles.menuLink}
+            >
               Coffee
             </Link>
           </li>
           {/* <li>
-            <Link to="/registration" className={styles.menuLink}>
+            <Link onClick={() => setToggle(false)} to="/registration" className={styles.menuLink}>
               Register
             </Link>
           </li> */}
