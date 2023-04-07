@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./PlanMenu.module.css";
 import ArrowIcon from "../../UI/ArrowIcon";
 import PlanDropdownItem from "./PlanDropdownItem";
-import { DropdownItemType } from "src/interfaces";
+import { DropdownItemProps } from "src/interfaces";
 
 export default function Grind({
   plan,
@@ -21,7 +21,7 @@ export default function Grind({
     onButtonClick(target.value);
   }
 
-  const dropdownItems = content.map((item: DropdownItemType) => {
+  const dropdownItems = content.map((item: DropdownItemProps) => {
     return (
       <PlanDropdownItem
         key={item.id}

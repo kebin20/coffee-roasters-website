@@ -3,7 +3,7 @@ import styles from "./CoffeeList.module.css";
 import Wrapper from "../UI/Wrapper";
 import Footer from "../Layout/Footer";
 import Coffee from "../components/Coffee";
-import { CoffeeItemType } from "src/interfaces";
+import { CoffeeItemProps } from "src/interfaces";
 
 export default function CoffeeList({ coffees }) {
   return (
@@ -23,7 +23,7 @@ export default function CoffeeList({ coffees }) {
               What kind of coffees are there?
             </h2>
             <ul className={styles.coffeeList}>
-              {coffees.map((coffee: CoffeeItemType) => {
+              {coffees.map((coffee: CoffeeItemProps) => {
                 return (
                   <Coffee
                     key={coffee.id}
