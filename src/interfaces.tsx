@@ -1,24 +1,24 @@
 import { ReactNode } from "react";
 
-export interface MainButtonType {
+export interface MainButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   children?: ReactNode;
 }
 
-export interface PropsType {
+export interface ContainerProps {
   children?: ReactNode;
 }
 
-export interface CoffeeItemType {
+export interface CoffeeItemProps {
   id?: string;
   image: string;
   title: string;
   description: string;
 }
 
-export interface OrderSummaryType {
+export interface OrderSummaryProps {
   orderContent: {
     coffeeMethod: string;
     coffeeType: string;
@@ -29,12 +29,12 @@ export interface OrderSummaryType {
   isCapsule: boolean;
 }
 
-export interface OrderModalType extends OrderSummaryType {
+export interface OrderModalProps extends OrderSummaryProps {
   shippingPrice: number;
   closeModal?: () => void;
 }
 
-export interface DropdownItemType {
+export interface DropdownItemProps {
   id?: string | null | undefined;
   isSelected: boolean;
   isCapsule?: boolean;
@@ -44,7 +44,7 @@ export interface DropdownItemType {
   description: string;
 }
 
-export interface Description {
+export interface SubscriptionDescription {
   week: string;
   fortnight: string;
   month: string;
