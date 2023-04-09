@@ -7,7 +7,7 @@ export interface MainButtonProps {
   children?: ReactNode;
 }
 
-export interface ContainerProps {
+export interface WrapperProps {
   children?: ReactNode;
 }
 

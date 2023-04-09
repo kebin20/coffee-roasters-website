@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import styles from "./PlanMenu.module.css";
-import ArrowIcon from "../../UI/ArrowIcon";
-import PlanDropdownItem from "./PlanDropdownItem";
-import { Description } from "src/interfaces";
+import React, { useState, useEffect } from 'react';
+import styles from './PlanMenu.module.css';
+import ArrowIcon from '../../UI/ArrowIcon';
+import PlanDropdownItem from './PlanDropdownItem';
+import { SubscriptionDescription } from 'src/interfaces';
 
 export default function Delivery({
   onButtonClick,
@@ -15,10 +15,10 @@ export default function Delivery({
   const { content, menu } = plan;
 
   const [open, setOpen] = useState(true);
-  const [description, setDescription] = useState<Description>({
-    week: "",
-    fortnight: "",
-    month: "",
+  const [description, setDescription] = useState<SubscriptionDescription>({
+    week: '',
+    fortnight: '',
+    month: '',
   });
 
   const { firstWeight, secondWeight, thirdWeight } = weight;
@@ -30,15 +30,15 @@ export default function Delivery({
   }
 
   const fiveHundredGramsPrices = {
-    firstWeight: "$13.00",
-    secondWeight: "$17.50",
-    thirdWeight: "$22.00",
+    firstWeight: '$13.00',
+    secondWeight: '$17.50',
+    thirdWeight: '$22.00',
   };
 
   const thousandGramsPrices = {
-    firstWeight: "$22.00",
-    secondWeight: "$32.50",
-    thirdWeight: "$42.00",
+    firstWeight: '$22.00',
+    secondWeight: '$32.50',
+    thirdWeight: '$42.00',
   };
 
   function createConditionalDescription() {
@@ -47,9 +47,9 @@ export default function Delivery({
     let modMonthDescription: string;
 
     if (secondWeight && !firstWeight && !thirdWeight) {
-      const splitWeekDescriptionArr = content[0].description.split(" ");
-      const splitFortnightDescriptionArr = content[1].description.split(" ");
-      const splitMonthDescriptionArr = content[2].description.split(" ");
+      const splitWeekDescriptionArr = content[0].description.split(' ');
+      const splitFortnightDescriptionArr = content[1].description.split(' ');
+      const splitMonthDescriptionArr = content[2].description.split(' ');
       splitWeekDescriptionArr.splice(0, 1, fiveHundredGramsPrices.firstWeight);
       splitFortnightDescriptionArr.splice(
         0,
@@ -57,17 +57,17 @@ export default function Delivery({
         fiveHundredGramsPrices.secondWeight
       );
       splitMonthDescriptionArr.splice(0, 1, fiveHundredGramsPrices.thirdWeight);
-      const joinedFirstWeekDescription = splitWeekDescriptionArr.join(" ");
+      const joinedFirstWeekDescription = splitWeekDescriptionArr.join(' ');
       const joinedFirstFortnightDescription =
-        splitFortnightDescriptionArr.join(" ");
-      const joinedFirstMonthDescription = splitMonthDescriptionArr.join(" ");
+        splitFortnightDescriptionArr.join(' ');
+      const joinedFirstMonthDescription = splitMonthDescriptionArr.join(' ');
       modWeekDescription = joinedFirstWeekDescription;
       modFortnightDescription = joinedFirstFortnightDescription;
       modMonthDescription = joinedFirstMonthDescription;
     } else if (thirdWeight && !secondWeight && !firstWeight) {
-      const splitWeekDescriptionArr = content[0].description.split(" ");
-      const splitFortnightDescriptionArr = content[1].description.split(" ");
-      const splitMonthDescriptionArr = content[2].description.split(" ");
+      const splitWeekDescriptionArr = content[0].description.split(' ');
+      const splitFortnightDescriptionArr = content[1].description.split(' ');
+      const splitMonthDescriptionArr = content[2].description.split(' ');
       splitWeekDescriptionArr.splice(0, 1, thousandGramsPrices.firstWeight);
       splitFortnightDescriptionArr.splice(
         0,
@@ -75,10 +75,10 @@ export default function Delivery({
         thousandGramsPrices.secondWeight
       );
       splitMonthDescriptionArr.splice(0, 1, thousandGramsPrices.thirdWeight);
-      const joinedSecondWeekDescription = splitWeekDescriptionArr.join(" ");
+      const joinedSecondWeekDescription = splitWeekDescriptionArr.join(' ');
       const joinedSecondFortnightDescription =
-        splitFortnightDescriptionArr.join(" ");
-      const joinedSecondMonthDescription = splitMonthDescriptionArr.join(" ");
+        splitFortnightDescriptionArr.join(' ');
+      const joinedSecondMonthDescription = splitMonthDescriptionArr.join(' ');
       modWeekDescription = joinedSecondWeekDescription;
       modFortnightDescription = joinedSecondFortnightDescription;
       modMonthDescription = joinedSecondMonthDescription;
@@ -137,7 +137,7 @@ export default function Delivery({
     <li id={id} className={styles.selectionItem}>
       <button className={styles.selectionButton} onClick={() => setOpen(!open)}>
         <span className={styles.selectionButtonText}>{menu}</span>
-        <ArrowIcon open={open}/>
+        <ArrowIcon open={open} />
       </button>
       <div className={styles.dropdownItems}>{open && dropdownItems}</div>
     </li>
