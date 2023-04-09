@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 /* Images */
-import coffeeRoastersLogoWhite from "../assets/shared/desktop/logo-white-text.svg";
-import facebookIcon from "../assets/shared/desktop/icon-facebook.svg";
-import twitterIcon from "../assets/shared/desktop/icon-twitter.svg";
-import instagramIcon from "../assets/shared/desktop/icon-instagram.svg";
+import coffeeRoastersLogoWhite from "../../assets/shared/desktop/logo-white-text.svg";
+import facebookIcon from "../../assets/shared/desktop/icon-facebook.svg";
+import twitterIcon from "../../assets/shared/desktop/icon-twitter.svg";
+import instagramIcon from "../../assets/shared/desktop/icon-instagram.svg";
 
 export default function Footer() {
   return (

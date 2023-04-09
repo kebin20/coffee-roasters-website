@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from './NavBar.module.css';
-import coffeeRoastersLogo from '../assets/shared/desktop/logo.svg';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styles from "./NavBar.module.css";
+import coffeeRoastersLogo from "../../assets/shared/desktop/logo.svg";
 
 export default function NavBar() {
   const [toggle, setToggle] = useState(false);
