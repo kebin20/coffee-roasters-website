@@ -1,8 +1,8 @@
 import React from "react";
-import { CoffeeItemType } from "../interfaces";
+import { CoffeeItemProps } from "../interfaces";
 import styles from "./Coffee.module.css";
 
-export default function Coffee(props: CoffeeItemType) {
+export default function Coffee(props: CoffeeItemProps) {
   const { image, description, title } = props;
 
   return (

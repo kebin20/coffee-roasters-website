@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Wrapper.module.css';
-import { PropsType } from '../interfaces';
+import { WrapperProps } from '../interfaces';
 
-export default function Wrapper(props: PropsType) {
+export default function Wrapper(props: WrapperProps) {
   return <div className={styles.wrapper}>{props.children}</div>;
 }

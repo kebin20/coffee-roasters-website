@@ -1,8 +1,8 @@
 import React from "react";
-import { OrderSummaryType } from "src/interfaces";
+import { OrderSummaryProps } from "src/interfaces";
 import styles from "./OrderSummary.module.css";
 
-export default function OrderSummary(props: OrderSummaryType) {
+export default function OrderSummary(props: OrderSummaryProps) {
   const { coffeeMethod, coffeeType, amount, grindType, delivery } =
     props.orderContent;
 

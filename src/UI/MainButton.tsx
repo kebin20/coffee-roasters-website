@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './MainButton.module.css';
-import {MainButtonType} from '../interfaces'
+import {MainButtonProps} from '../interfaces'
 
-export default function MainButton(props: MainButtonType) {
+export default function MainButton(props: MainButtonProps) {
   return (
     <button
       className={styles.mainButton}

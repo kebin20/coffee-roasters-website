@@ -1,17 +1,17 @@
-import React, { CSSProperties } from "react";
-import styles from "./PlanDropdownItem.module.css";
-import { DropdownItemType } from "src/interfaces";
+import React, { CSSProperties } from 'react';
+import styles from './PlanDropdownItem.module.css';
+import { DropdownItemProps } from 'src/interfaces';
 
-export default function PlanDropdownItem(props: DropdownItemType) {
+export default function PlanDropdownItem(props: DropdownItemProps) {
   const buttonSelectedStyling: CSSProperties = {
     backgroundColor: props.isSelected
-      ? "var(--darkCyan)"
-      : "var(--big-select-option-default)",
-    color: props.isSelected ? "var(--lightCream)" : "var(--darkBlue)",
-    transition: "background-color 0.2s ease-in-out",
+      ? 'var(--darkCyan)'
+      : 'var(--big-select-option-default)',
+    color: props.isSelected ? 'var(--lightCream)' : 'var(--darkBlue)',
+    transition: 'background-color 0.2s ease-in-out',
   };
 
-  const isCapsuleSelected = props.isCapsule ? styles.disabled : "";
+  const isCapsuleSelected = props.isCapsule ? styles.disabled : '';
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -22,7 +22,7 @@ export default function PlanDropdownItem(props: DropdownItemType) {
     <>
       <button
         className={`${styles.ddItem} ${isCapsuleSelected}`}
-        type={props.type || "button"}
+        type={props.type || 'button'}
         style={props.isSelected ? buttonSelectedStyling : undefined}
         onClick={handleClick}
         value={props.title}

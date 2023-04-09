@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "./OrderModal.module.css";
 import MainButton from "../UI/MainButton";
-import { OrderModalType } from "../interfaces";
+import { OrderModalProps } from "../interfaces";
 
-export default function OrderModal(props: OrderModalType) {
+export default function OrderModal(props: OrderModalProps) {
   const [confirmCheckout, setConfirmCheckout] = useState(false);
 
   const { coffeeMethod, coffeeType, amount, grindType, delivery } =
