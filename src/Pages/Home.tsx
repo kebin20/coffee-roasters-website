@@ -17,7 +17,7 @@ import truck from "../assets/home/desktop/icon-truck.svg";
 export default function Home() {
   return (
     <>
-      <main>
+      <main id="main">
         <Wrapper>
           <section className={styles.homeHeroSection}>
             <div className={styles.heroContainer}>

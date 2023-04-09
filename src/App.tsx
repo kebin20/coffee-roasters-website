@@ -53,6 +53,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+    <a className="skip-to-content" href="#main">Skip to content</a>
       <NavBar />
       <Routes>
         <Route path="/registration" element={<Registration />} />

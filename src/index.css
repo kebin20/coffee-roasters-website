@@ -109,6 +109,21 @@ a {
   isolation: isolate;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 10;
+  background: hsl(var(--clr-lightCream));
+  color: hsl(var(--clr-darkGreyBlue));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 200ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,
