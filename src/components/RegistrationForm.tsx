@@ -96,7 +96,7 @@ function RegistrationForm() {
     : "";
 
   return (
-    <form onSubmit={formSubmissionHandler}>
+    <form className={styles.form} onSubmit={formSubmissionHandler}>
       <div className={styles.formInputGroup}>
         <p className={styles.formDescription}>
           Please fill the form below. Fields marked with * are required.
@@ -162,7 +162,7 @@ function RegistrationForm() {
           )}
         </div>
       </div>
-      <div className={styles.submitFormButton}>
+      <div>
         <MainButton disabled={!formIsValid}>Register</MainButton>
       </div>
     </form>

@@ -1,8 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .formInputGroup {
   display: grid;
   grid-template-columns: minmax(1fr, 500px);
-  gap: 2em;
-  justify-content: center;
+  gap: 3em;
 }
 
 .formControl {
@@ -25,11 +30,6 @@
 
 .errorText {
   color: red;
-}
-
-.submitFormButton {
-  text-align: center;
-  margin: 3em;
 }
 
 /* Tablet portrait and larger */
