@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Footer from "../Layout/Footer";
+import Footer from "../components/Layout/Footer";
 import MainButton from "../UI/MainButton";
 import OrderModal from "../components/OrderModal";
 import OrderSummary from "../components/OrderSummary";

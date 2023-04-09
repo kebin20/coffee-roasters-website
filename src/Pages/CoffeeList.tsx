@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CoffeeList.module.css";
 import Wrapper from "../UI/Wrapper";
-import Footer from "../Layout/Footer";
+import Footer from "../components/Layout/Footer";
 import Coffee from "../components/Coffee";
 import { CoffeeItemProps } from "src/interfaces";
 

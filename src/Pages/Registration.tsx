@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Registration.module.css";
 
-import Footer from "../Layout/Footer";
+import Footer from "../components/Layout/Footer";
 import RegistrationForm from "../components/RegistrationForm";
 import Wrapper from "../UI/Wrapper";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
 import Wrapper from "../UI/Wrapper";
-import Footer from "../Layout/Footer";
+import Footer from "../components/Layout/Footer";
 
 /* Images */
 import commitment from "../assets/about/mobile/image-commitment.jpg";
