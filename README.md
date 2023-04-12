@@ -45,51 +45,99 @@ Users should be able to:
 
 ### What I learned
 
-Firstly, I learnt how to add an extra property to an object within a data array by the following code using useEffect. When the page renders, a unique ID (using nanoid()) will be added to each object in the array:
+I had to revise my original solution in mapping all of the subscription option sections as the requirements provided by the challenge proved it to be difficult to implement while mapping the options. Therefore, I decided to create separate sections as there were a lot of moving parts:
 
 ```
+            <Method
+                id="method"
+                plan={planOption[0]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[0].id, id, event)
+                }
+                onButtonClick={handleCoffeeMethodBtn}
+              />
+              <CoffeeType
+                id="coffee-type"
+                plan={planOption[1]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[1].id, id, event)
+                }
+                onButtonClick={handleCoffeeTypeBtn}
+              />
+              <Amount
+                id="amount"
+                plan={planOption[2]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[2].id, id, event)
+                }
+                onButtonClick={handleAmountBtn}
+                onSetWeight={setWeightBoolean}
+              />
+              <Grind
+                id="grind"
+                plan={planOption[3]}
+                isCapsule={isCapsule}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[3].id, id, event)
+                }
+                onButtonClick={handleGrindTypeBtn}
+              />
+              <Delivery
+                id="delivery"
+                plan={planOption[4]}
+                onHoldChoice={(id: string, event: MouseEvent) =>
+                  holdChoice(planOption[4].id, id, event)
+                }
+                onButtonClick={handleDeliveryBtn}
+                onSetFrequency={setFrequencyBoolean}
+                weight={weight}
+              />
+```
+This code was one example of the use case provided by the project challenge, where shipping price is calculated according to the frequency and weight chosen by the customer:
+
+```
+ function displayShippingPrice() {
+    let price: number;
+    if (frequency.isWeekSelected && weight.firstWeight) {
+      price = 7.2 * 4;
+    } else if (frequency.isFortnightSelected && weight.firstWeight) {
+      price = 9.6 * 2;
+    } else if (frequency.isMonthSelected && weight.firstWeight) {
+      price = 12.0;
+    } else if (frequency.isWeekSelected && weight.secondWeight) {
+      price = 13.0 * 4;
+    } else if (frequency.isFortnightSelected && weight.secondWeight) {
+      price = 17.5 * 2;
+    } else if (frequency.isMonthSelected && weight.secondWeight) {
+      price = 22.0;
+    } else if (frequency.isWeekSelected && weight.thirdWeight) {
+      price = 22.0 * 4;
+    } else if (frequency.isFortnightSelected && weight.thirdWeight) {
+      price = 32.0 * 2;
+    } else if (frequency.isMonthSelected && weight.thirdWeight) {
+      price = 42.0;
+    } else {
+      price = 0;
+    }
+    setShippingPrice(price);
+  }
+
   useEffect(() => {
-    const newPlanData = plan.map((item) => {
-      return {
-        ...item,
-        id: nanoid(),
-        content: item.content.map((option) => {
-          return {
-            ...option,
-            id: nanoid(),
-          };
-        }),
-      };
-    });
-    setPlanOption(newPlanData);
-  }, []);
+    displayShippingPrice();
+  }, [weight, frequency]);
 ```
+A lot of variables depending on each other therefore, made it difficult for me to implement these conditional variables when mapping over elements.
 
-Next, I was struggling in keeping the active button select in order for me to maintain the active style state of each button when selected when customizing the plan, I reused my function from my Quizzical app with modifications as follows:
+Another significant learning aspect of this project was the use of TypeScript. I have went through basic TS tutorials offered by Microsoft as well as Scrimba and I understood and grasped the basics. However, doing it in React proved to be a challenge as there were HTML elements that I did not know how to declare which took a lot of Googling and asking ChatGPT to explain and provide examples of these types such as:
 
-```
- function holdChoice(planId, optionId, event) {
+``` 
+  function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    const target = event.target as HTMLInputElement;
     event.preventDefault();
-    setPlanOption((prevPlanOption) =>
-      prevPlanOption.map((plan) => {
-        if (plan.id !== planId) return plan;
-        return {
-          ...plan,
-          content: plan.content.map((option) => {
-            event.target.value === 'Capsule'
-              ? setIsCapsule(true)
-              : setIsCapsule(false);
-            if (option.id === optionId) {
-              return { ...option, isSelected: !option.isSelected };
-            } else {
-              return { ...option, isSelected: false };
-            }
-          }),
-        };
-      })
-    );
+    onButtonClick(target.value);
   }
 ```
+
 
 ### Continued development
 
