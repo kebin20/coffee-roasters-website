@@ -47,8 +47,8 @@ Users should be able to:
 
 I had to revise my original solution in mapping all of the subscription option sections as the requirements provided by the challenge proved it to be difficult to implement while mapping the options. Therefore, I decided to create separate sections as there were a lot of moving parts:
 
-```
-            <Method
+```jsx
+           <Method
                 id="method"
                 plan={planOption[0]}
                 onHoldChoice={(id: string, event: MouseEvent) =>
@@ -95,7 +95,7 @@ I had to revise my original solution in mapping all of the subscription option s
 ```
 This code was one example of the use case provided by the project challenge, where shipping price is calculated according to the frequency and weight chosen by the customer:
 
-```
+```jsx
  function displayShippingPrice() {
     let price: number;
     if (frequency.isWeekSelected && weight.firstWeight) {
@@ -130,7 +130,7 @@ A lot of variables depending on each other therefore, made it difficult for me t
 
 Another significant learning aspect of this project was the use of TypeScript. I have went through basic TS tutorials offered by Microsoft as well as Scrimba and I understood and grasped the basics. However, doing it in React proved to be a challenge as there were HTML elements that I did not know how to declare which took a lot of Googling and asking ChatGPT to explain and provide examples of these types such as:
 
-``` 
+```jsx 
   function handleClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     const target = event.target as HTMLInputElement;
     event.preventDefault();
