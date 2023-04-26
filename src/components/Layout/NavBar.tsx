@@ -58,7 +58,7 @@ export default function NavBar() {
               Coffee
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               onClick={() => setToggle(false)}
               to="/registration"
@@ -66,7 +66,7 @@ export default function NavBar() {
             >
               Register
             </Link>
-          </li>
+          </li> */}
         </ul>
 
         <button onClick={toggleHamburgerMenu} className={styles.hamburgerMenu}>
