@@ -28,6 +28,6 @@
     }
   },
 
-  "include": ["src/**/*.ts", "src/**/*.tsx",  "src/**/*.js", "src/**/*.jsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx",  "src/**/*.js", "src/**/*.jsx", "src/components/OrderModal.test.tsx"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"]
 }
