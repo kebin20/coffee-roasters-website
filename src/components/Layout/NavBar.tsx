@@ -16,7 +16,7 @@ export default function NavBar() {
         <Link onClick={() => setToggle(false)} to="/">
           <img
             className={styles.mobileLogo}
-            src={coffeeRoastersLogo}
+            src={coffeeRoastersLogo as unknown as string}
             alt="coffee roasters logo"
           />
         </Link>
