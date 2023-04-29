@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./CoffeeList.module.css";
 import Wrapper from "../UI/Wrapper";
-import Footer from "../components/Layout/Footer";
 import Coffee from "../components/Coffee";
 import { CoffeeItemProps } from "src/interfaces";
 
-export default function CoffeeList({ coffees }) {
+export default function CoffeeList({
+  coffees,
+}: {
+  coffees: CoffeeItemProps[];
+}) {
+  console.log(coffees.length);
+
   return (
     <>
       <main>
@@ -22,14 +27,15 @@ export default function CoffeeList({ coffees }) {
             <h2 className={styles.coffeeListTitle}>
               What kind of coffees are there?
             </h2>
-            <ul className={styles.coffeeList}>
-              {coffees.map((coffee: CoffeeItemProps) => {
+            <ul className={styles.coffeeList} role="list">
+              {coffees.map((coffee) => {
                 return (
                   <Coffee
                     key={coffee.id}
                     title={coffee.title}
                     description={coffee.description}
                     image={coffee.image}
+                    ingredients={coffee.ingredients}
                   />
                 );
               })}
@@ -37,7 +43,6 @@ export default function CoffeeList({ coffees }) {
           </section>
         </Wrapper>
       </main>
-      <Footer />
     </>
   );
 }
