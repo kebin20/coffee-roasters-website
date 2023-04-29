@@ -16,6 +16,7 @@ export interface CoffeeItemProps {
   image: string;
   title: string;
   description: string;
+  ingredients: string[];
 }
 
 export interface OrderSummaryProps {
