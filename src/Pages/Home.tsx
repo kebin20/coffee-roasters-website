@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import MainButton from "../UI/MainButton";
 import Wrapper from "../UI/Wrapper";
-import Footer from "../components/Layout/Footer";
 
 /* Images */
 import granEspresso from "../assets/home/desktop/image-gran-espresso.png";
@@ -180,7 +179,6 @@ export default function Home() {
             </Link>
           </section>
         </Wrapper>
-        <Footer />
       </main>
     </>
   );

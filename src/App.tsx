@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/Layout/NavBar";
+import Footer from "./components/Layout/Footer";
 
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
@@ -53,7 +54,9 @@ export default function App() {
 
   return (
     <BrowserRouter>
-    <a className="skip-to-content" href="#main">Skip to content</a>
+      <a className="skip-to-content" href="#main">
+        Skip to content
+      </a>
       <NavBar />
       <Routes>
         <Route path="/registration" element={<Registration />} />
@@ -62,6 +65,7 @@ export default function App() {
         <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/coffee" element={coffeeContent} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

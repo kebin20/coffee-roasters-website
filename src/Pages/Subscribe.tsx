@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import Footer from "../components/Layout/Footer";
 import MainButton from "../UI/MainButton";
 import OrderModal from "../components/OrderModal";
 import OrderSummary from "../components/OrderSummary";
@@ -352,7 +351,6 @@ export default function Subscribe() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
