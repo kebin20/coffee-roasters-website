@@ -42,6 +42,7 @@ Users should be able to:
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript - Strongly typed programming language on top of JS
 - [React](https://reactjs.org/) - JS library
 - [React Router](https://reactrouter.com/en/main) - React routing library
+- [Jest](https://jestjs.io/) - Testing suite
 
 ### What I learned
 
