@@ -45,6 +45,42 @@ Users should be able to:
 
 ### What I learned
 
+UPDATE: Implemented a test using jest
+
+- Recently completed a basic tutorial on testing using jest and react testing library. It was quite challenging having to wrestle with the config settings to suit TypeScript, as well as getting the tests to run successfully. After debugging and internet searches, I have finally successfully implemented a basic test for making sure an async function fetches the data successfully from an API:
+
+An example of my test for my CoffeeList: 
+
+```jsx 
+
+import { render, screen } from "@testing-library/react";
+import CoffeeList from "./CoffeeList";
+import React from "react";
+
+describe("Async function", () => {
+  test("renders coffee items if request succeeds", async () => {
+    window.fetch = jest.fn().mockResolvedValueOnce({
+      json: async () => [
+        {
+          id: "1",
+          image: "https://example.com/coffee1.jpg",
+          title: "Dark Roast",
+          description:
+            "A bold and rich coffee with notes of chocolate and caramel.",
+          ingredients: ["coffee beans", "water"],
+        },
+      ],
+    });
+    render(<CoffeeList coffees={[]} />);
+
+    const listItemElements = await screen.findAllByRole("list");
+    expect(listItemElements).not.toHaveLength(0);
+  });
+});
+
+
+```
+
 I had to revise my original solution in mapping all of the subscription option sections as the requirements provided by the challenge proved it to be difficult to implement while mapping the options. Therefore, I decided to create separate sections as there were a lot of moving parts:
 
 ```jsx
