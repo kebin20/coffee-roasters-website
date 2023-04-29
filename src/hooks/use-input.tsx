@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 function useInput(validateValue) {
   const [enteredValue, setEnteredValue] = useState("");
@@ -7,7 +7,7 @@ function useInput(validateValue) {
   const isValueValid = validateValue(enteredValue);
   const hasError = !isValueValid && isTouched;
 
-  function valueChangeHandler(event) {
+  function valueChangeHandler(event: { target: { value: string; }; }) {
     setEnteredValue(event.target.value);
   }
 
