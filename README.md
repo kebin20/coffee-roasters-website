@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-- My more significant learning points will be explained in a blog post! (WIP)
+- My learning takeways written in my blog post [here on Dev.to](https://dev.to/kebin20/lessons-learned-from-tackling-a-frontend-mentor-project-coffee-roasters-themed-edition-3ojm)!
 
 
 ### Continued development
