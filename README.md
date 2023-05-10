@@ -23,6 +23,7 @@ Users should be able to:
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
 - Make selections to create a coffee subscription and see an order summary modal of their choices
+- See the different types of coffee, with information fetched from a third party API. (NOTE: There may be irregularities with the information shown and it is due to the source of the API.)
 
 ### Links
 
