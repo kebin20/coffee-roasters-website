@@ -69,7 +69,7 @@ Future implementations:
 - Add a "add to shopping cart" functionality.
 
 ### Useful resources
-
+- [Coffee API](https://sampleapis.com/api-list/coffee) - This coffee API sample is being used to display the different types of coffee available in the world.
 - [Scaler](https://www.scaler.com/topics/text-gradient-css/) - This helped me for creating the text gradient for the title within the homepage.
 - [MDN - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip) - This doc helped me to create the transparent looking style of the hamburger menu.
 - [Stack Overflow](https://stackoverflow.com/a/50885613) - This SO thread helped me to understand how to add a br tag in React
